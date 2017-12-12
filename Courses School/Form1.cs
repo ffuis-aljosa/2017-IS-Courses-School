@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace Courses_School
 {
-    public partial class Form1 : Form
+    public partial class loginForm : Form
     {
-        public Form1()
+        public loginForm()
         {
             InitializeComponent();
+        }
+
+        private void administratorButton_Click(object sender, EventArgs e)
+        {
+            administratorLoginForm login = new administratorLoginForm();
+            login.Show();
+        }
+
+        private void userButton_Click(object sender, EventArgs e)
+        {
+            userLoginForm login = new userLoginForm();
+            login.Show();
         }
     }
 }
