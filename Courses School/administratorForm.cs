@@ -15,18 +15,31 @@ namespace Courses_School
         public administratorForm()
         {
             InitializeComponent();
-        }
-
-        private void administratorForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        } 
 
         private void schoolSubjectbutton_Click(object sender, EventArgs e)
         {
-            schoolSubjectForm login = new schoolSubjectForm();
-            login.Show();
+            schoolSubjectForm form = new schoolSubjectForm();
+            form.Show();
 
+        }
+
+        private void informationsAboutEmployeesButton_Click(object sender, EventArgs e)
+        {
+            informationsAboutEmployeesForm form = new informationsAboutEmployeesForm();
+            form.Show();
+        }
+
+        private void informationsAboutStudentsButton_Click(object sender, EventArgs e)
+        {
+            informationsAboutStudentsForm form = new informationsAboutStudentsForm();
+            form.Show();
+        }
+
+        private void schoolTimetableButton_Click(object sender, EventArgs e)
+        {
+            schoolTimetableForm form = new schoolTimetableForm();
+            form.Show();
         }
     }
 }

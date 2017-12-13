@@ -44,6 +44,7 @@
             this.schoolTimetableButton.TabIndex = 0;
             this.schoolTimetableButton.Text = "Raspored";
             this.schoolTimetableButton.UseVisualStyleBackColor = true;
+            this.schoolTimetableButton.Click += new System.EventHandler(this.schoolTimetableButton_Click);
             // 
             // schoolSubjectbutton
             // 
@@ -65,6 +66,7 @@
             this.informationsAboutStudentsButton.TabIndex = 2;
             this.informationsAboutStudentsButton.Text = "Podaci o učenicima";
             this.informationsAboutStudentsButton.UseVisualStyleBackColor = true;
+            this.informationsAboutStudentsButton.Click += new System.EventHandler(this.informationsAboutStudentsButton_Click);
             // 
             // informationsAboutEmployeesButton
             // 
@@ -75,6 +77,7 @@
             this.informationsAboutEmployeesButton.TabIndex = 3;
             this.informationsAboutEmployeesButton.Text = "Podaci o zaposlenima";
             this.informationsAboutEmployeesButton.UseVisualStyleBackColor = true;
+            this.informationsAboutEmployeesButton.Click += new System.EventHandler(this.informationsAboutEmployeesButton_Click);
             // 
             // administratorForm
             // 
@@ -89,7 +92,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "administratorForm";
             this.Text = "administratorForm";
-           
             this.ResumeLayout(false);
 
         }
