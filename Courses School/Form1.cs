@@ -28,5 +28,10 @@ namespace Courses_School
             userLoginForm login = new userLoginForm();
             login.Show();
         }
+
+        private void loginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
