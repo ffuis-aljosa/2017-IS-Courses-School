@@ -16,5 +16,17 @@ namespace Courses_School
         {
             InitializeComponent();
         }
+
+        private void administratorForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void schoolSubjectbutton_Click(object sender, EventArgs e)
+        {
+            schoolSubjectForm login = new schoolSubjectForm();
+            login.Show();
+
+        }
     }
 }

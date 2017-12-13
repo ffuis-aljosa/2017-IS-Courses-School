@@ -28,11 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(administratorForm));
+            this.schoolTimetableButton = new System.Windows.Forms.Button();
+            this.schoolSubjectbutton = new System.Windows.Forms.Button();
+            this.informationsAboutStudentsButton = new System.Windows.Forms.Button();
+            this.informationsAboutEmployeesButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // schoolTimetableButton
+            // 
+            this.schoolTimetableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.schoolTimetableButton.Location = new System.Drawing.Point(305, 146);
+            this.schoolTimetableButton.Name = "schoolTimetableButton";
+            this.schoolTimetableButton.Size = new System.Drawing.Size(158, 66);
+            this.schoolTimetableButton.TabIndex = 0;
+            this.schoolTimetableButton.Text = "Raspored";
+            this.schoolTimetableButton.UseVisualStyleBackColor = true;
+            // 
+            // schoolSubjectbutton
+            // 
+            this.schoolSubjectbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.schoolSubjectbutton.Location = new System.Drawing.Point(98, 62);
+            this.schoolSubjectbutton.Name = "schoolSubjectbutton";
+            this.schoolSubjectbutton.Size = new System.Drawing.Size(158, 66);
+            this.schoolSubjectbutton.TabIndex = 1;
+            this.schoolSubjectbutton.Text = "Predmeti";
+            this.schoolSubjectbutton.UseVisualStyleBackColor = true;
+            this.schoolSubjectbutton.Click += new System.EventHandler(this.schoolSubjectbutton_Click);
+            // 
+            // informationsAboutStudentsButton
+            // 
+            this.informationsAboutStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.informationsAboutStudentsButton.Location = new System.Drawing.Point(98, 146);
+            this.informationsAboutStudentsButton.Name = "informationsAboutStudentsButton";
+            this.informationsAboutStudentsButton.Size = new System.Drawing.Size(158, 66);
+            this.informationsAboutStudentsButton.TabIndex = 2;
+            this.informationsAboutStudentsButton.Text = "Podaci o učenicima";
+            this.informationsAboutStudentsButton.UseVisualStyleBackColor = true;
+            // 
+            // informationsAboutEmployeesButton
+            // 
+            this.informationsAboutEmployeesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.informationsAboutEmployeesButton.Location = new System.Drawing.Point(305, 62);
+            this.informationsAboutEmployeesButton.Name = "informationsAboutEmployeesButton";
+            this.informationsAboutEmployeesButton.Size = new System.Drawing.Size(158, 66);
+            this.informationsAboutEmployeesButton.TabIndex = 3;
+            this.informationsAboutEmployeesButton.Text = "Podaci o zaposlenima";
+            this.informationsAboutEmployeesButton.UseVisualStyleBackColor = true;
+            // 
+            // administratorForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(560, 319);
+            this.Controls.Add(this.informationsAboutEmployeesButton);
+            this.Controls.Add(this.informationsAboutStudentsButton);
+            this.Controls.Add(this.schoolSubjectbutton);
+            this.Controls.Add(this.schoolTimetableButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "administratorForm";
             this.Text = "administratorForm";
+           
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button schoolTimetableButton;
+        private System.Windows.Forms.Button schoolSubjectbutton;
+        private System.Windows.Forms.Button informationsAboutStudentsButton;
+        private System.Windows.Forms.Button informationsAboutEmployeesButton;
     }
 }
