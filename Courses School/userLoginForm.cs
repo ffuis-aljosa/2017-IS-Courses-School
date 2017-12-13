@@ -17,9 +17,6 @@ namespace Courses_School
             InitializeComponent();
         }
 
-        private void userLoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
