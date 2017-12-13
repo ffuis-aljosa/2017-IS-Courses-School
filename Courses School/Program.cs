@@ -16,7 +16,7 @@ namespace Courses_School
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new userLoginForm());
+            Application.Run(new loginForm());
         }
     }
 }

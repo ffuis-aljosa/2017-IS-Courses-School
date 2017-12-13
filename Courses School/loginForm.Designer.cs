@@ -1,6 +1,6 @@
 ﻿namespace Courses_School
 {
-    partial class userLoginForm
+    partial class loginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
-            this.userLoginFormButton = new System.Windows.Forms.Button();
+            this.loginFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameTextBox
@@ -79,32 +80,34 @@
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Šifra:";
             // 
-            // userLoginFormButton
+            // loginFormButton
             // 
-            this.userLoginFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userLoginFormButton.Location = new System.Drawing.Point(318, 179);
-            this.userLoginFormButton.Name = "userLoginFormButton";
-            this.userLoginFormButton.Size = new System.Drawing.Size(127, 33);
-            this.userLoginFormButton.TabIndex = 5;
-            this.userLoginFormButton.Text = "Prijavi se";
-            this.userLoginFormButton.UseVisualStyleBackColor = true;
-            
+            this.loginFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.loginFormButton.Location = new System.Drawing.Point(318, 179);
+            this.loginFormButton.Name = "loginFormButton";
+            this.loginFormButton.Size = new System.Drawing.Size(127, 33);
+            this.loginFormButton.TabIndex = 5;
+            this.loginFormButton.Text = "Prijavi se";
+            this.loginFormButton.UseVisualStyleBackColor = true;
+            this.loginFormButton.Click += new System.EventHandler(this.userLoginFormButton_Click);
             // 
-            // userLoginForm
+            // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(560, 319);
-            this.Controls.Add(this.userLoginFormButton);
+            this.Controls.Add(this.loginFormButton);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Name = "userLoginForm";
-            this.Text = "userLoginForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "loginForm";
+            this.Text = "Prijava";
+            this.Load += new System.EventHandler(this.loginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +120,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.Button userLoginFormButton;
+        private System.Windows.Forms.Button loginFormButton;
     }
 }
