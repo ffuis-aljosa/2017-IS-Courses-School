@@ -41,7 +41,7 @@
             // 
             this.usernameTextBox.Location = new System.Drawing.Point(233, 91);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(212, 20);
+            this.usernameTextBox.Size = new System.Drawing.Size(212, 23);
             this.usernameTextBox.TabIndex = 0;
             // 
             // passwordTextBox
@@ -49,7 +49,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(233, 133);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(212, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(212, 23);
             this.passwordTextBox.TabIndex = 1;
             // 
             // label1
@@ -57,16 +57,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(124, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 2;
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.usernameLabel.Location = new System.Drawing.Point(113, 91);
+            this.usernameLabel.Location = new System.Drawing.Point(73, 91);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(114, 20);
+            this.usernameLabel.Size = new System.Drawing.Size(145, 25);
             this.usernameLabel.TabIndex = 3;
             this.usernameLabel.Text = "Korisničko ime:";
             // 
@@ -74,9 +74,9 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.passwordLabel.Location = new System.Drawing.Point(181, 133);
+            this.passwordLabel.Location = new System.Drawing.Point(160, 133);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(46, 20);
+            this.passwordLabel.Size = new System.Drawing.Size(58, 25);
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Šifra:";
             // 
@@ -89,11 +89,11 @@
             this.loginFormButton.TabIndex = 5;
             this.loginFormButton.Text = "Prijavi se";
             this.loginFormButton.UseVisualStyleBackColor = true;
-            this.loginFormButton.Click += new System.EventHandler(this.userLoginFormButton_Click);
+            this.loginFormButton.Click += new System.EventHandler(this.loginFormButton_Click);
             // 
             // loginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(560, 319);
@@ -106,8 +106,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "loginForm";
-            this.Text = "Prijava";
-            this.Load += new System.EventHandler(this.loginForm_Load);
+      
             this.ResumeLayout(false);
             this.PerformLayout();
 

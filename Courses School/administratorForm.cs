@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Courses_School
@@ -39,6 +32,12 @@ namespace Courses_School
         private void schoolTimetableButton_Click(object sender, EventArgs e)
         {
             schoolTimetableForm form = new schoolTimetableForm();
+            form.Show();
+        }
+
+        private void administratorButton_Click(object sender, EventArgs e)
+        {
+            newUserForm form = new newUserForm();
             form.Show();
         }
     }

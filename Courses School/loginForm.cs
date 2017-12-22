@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Courses_School.Database;
+using Courses_School.Models;
 
 namespace Courses_School
 {
@@ -17,15 +12,36 @@ namespace Courses_School
             InitializeComponent();
         }
 
-        private void loginForm_Load(object sender, EventArgs e)
+        private void loginFormButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                User user = new User(usernameTextBox.Text, passwordTextBox.Text);
 
+                if (UserRepository.login(user))
+                {
+                    administratorForm form = new administratorForm();
+                    form.Show();
+
+                    form.FormClosed += administratorForm_FormClosed;
+
+                    Hide();
+                }
+                else
+                {
+                    throw new Exception("Korisničko ime i/ili lozinka su pogrešni");
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+        private void administratorForm_FormClosed (object sender, FormClosedEventArgs e)
+        {
+            Show();
         }
 
-        private void userLoginFormButton_Click(object sender, EventArgs e)
-        {
-            administratorForm login = new administratorForm();
-            login.Show();
-        }
-    }
+    }  
 }

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlServerCe;
+﻿using System.Data.SqlServerCe;
 
-namespace Courses_School
+namespace Courses_School.Database
 {
-
-     class DbConnection
+       class DbConnection
         {
             private SqlCeConnection connection;
 
@@ -25,7 +19,7 @@ namespace Courses_School
                 get
                 {
                     if (instance == null)
-                        instance = new DbConnection(@"Data Source=..\..\CoursesSchoolDB.sdf");
+                        instance = new DbConnection(@"Data Source=..\..\CoursesSchoolDb.sdf");
 
                     return instance;
                 }
@@ -39,7 +33,6 @@ namespace Courses_School
                 }
             }
         }
-    }
-
+ }
 
 
