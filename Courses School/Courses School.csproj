@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addNewEmloyeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addNewEmloyeeForm.Designer.cs">
+      <DependentUpon>addNewEmloyeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="administratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +112,14 @@
     <Compile Include="schoolTimetableForm.Designer.cs">
       <DependentUpon>schoolTimetableForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addNewEmloyeeForm.resx">
+      <DependentUpon>addNewEmloyeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="administratorForm.resx">
       <DependentUpon>administratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informationsAboutEmployeesForm.resx">
+      <DependentUpon>informationsAboutEmployeesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newUserForm.resx">
       <DependentUpon>newUserForm.cs</DependentUpon>

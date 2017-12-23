@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Courses_School
 {
-    public partial class informationsAboutEmployeesForm : Form
+    public partial class addNewEmloyeeForm : Form
     {
-        public informationsAboutEmployeesForm()
+        public addNewEmloyeeForm()
         {
             InitializeComponent();
-        }
-
-        private void addNewEmployeeButton_Click(object sender, EventArgs e)
-        {
-            addNewEmloyeeForm form = new addNewEmloyeeForm();
-            form.Show();
-
         }
     }
 }
