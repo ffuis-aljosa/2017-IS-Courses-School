@@ -16,5 +16,21 @@ namespace Courses_School
         {
             InitializeComponent();
         }
+
+        private void schoolSubjectForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SchoolSubjectButton_Click(object sender, EventArgs e)
+        {
+            addSchoolSubjectForm form = new addSchoolSubjectForm();
+            form.Show();
+        }
+
+        private void SchoolSubjectListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
