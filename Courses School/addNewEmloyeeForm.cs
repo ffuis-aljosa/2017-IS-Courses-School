@@ -15,6 +15,9 @@ namespace Courses_School
         public addNewEmloyeeForm()
         {
             InitializeComponent();
+            
         }
+
+        
     }
 }
