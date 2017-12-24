@@ -18,6 +18,5 @@ namespace Courses_School
             
         }
 
-        
     }
 }

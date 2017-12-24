@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Courses_School.Models;
 
 namespace Courses_School
 {
@@ -17,6 +11,5 @@ namespace Courses_School
             InitializeComponent();
         }
 
-      
     }
 }

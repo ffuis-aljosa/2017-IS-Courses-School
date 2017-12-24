@@ -93,6 +93,7 @@
       <DependentUpon>informationsAboutStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Emloyees.cs" />
+    <Compile Include="Models\Students.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="newUserForm.cs">
       <SubType>Form</SubType>

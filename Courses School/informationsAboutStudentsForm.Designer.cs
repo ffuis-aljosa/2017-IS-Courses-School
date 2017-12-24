@@ -35,15 +35,13 @@
             this.jmbColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateAndPlaceOfBirthColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.addressColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.membershipFeesColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // addNewStudentButton
             // 
             this.addNewStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.addNewStudentButton.Location = new System.Drawing.Point(986, 12);
+            this.addNewStudentButton.Location = new System.Drawing.Point(777, 12);
             this.addNewStudentButton.Name = "addNewStudentButton";
             this.addNewStudentButton.Size = new System.Drawing.Size(341, 39);
             this.addNewStudentButton.TabIndex = 2;
@@ -59,13 +57,11 @@
             this.jmbColumnHeader,
             this.dateAndPlaceOfBirthColumnHeader,
             this.addressColumnHeader,
-            this.columnHeader1,
-            this.columnHeader,
-            this.columnHeader2});
+            this.membershipFeesColumnHeader});
             this.informationsAboutStudentsListView.GridLines = true;
-            this.informationsAboutStudentsListView.Location = new System.Drawing.Point(34, 73);
+            this.informationsAboutStudentsListView.Location = new System.Drawing.Point(12, 66);
             this.informationsAboutStudentsListView.Name = "informationsAboutStudentsListView";
-            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1485, 419);
+            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1106, 419);
             this.informationsAboutStudentsListView.TabIndex = 3;
             this.informationsAboutStudentsListView.UseCompatibleStateImageBehavior = false;
             this.informationsAboutStudentsListView.View = System.Windows.Forms.View.Details;
@@ -95,29 +91,22 @@
             this.addressColumnHeader.Text = "Adresa stanovanja";
             this.addressColumnHeader.Width = 200;
             // 
-            // columnHeader1
+            // membershipFeesColumnHeader
             // 
-            this.columnHeader1.Text = "Mjesečna uplata";
-            this.columnHeader1.Width = 210;
-            // 
-            // columnHeader
-            // 
-            this.columnHeader.Text = "Jezici";
-            this.columnHeader.Width = 217;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Položeni nivoi";
-            this.columnHeader2.Width = 331;
+            this.membershipFeesColumnHeader.Text = "Mjesečna članarina";
+            this.membershipFeesColumnHeader.Width = 210;
             // 
             // informationsAboutStudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1550, 538);
+            this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1138, 538);
             this.Controls.Add(this.informationsAboutStudentsListView);
             this.Controls.Add(this.addNewStudentButton);
             this.Name = "informationsAboutStudentsForm";
+            this.ShowIcon = false;
             this.ResumeLayout(false);
 
         }
@@ -130,8 +119,6 @@
         private System.Windows.Forms.ColumnHeader jmbColumnHeader;
         private System.Windows.Forms.ColumnHeader dateAndPlaceOfBirthColumnHeader;
         private System.Windows.Forms.ColumnHeader addressColumnHeader;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader membershipFeesColumnHeader;
     }
 }

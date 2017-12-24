@@ -24,14 +24,13 @@ namespace Courses_School
                     form.Show();
 
                     form.FormClosed += administratorForm_FormClosed;
-
                     Hide();
                 }
                 else
                 {
                     throw new Exception("Korisničko ime i/ili lozinka su pogrešni");
                 }
-
+                
             }
             catch (Exception error)
             {
