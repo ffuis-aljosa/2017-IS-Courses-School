@@ -37,6 +37,7 @@ namespace Courses_School
             {
                 MessageBox.Show(error.Message);
             }
+           
         }
         private void administratorForm_FormClosed (object sender, FormClosedEventArgs e)
         {

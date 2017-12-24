@@ -10,18 +10,13 @@ using System.Windows.Forms;
 
 namespace Courses_School
 {
-    public partial class informationsAboutStudentsForm : Form
+    public partial class addNewStudentForm : Form
     {
-        public informationsAboutStudentsForm()
+        public addNewStudentForm()
         {
             InitializeComponent();
         }
 
-        private void addNewStudentButton_Click(object sender, EventArgs e)
-        {
-            addNewStudentForm form = new addNewStudentForm();
-            form.Show();
-            Hide();
-        }
+      
     }
 }

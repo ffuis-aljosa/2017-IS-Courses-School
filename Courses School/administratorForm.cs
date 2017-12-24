@@ -14,7 +14,6 @@ namespace Courses_School
         {
             schoolSubjectForm form = new schoolSubjectForm();
             form.Show();
-
         }
 
         private void informationsAboutEmployeesButton_Click(object sender, EventArgs e)
