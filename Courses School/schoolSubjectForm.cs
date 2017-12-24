@@ -24,8 +24,13 @@ namespace Courses_School
 
         private void SchoolSubjectButton_Click(object sender, EventArgs e)
         {
-            addSchoolSubject form = new addSchoolSubject();
+            addSchoolSubjectForm form = new addSchoolSubjectForm();
             form.Show();
+        }
+
+        private void SchoolSubjectListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

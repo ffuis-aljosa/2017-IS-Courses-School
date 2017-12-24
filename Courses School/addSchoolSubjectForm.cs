@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Courses_School
 {
-    public partial class addSchoolSubject : Form
+    public partial class addSchoolSubjectForm : Form
     {
-        public addSchoolSubject()
+        public addSchoolSubjectForm()
         {
             InitializeComponent();
+        }
+
+        private void addSchoolSubjectButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
