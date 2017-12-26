@@ -32,7 +32,7 @@
             this.informationsAboutStudentsListView = new System.Windows.Forms.ListView();
             this.firstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lastNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.jmbColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.jmbgColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateAndPlaceOfBirthColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.addressColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.membershipFeesColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,7 +54,7 @@
             this.informationsAboutStudentsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.firstNameColumnHeader,
             this.lastNameColumnHeader,
-            this.jmbColumnHeader,
+            this.jmbgColumnHeader,
             this.dateAndPlaceOfBirthColumnHeader,
             this.addressColumnHeader,
             this.membershipFeesColumnHeader});
@@ -76,10 +76,10 @@
             this.lastNameColumnHeader.Text = "Prezime";
             this.lastNameColumnHeader.Width = 171;
             // 
-            // jmbColumnHeader
+            // jmbgColumnHeader
             // 
-            this.jmbColumnHeader.Text = "JMB";
-            this.jmbColumnHeader.Width = 170;
+            this.jmbgColumnHeader.Text = "JMBG";
+            this.jmbgColumnHeader.Width = 170;
             // 
             // dateAndPlaceOfBirthColumnHeader
             // 
@@ -116,7 +116,7 @@
         private System.Windows.Forms.ListView informationsAboutStudentsListView;
         private System.Windows.Forms.ColumnHeader firstNameColumnHeader;
         private System.Windows.Forms.ColumnHeader lastNameColumnHeader;
-        private System.Windows.Forms.ColumnHeader jmbColumnHeader;
+        private System.Windows.Forms.ColumnHeader jmbgColumnHeader;
         private System.Windows.Forms.ColumnHeader dateAndPlaceOfBirthColumnHeader;
         private System.Windows.Forms.ColumnHeader addressColumnHeader;
         private System.Windows.Forms.ColumnHeader membershipFeesColumnHeader;

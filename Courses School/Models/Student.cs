@@ -3,8 +3,9 @@
 
 namespace Courses_School.Models
 {
-    class Students
+    class Student
     {
+        private int id;
         private string first_name;
         private string last_name;
         private int jmbg;
@@ -14,10 +15,11 @@ namespace Courses_School.Models
         private int membership_fees;
 
 
-        public Students(string first_name, string last_name, int jmb, string date_and_place_of_birth,
+        public Student(int id, string first_name, string last_name, int jmb, string date_and_place_of_birth,
             string address, int phone_number, int membership_fees)
             
         {
+            this.id = id;
             First_name = first_name;
             Last_name = last_name;
             Jmbg = jmbg;
@@ -26,6 +28,13 @@ namespace Courses_School.Models
             Phone_number = phone_number;
             Membership_fees = membership_fees;
 
+        }
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
         }
 
         public string First_name
