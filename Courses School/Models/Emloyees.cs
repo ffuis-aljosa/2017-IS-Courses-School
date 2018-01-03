@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Courses_School.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Courses_School.Models
+namespace Courses_School
 {
-    class Emloyees
+    class Employees
     {
+        private int id;
         private string first_name;
         private string last_name;
         private string address;
@@ -15,13 +17,14 @@ namespace Courses_School.Models
         private int phone_number;
         private string email;      
         private string qualification;
-        private int number_of_lessons;
-        private string school_subject;
+        private int number_of_classes;
+        private SchoolSubjects school_subject;
         private int salary;
 
-        public Emloyees (string first_name,string last_name, string address, string date_of_birth, int phone_number, string email,
-            string qualification, int number_of_lessons, string school_subject, int salary)
+        public Employees (int id,string first_name,string last_name, string address, string date_of_birth, int phone_number, string email,
+            string qualification, int number_of_classes, SchoolSubjects school_subject, int salary)
         {
+            this.id = id;
             First_name = first_name;
             Last_name = last_name;
             Address = address;
@@ -29,9 +32,47 @@ namespace Courses_School.Models
             Phone_number = phone_number;
             Email = email;
             Qualification = qualification;
-            Number_of_lessons = number_of_lessons;
-            School_subject = school_subject;
+            Number_of_classes = number_of_classes;
+            SchoolSubject = school_subject;
             Salary = salary;
+        }
+
+        public Employees(string first_name, string last_name, string address, string date_of_birth, string phone_number, string email,
+           string qualification, string number_of_classes, SchoolSubjects school_subject, string salary)
+        {
+            First_name = first_name;
+            Last_name = last_name;
+            Address = address;
+            Date_of_birth = date_of_birth; 
+            Email = email;
+            Qualification = qualification;
+            SchoolSubject = school_subject;
+
+            int phone_numberInt;
+            bool parseSuccessful = int.TryParse(phone_number, out phone_numberInt);
+            if (!parseSuccessful)
+                throw new Exception("Neispravan broj telefona.");
+            Phone_number = phone_numberInt;
+
+            int number_of_classesInt;
+            bool parseSuccessfull = int.TryParse(number_of_classes, out number_of_classesInt);
+            if (!parseSuccessfull)
+                throw new Exception("Neispravan broj casova.");
+            Number_of_classes = phone_numberInt;
+
+            int salaryInt;
+            bool parse_Successful = int.TryParse(salary, out salaryInt);
+            if (!parse_Successful)
+                throw new Exception("Neispavna plata.");
+            Salary = salaryInt;
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
         }
 
         public string First_name
@@ -139,22 +180,22 @@ namespace Courses_School.Models
             }
         }
 
-        public int Number_of_lessons
+        public int Number_of_classes
         {
             get
             {
-                return number_of_lessons;
+                return number_of_classes;
             }
             set
             {
                 if (value < 0 || value == 0)
                     throw new Exception("Neispravan broj časova!");
 
-                number_of_lessons = value;
+                number_of_classes = value;
             }
         }
 
-        public string School_subject
+        public  SchoolSubjects SchoolSubject
         {
             get
             {
@@ -162,9 +203,6 @@ namespace Courses_School.Models
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Predmet ne moze biti prazan !");
-
                 school_subject = value;
             }
         }
@@ -182,13 +220,6 @@ namespace Courses_School.Models
 
                 salary = value;
             }
-        }
-
-
-        public override string ToString()
-        {
-            return first_name + ", " + last_name + ", " + address + ", " + date_of_birth +  ", " + phone_number + ", " + email + ", " + qualification
-                + ", " + school_subject + ", " + number_of_lessons + ", " + salary + " KM ";
         }
     }
 }

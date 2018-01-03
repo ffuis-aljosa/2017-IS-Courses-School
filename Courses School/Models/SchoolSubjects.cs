@@ -8,9 +8,9 @@ namespace Courses_School.Models
         private int id;
         private string school_subject;
         private int number_of_classes;
-        private Emloyees employee;
+        private Employees employee;
 
-        public SchoolSubjects(int id, string school_subject, int number_of_classes, Emloyees employee)
+        public SchoolSubjects(int id, string school_subject, int number_of_classes, Employees employee)
 
         {
             this.id = id;
@@ -63,7 +63,7 @@ namespace Courses_School.Models
 
         }
 
-        public Emloyees Employee
+        public Employees Employee
         {
 
             get
