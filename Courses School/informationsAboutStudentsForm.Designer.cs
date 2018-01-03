@@ -33,9 +33,10 @@
             this.firstNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lastNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.jmbgColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dateAndPlaceOfBirthColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dateOfBirthColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.addressColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.membershipFeesColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.phoneNumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.membershipCostcolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // addNewStudentButton
@@ -55,13 +56,14 @@
             this.firstNameColumnHeader,
             this.lastNameColumnHeader,
             this.jmbgColumnHeader,
-            this.dateAndPlaceOfBirthColumnHeader,
+            this.dateOfBirthColumnHeader,
             this.addressColumnHeader,
-            this.membershipFeesColumnHeader});
+            this.phoneNumberColumnHeader,
+            this.membershipCostcolumnHeader});
             this.informationsAboutStudentsListView.GridLines = true;
             this.informationsAboutStudentsListView.Location = new System.Drawing.Point(12, 66);
             this.informationsAboutStudentsListView.Name = "informationsAboutStudentsListView";
-            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1106, 419);
+            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1066, 419);
             this.informationsAboutStudentsListView.TabIndex = 3;
             this.informationsAboutStudentsListView.UseCompatibleStateImageBehavior = false;
             this.informationsAboutStudentsListView.View = System.Windows.Forms.View.Details;
@@ -69,32 +71,37 @@
             // firstNameColumnHeader
             // 
             this.firstNameColumnHeader.Text = "Ime";
-            this.firstNameColumnHeader.Width = 139;
+            this.firstNameColumnHeader.Width = 150;
             // 
             // lastNameColumnHeader
             // 
             this.lastNameColumnHeader.Text = "Prezime";
-            this.lastNameColumnHeader.Width = 171;
+            this.lastNameColumnHeader.Width = 150;
             // 
             // jmbgColumnHeader
             // 
             this.jmbgColumnHeader.Text = "JMBG";
-            this.jmbgColumnHeader.Width = 170;
+            this.jmbgColumnHeader.Width = 150;
             // 
-            // dateAndPlaceOfBirthColumnHeader
+            // dateOfBirthColumnHeader
             // 
-            this.dateAndPlaceOfBirthColumnHeader.Text = "Datum i mjesto rođenja";
-            this.dateAndPlaceOfBirthColumnHeader.Width = 212;
+            this.dateOfBirthColumnHeader.Text = "Datum rođenja";
+            this.dateOfBirthColumnHeader.Width = 150;
             // 
             // addressColumnHeader
             // 
             this.addressColumnHeader.Text = "Adresa stanovanja";
-            this.addressColumnHeader.Width = 200;
+            this.addressColumnHeader.Width = 150;
             // 
-            // membershipFeesColumnHeader
+            // phoneNumberColumnHeader
             // 
-            this.membershipFeesColumnHeader.Text = "Mjesečna članarina";
-            this.membershipFeesColumnHeader.Width = 210;
+            this.phoneNumberColumnHeader.Text = "Broj telefona";
+            this.phoneNumberColumnHeader.Width = 150;
+            // 
+            // membershipCostcolumnHeader
+            // 
+            this.membershipCostcolumnHeader.Text = "Mjesečna članarina";
+            this.membershipCostcolumnHeader.Width = 150;
             // 
             // informationsAboutStudentsForm
             // 
@@ -102,7 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1138, 538);
+            this.ClientSize = new System.Drawing.Size(1130, 538);
             this.Controls.Add(this.informationsAboutStudentsListView);
             this.Controls.Add(this.addNewStudentButton);
             this.Name = "informationsAboutStudentsForm";
@@ -117,8 +124,9 @@
         private System.Windows.Forms.ColumnHeader firstNameColumnHeader;
         private System.Windows.Forms.ColumnHeader lastNameColumnHeader;
         private System.Windows.Forms.ColumnHeader jmbgColumnHeader;
-        private System.Windows.Forms.ColumnHeader dateAndPlaceOfBirthColumnHeader;
+        private System.Windows.Forms.ColumnHeader dateOfBirthColumnHeader;
         private System.Windows.Forms.ColumnHeader addressColumnHeader;
-        private System.Windows.Forms.ColumnHeader membershipFeesColumnHeader;
+        private System.Windows.Forms.ColumnHeader phoneNumberColumnHeader;
+        private System.Windows.Forms.ColumnHeader membershipCostcolumnHeader;
     }
 }

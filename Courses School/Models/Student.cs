@@ -9,24 +9,39 @@ namespace Courses_School.Models
         private string first_name;
         private string last_name;
         private int jmbg;
-        private string date_and_place_of_birth;
+        private string date_of_birth;
         private string address;
         private int phone_number;
-        private int membership_fees;
+        private int membership_cost;
 
 
-        public Student(int id, string first_name, string last_name, int jmb, string date_and_place_of_birth,
-            string address, int phone_number, int membership_fees)
-            
+        public Student(int id, string first_name, string last_name, string jmbg, string date_of_birth,
+            string address, string phone_number, string membership_cost)
+
         {
             this.id = id;
             First_name = first_name;
             Last_name = last_name;
-            Jmbg = jmbg;
-            Date_and_place_of_birth = date_and_place_of_birth;
+            Date_of_birth = date_of_birth;
             Address = address;
-            Phone_number = phone_number;
-            Membership_fees = membership_fees;
+
+            int jmbgInt;
+            bool parseSuccessful = int.TryParse(jmbg, out jmbgInt);
+            if (!parseSuccessful)
+                throw new Exception("Neispravan matični broj!");
+            Jmbg = jmbgInt;
+
+            int phone_numberInt;
+            bool parseSuccessful1 = int.TryParse(phone_number, out phone_numberInt);
+            if (!parseSuccessful1)
+                throw new Exception("Neispravan broj telefona!");
+            Phone_number = phone_numberInt;
+
+            int membership_costInt;
+            bool parseSuccessful2 = int.TryParse(membership_cost, out membership_costInt);
+            if (!parseSuccessful2)
+                throw new Exception("Neispravna cijena mjesečne članarine!");
+            Membership_cost = membership_costInt;
 
         }
         public int Id
@@ -81,18 +96,18 @@ namespace Courses_School.Models
             }
 
         }
-        public string Date_and_place_of_birth
+        public string Date_of_birth
         {
             get
             {
-                return date_and_place_of_birth;
+                return date_of_birth;
             }
             set
             {
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("Datum i mjesto rođenja ne može biti prazano!");
 
-                date_and_place_of_birth = value;
+                date_of_birth = value;
             }
         }
 
@@ -126,18 +141,24 @@ namespace Courses_School.Models
                 phone_number = value;
             }
         }
-       public int Membership_fees
+        public int Membership_cost
         {
             get
             {
-                return membership_fees;
+                return membership_cost;
             }
             set
             {
                 if (value < 0 || value == 0)
                     throw new Exception("Potrebno je unijeti mjesečnu cijenu članarine!");
-                membership_fees = value;
+                membership_cost = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return first_name + " " + last_name + " " + jmbg + " " + date_of_birth + " " + address + " "
+                + phone_number + " " + membership_cost;
         }
 
     }

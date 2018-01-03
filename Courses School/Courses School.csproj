@@ -85,6 +85,7 @@
       <DependentUpon>administratorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DbConnection.cs" />
+    <Compile Include="Database\StudentRepository.cs" />
     <Compile Include="Database\UserRepository.cs" />
     <Compile Include="informationsAboutEmployeesForm.cs">
       <SubType>Form</SubType>

@@ -34,12 +34,12 @@
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.addressLabel = new System.Windows.Forms.Label();
             this.jmbgTextBox = new System.Windows.Forms.TextBox();
-            this.dateAndPlaceOfBirthLabel = new System.Windows.Forms.Label();
-            this.dateAndPlaceOfBirthTextBox = new System.Windows.Forms.TextBox();
-            this.jmbLabel = new System.Windows.Forms.Label();
+            this.dateOfBirthLabel = new System.Windows.Forms.Label();
+            this.dateOfBirthTextBox = new System.Windows.Forms.TextBox();
+            this.jmbgLabel = new System.Windows.Forms.Label();
             this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.membershipFeesLabel = new System.Windows.Forms.Label();
-            this.membershipFeesTextBox = new System.Windows.Forms.TextBox();
+            this.membershipCostLabel = new System.Windows.Forms.Label();
+            this.membershipCostTextBox = new System.Windows.Forms.TextBox();
             this.addNewStudentButton = new System.Windows.Forms.Button();
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
@@ -95,30 +95,30 @@
             this.jmbgTextBox.Size = new System.Drawing.Size(539, 29);
             this.jmbgTextBox.TabIndex = 5;
             // 
-            // dateAndPlaceOfBirthLabel
+            // dateOfBirthLabel
             // 
-            this.dateAndPlaceOfBirthLabel.AutoSize = true;
-            this.dateAndPlaceOfBirthLabel.Location = new System.Drawing.Point(51, 275);
-            this.dateAndPlaceOfBirthLabel.Name = "dateAndPlaceOfBirthLabel";
-            this.dateAndPlaceOfBirthLabel.Size = new System.Drawing.Size(208, 24);
-            this.dateAndPlaceOfBirthLabel.TabIndex = 6;
-            this.dateAndPlaceOfBirthLabel.Text = "Datum i mjesto rođenja:";
+            this.dateOfBirthLabel.AutoSize = true;
+            this.dateOfBirthLabel.Location = new System.Drawing.Point(51, 275);
+            this.dateOfBirthLabel.Name = "dateOfBirthLabel";
+            this.dateOfBirthLabel.Size = new System.Drawing.Size(139, 24);
+            this.dateOfBirthLabel.TabIndex = 6;
+            this.dateOfBirthLabel.Text = "Datum rođenja:";
             // 
-            // dateAndPlaceOfBirthTextBox
+            // dateOfBirthTextBox
             // 
-            this.dateAndPlaceOfBirthTextBox.Location = new System.Drawing.Point(55, 317);
-            this.dateAndPlaceOfBirthTextBox.Name = "dateAndPlaceOfBirthTextBox";
-            this.dateAndPlaceOfBirthTextBox.Size = new System.Drawing.Size(539, 29);
-            this.dateAndPlaceOfBirthTextBox.TabIndex = 7;
+            this.dateOfBirthTextBox.Location = new System.Drawing.Point(55, 317);
+            this.dateOfBirthTextBox.Name = "dateOfBirthTextBox";
+            this.dateOfBirthTextBox.Size = new System.Drawing.Size(539, 29);
+            this.dateOfBirthTextBox.TabIndex = 7;
             // 
-            // jmbLabel
+            // jmbgLabel
             // 
-            this.jmbLabel.AutoSize = true;
-            this.jmbLabel.Location = new System.Drawing.Point(51, 191);
-            this.jmbLabel.Name = "jmbLabel";
-            this.jmbLabel.Size = new System.Drawing.Size(66, 24);
-            this.jmbLabel.TabIndex = 8;
-            this.jmbLabel.Text = "JMBG:";
+            this.jmbgLabel.AutoSize = true;
+            this.jmbgLabel.Location = new System.Drawing.Point(51, 191);
+            this.jmbgLabel.Name = "jmbgLabel";
+            this.jmbgLabel.Size = new System.Drawing.Size(66, 24);
+            this.jmbgLabel.TabIndex = 8;
+            this.jmbgLabel.Text = "JMBG:";
             // 
             // addressTextBox
             // 
@@ -127,21 +127,21 @@
             this.addressTextBox.Size = new System.Drawing.Size(539, 29);
             this.addressTextBox.TabIndex = 9;
             // 
-            // membershipFeesLabel
+            // membershipCostLabel
             // 
-            this.membershipFeesLabel.AutoSize = true;
-            this.membershipFeesLabel.Location = new System.Drawing.Point(51, 526);
-            this.membershipFeesLabel.Name = "membershipFeesLabel";
-            this.membershipFeesLabel.Size = new System.Drawing.Size(178, 24);
-            this.membershipFeesLabel.TabIndex = 10;
-            this.membershipFeesLabel.Text = "Mjesečna članarina:";
+            this.membershipCostLabel.AutoSize = true;
+            this.membershipCostLabel.Location = new System.Drawing.Point(51, 526);
+            this.membershipCostLabel.Name = "membershipCostLabel";
+            this.membershipCostLabel.Size = new System.Drawing.Size(178, 24);
+            this.membershipCostLabel.TabIndex = 10;
+            this.membershipCostLabel.Text = "Mjesečna članarina:";
             // 
-            // membershipFeesTextBox
+            // membershipCostTextBox
             // 
-            this.membershipFeesTextBox.Location = new System.Drawing.Point(55, 564);
-            this.membershipFeesTextBox.Name = "membershipFeesTextBox";
-            this.membershipFeesTextBox.Size = new System.Drawing.Size(539, 29);
-            this.membershipFeesTextBox.TabIndex = 11;
+            this.membershipCostTextBox.Location = new System.Drawing.Point(55, 564);
+            this.membershipCostTextBox.Name = "membershipCostTextBox";
+            this.membershipCostTextBox.Size = new System.Drawing.Size(539, 29);
+            this.membershipCostTextBox.TabIndex = 11;
             // 
             // addNewStudentButton
             // 
@@ -178,12 +178,12 @@
             this.Controls.Add(this.phoneNumberTextBox);
             this.Controls.Add(this.phoneNumberLabel);
             this.Controls.Add(this.addNewStudentButton);
-            this.Controls.Add(this.membershipFeesTextBox);
-            this.Controls.Add(this.membershipFeesLabel);
+            this.Controls.Add(this.membershipCostTextBox);
+            this.Controls.Add(this.membershipCostLabel);
             this.Controls.Add(this.addressTextBox);
-            this.Controls.Add(this.jmbLabel);
-            this.Controls.Add(this.dateAndPlaceOfBirthTextBox);
-            this.Controls.Add(this.dateAndPlaceOfBirthLabel);
+            this.Controls.Add(this.jmbgLabel);
+            this.Controls.Add(this.dateOfBirthTextBox);
+            this.Controls.Add(this.dateOfBirthLabel);
             this.Controls.Add(this.jmbgTextBox);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.lastNameTextBox);
@@ -206,12 +206,12 @@
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.TextBox jmbgTextBox;
-        private System.Windows.Forms.Label dateAndPlaceOfBirthLabel;
-        private System.Windows.Forms.TextBox dateAndPlaceOfBirthTextBox;
-        private System.Windows.Forms.Label jmbLabel;
+        private System.Windows.Forms.Label dateOfBirthLabel;
+        private System.Windows.Forms.TextBox dateOfBirthTextBox;
+        private System.Windows.Forms.Label jmbgLabel;
         private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.Label membershipFeesLabel;
-        private System.Windows.Forms.TextBox membershipFeesTextBox;
+        private System.Windows.Forms.Label membershipCostLabel;
+        private System.Windows.Forms.TextBox membershipCostTextBox;
         private System.Windows.Forms.Button addNewStudentButton;
         private System.Windows.Forms.Label phoneNumberLabel;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
