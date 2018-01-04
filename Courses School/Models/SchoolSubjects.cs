@@ -8,16 +8,26 @@ namespace Courses_School.Models
         private int id;
         private string school_subject;
         private int number_of_classes;
-        private Employees employee;
+       
 
-        public SchoolSubjects(int id, string school_subject, int number_of_classes, Employees employee)
+        public SchoolSubjects(int id, string school_subject, int number_of_classes)
 
         {
             this.id = id;
             School_subject = school_subject;
             Number_of_classes = number_of_classes;
-            Employee = employee;
 
+        }
+
+        public SchoolSubjects(string school_subject, string number_of_classes)
+        {
+            School_subject = school_subject;
+
+            int number_of_classes_int;
+            bool parseSuccessful = int.TryParse(number_of_classes, out number_of_classes_int);
+            if (!parseSuccessful)
+                throw new Exception("Broj časova nije dobro unesen.");
+            Number_of_classes = number_of_classes_int;
         }
 
         public int Id
@@ -62,20 +72,10 @@ namespace Courses_School.Models
             }
 
         }
-
-        public Employees Employee
+        public override string ToString()
         {
-
-            get
-            {
-                return employee;
-            }
-            set
-            {
-                employee = value;
-            }
-
+            return school_subject + " " + number_of_classes;
         }
-        
+
     }
 }
