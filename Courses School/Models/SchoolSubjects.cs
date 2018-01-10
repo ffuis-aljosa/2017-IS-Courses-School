@@ -30,6 +30,15 @@ namespace Courses_School.Models
             Number_of_classes = number_of_classes_int;
         }
 
+        public SchoolSubjects(int id, string school_subject )
+
+        {
+            this.id = id;
+            School_subject = school_subject;
+            
+
+        }
+
         public int Id
         {
             get
@@ -52,11 +61,6 @@ namespace Courses_School.Models
 
                 school_subject = value;
             }
-        }
-
-        internal void Add(SchoolSubjects schoolSubject)
-        {
-            throw new NotImplementedException();
         }
 
         public int Number_of_classes

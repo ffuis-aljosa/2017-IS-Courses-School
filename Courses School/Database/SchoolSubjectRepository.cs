@@ -28,9 +28,14 @@ namespace Courses_School.Database
                 int number_of_classes = (int)reader["number_of_classes"];
 
                 SchoolSubjects schoolSubject = new SchoolSubjects(id, school_subject, number_of_classes);
-                schoolSubject.Add(schoolSubject);
+                addSchoolSubject(schoolSubjects, schoolSubject);
             }
             return schoolSubjects;
-        }   
+        }
+
+        private static void addSchoolSubject(List<SchoolSubjects> schoolSubjects, SchoolSubjects schoolSubject)
+        {
+            schoolSubjects.Add(schoolSubject);
+        }
     }
 }

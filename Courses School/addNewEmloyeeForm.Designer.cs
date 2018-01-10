@@ -32,20 +32,18 @@
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.phonuNumberTextBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.dateOfBirthTextBox = new System.Windows.Forms.TextBox();
             this.lastNameLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.schoolSubjectLabel = new System.Windows.Forms.Label();
-            this.numberOfClassesLabel = new System.Windows.Forms.Label();
+            this.schoolSubjectAndNumberOfClassesLabel = new System.Windows.Forms.Label();
             this.salaryLabel = new System.Windows.Forms.Label();
             this.qualificationLabel = new System.Windows.Forms.Label();
-            this.numberOfClassesTextBox = new System.Windows.Forms.TextBox();
             this.qualificationTextBox = new System.Windows.Forms.TextBox();
-            this.schoolSubjectComboBox = new System.Windows.Forms.ComboBox();
+            this.schoolSubjectAndNumberOfClassesComboBox = new System.Windows.Forms.ComboBox();
             this.addEmployeeButton = new System.Windows.Forms.Button();
             this.salaryTextBox = new System.Windows.Forms.TextBox();
             this.dateOfBirthLabel = new System.Windows.Forms.Label();
@@ -79,12 +77,12 @@
             this.firstNameTextBox.Size = new System.Drawing.Size(372, 20);
             this.firstNameTextBox.TabIndex = 3;
             // 
-            // phonuNumberTextBox
+            // phoneNumberTextBox
             // 
-            this.phonuNumberTextBox.Location = new System.Drawing.Point(128, 244);
-            this.phonuNumberTextBox.Name = "phonuNumberTextBox";
-            this.phonuNumberTextBox.Size = new System.Drawing.Size(372, 20);
-            this.phonuNumberTextBox.TabIndex = 4;
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(128, 244);
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(372, 20);
+            this.phoneNumberTextBox.TabIndex = 4;
             // 
             // dateOfBirthTextBox
             // 
@@ -143,31 +141,21 @@
             this.emailLabel.TabIndex = 11;
             this.emailLabel.Text = "E-mail:";
             // 
-            // schoolSubjectLabel
+            // schoolSubjectAndNumberOfClassesLabel
             // 
-            this.schoolSubjectLabel.AutoSize = true;
-            this.schoolSubjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.schoolSubjectLabel.Location = new System.Drawing.Point(125, 379);
-            this.schoolSubjectLabel.Name = "schoolSubjectLabel";
-            this.schoolSubjectLabel.Size = new System.Drawing.Size(68, 18);
-            this.schoolSubjectLabel.TabIndex = 12;
-            this.schoolSubjectLabel.Text = "Predmet:";
-            // 
-            // numberOfClassesLabel
-            // 
-            this.numberOfClassesLabel.AutoSize = true;
-            this.numberOfClassesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.numberOfClassesLabel.Location = new System.Drawing.Point(127, 432);
-            this.numberOfClassesLabel.Name = "numberOfClassesLabel";
-            this.numberOfClassesLabel.Size = new System.Drawing.Size(91, 18);
-            this.numberOfClassesLabel.TabIndex = 13;
-            this.numberOfClassesLabel.Text = "Broj časova:";
+            this.schoolSubjectAndNumberOfClassesLabel.AutoSize = true;
+            this.schoolSubjectAndNumberOfClassesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.schoolSubjectAndNumberOfClassesLabel.Location = new System.Drawing.Point(125, 379);
+            this.schoolSubjectAndNumberOfClassesLabel.Name = "schoolSubjectAndNumberOfClassesLabel";
+            this.schoolSubjectAndNumberOfClassesLabel.Size = new System.Drawing.Size(156, 18);
+            this.schoolSubjectAndNumberOfClassesLabel.TabIndex = 12;
+            this.schoolSubjectAndNumberOfClassesLabel.Text = "Predmet i broj časova:";
             // 
             // salaryLabel
             // 
             this.salaryLabel.AutoSize = true;
             this.salaryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.salaryLabel.Location = new System.Drawing.Point(126, 479);
+            this.salaryLabel.Location = new System.Drawing.Point(128, 432);
             this.salaryLabel.Name = "salaryLabel";
             this.salaryLabel.Size = new System.Drawing.Size(45, 18);
             this.salaryLabel.TabIndex = 14;
@@ -183,13 +171,6 @@
             this.qualificationLabel.TabIndex = 15;
             this.qualificationLabel.Text = "Stručna sprema:";
             // 
-            // numberOfClassesTextBox
-            // 
-            this.numberOfClassesTextBox.Location = new System.Drawing.Point(129, 453);
-            this.numberOfClassesTextBox.Name = "numberOfClassesTextBox";
-            this.numberOfClassesTextBox.Size = new System.Drawing.Size(372, 20);
-            this.numberOfClassesTextBox.TabIndex = 16;
-            // 
             // qualificationTextBox
             // 
             this.qualificationTextBox.Location = new System.Drawing.Point(128, 356);
@@ -197,34 +178,28 @@
             this.qualificationTextBox.Size = new System.Drawing.Size(372, 20);
             this.qualificationTextBox.TabIndex = 17;
             // 
-            // schoolSubjectComboBox
+            // schoolSubjectAndNumberOfClassesComboBox
             // 
-            this.schoolSubjectComboBox.FormattingEnabled = true;
-            this.schoolSubjectComboBox.Items.AddRange(new object[] {
-            "Engleski jezik A1 ",
-            "Engleski jezik A2 ",
-            "Engleski jezik B1 ",
-            "Engleski jezik B2 ",
-            "Engleski jezik C1 ",
-            "Engleski jezik C2"});
-            this.schoolSubjectComboBox.Location = new System.Drawing.Point(131, 408);
-            this.schoolSubjectComboBox.Name = "schoolSubjectComboBox";
-            this.schoolSubjectComboBox.Size = new System.Drawing.Size(372, 21);
-            this.schoolSubjectComboBox.TabIndex = 18;
+            this.schoolSubjectAndNumberOfClassesComboBox.FormattingEnabled = true;
+            this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(131, 408);
+            this.schoolSubjectAndNumberOfClassesComboBox.Name = "schoolSubjectAndNumberOfClassesComboBox";
+            this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(372, 21);
+            this.schoolSubjectAndNumberOfClassesComboBox.TabIndex = 18;
             // 
             // addEmployeeButton
             // 
             this.addEmployeeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.addEmployeeButton.Location = new System.Drawing.Point(245, 526);
+            this.addEmployeeButton.Location = new System.Drawing.Point(224, 498);
             this.addEmployeeButton.Name = "addEmployeeButton";
-            this.addEmployeeButton.Size = new System.Drawing.Size(130, 34);
+            this.addEmployeeButton.Size = new System.Drawing.Size(173, 56);
             this.addEmployeeButton.TabIndex = 19;
             this.addEmployeeButton.Text = "Dodaj !";
             this.addEmployeeButton.UseVisualStyleBackColor = true;
+            this.addEmployeeButton.Click += new System.EventHandler(this.addEmployeeButton_Click);
             // 
             // salaryTextBox
             // 
-            this.salaryTextBox.Location = new System.Drawing.Point(128, 500);
+            this.salaryTextBox.Location = new System.Drawing.Point(128, 453);
             this.salaryTextBox.Name = "salaryTextBox";
             this.salaryTextBox.Size = new System.Drawing.Size(372, 20);
             this.salaryTextBox.TabIndex = 20;
@@ -248,20 +223,18 @@
             this.Controls.Add(this.dateOfBirthLabel);
             this.Controls.Add(this.salaryTextBox);
             this.Controls.Add(this.addEmployeeButton);
-            this.Controls.Add(this.schoolSubjectComboBox);
+            this.Controls.Add(this.schoolSubjectAndNumberOfClassesComboBox);
             this.Controls.Add(this.qualificationTextBox);
-            this.Controls.Add(this.numberOfClassesTextBox);
             this.Controls.Add(this.qualificationLabel);
             this.Controls.Add(this.salaryLabel);
-            this.Controls.Add(this.numberOfClassesLabel);
-            this.Controls.Add(this.schoolSubjectLabel);
+            this.Controls.Add(this.schoolSubjectAndNumberOfClassesLabel);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.phoneNumberLabel);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.dateOfBirthTextBox);
-            this.Controls.Add(this.phonuNumberTextBox);
+            this.Controls.Add(this.phoneNumberTextBox);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.addressTextBox);
@@ -279,20 +252,18 @@
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.TextBox phonuNumberTextBox;
+        private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox dateOfBirthTextBox;
         private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.Label phoneNumberLabel;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.Label schoolSubjectLabel;
-        private System.Windows.Forms.Label numberOfClassesLabel;
+        private System.Windows.Forms.Label schoolSubjectAndNumberOfClassesLabel;
         private System.Windows.Forms.Label salaryLabel;
         private System.Windows.Forms.Label qualificationLabel;
-        private System.Windows.Forms.TextBox numberOfClassesTextBox;
         private System.Windows.Forms.TextBox qualificationTextBox;
-        private System.Windows.Forms.ComboBox schoolSubjectComboBox;
+        private System.Windows.Forms.ComboBox schoolSubjectAndNumberOfClassesComboBox;
         private System.Windows.Forms.Button addEmployeeButton;
         private System.Windows.Forms.TextBox salaryTextBox;
         private System.Windows.Forms.Label dateOfBirthLabel;
