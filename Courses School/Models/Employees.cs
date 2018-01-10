@@ -17,12 +17,11 @@ namespace Courses_School
         private int phone_number;
         private string email;      
         private string qualification;
-        private int number_of_classes;
         private SchoolSubjects school_subject;
         private int salary;
 
         public Employees (int id,string first_name,string last_name, string address, string date_of_birth, int phone_number, string email,
-            string qualification, int number_of_classes, SchoolSubjects school_subject, int salary)
+            string qualification, SchoolSubjects school_subject, int salary)
         {
             this.id = id;
             First_name = first_name;
@@ -32,13 +31,12 @@ namespace Courses_School
             Phone_number = phone_number;
             Email = email;
             Qualification = qualification;
-            Number_of_classes = number_of_classes;
             SchoolSubject = school_subject;
             Salary = salary;
         }
 
         public Employees(string first_name, string last_name, string address, string date_of_birth, string phone_number, string email,
-           string qualification, string number_of_classes, SchoolSubjects school_subject, string salary)
+           string qualification, SchoolSubjects school_subject, string salary)
         {
             First_name = first_name;
             Last_name = last_name;
@@ -53,12 +51,6 @@ namespace Courses_School
             if (!parseSuccessful)
                 throw new Exception("Neispravan broj telefona.");
             Phone_number = phone_numberInt;
-
-            int number_of_classesInt;
-            bool parseSuccessfull = int.TryParse(number_of_classes, out number_of_classesInt);
-            if (!parseSuccessfull)
-                throw new Exception("Neispravan broj casova.");
-            Number_of_classes = phone_numberInt;
 
             int salaryInt;
             bool parse_Successful = int.TryParse(salary, out salaryInt);
@@ -177,21 +169,6 @@ namespace Courses_School
                     throw new Exception("Zanimanje ne moze biti prazno !");
 
                 qualification = value;
-            }
-        }
-
-        public int Number_of_classes
-        {
-            get
-            {
-                return number_of_classes;
-            }
-            set
-            {
-                if (value < 0 || value == 0)
-                    throw new Exception("Neispravan broj časova!");
-
-                number_of_classes = value;
             }
         }
 

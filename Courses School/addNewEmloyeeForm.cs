@@ -37,8 +37,7 @@ namespace Courses_School
                 dateOfBirthTextBox.Text,
                 phoneNumberTextBox.Text,
                 emailTextBox.Text,
-                qualificationTextBox.Text,
-                numberOfClassesTextBox.Text,
+                qualificationTextBox.Text,               
                 (SchoolSubjects)schoolSubjectAndNumberOfClassesComboBox.SelectedItem,
                 salaryTextBox.Text
                 );

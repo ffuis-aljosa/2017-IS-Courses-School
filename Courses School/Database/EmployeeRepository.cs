@@ -35,15 +35,14 @@ namespace Courses_School.Database
                 int phone_number = reader.GetInt32(5);
                 string email = reader.GetString(6);
                 string qualification = reader.GetString(7);
-                int number_of_classes = reader.GetInt32(8);
                 int salary = reader.GetInt32(9);
                 int schoolSubjectId = reader.GetInt32(10);
                 string schoolSubjectName = reader.GetString(11);
                 int schoolSubjectNumberOfClasses = reader.GetInt32(12);
 
                 Employees newEmployee = new Employees(id, first_name, last_name, address, date_of_birth, phone_number, email, qualification,
-                    number_of_classes, new SchoolSubjects(schoolSubjectId, schoolSubjectName, schoolSubjectNumberOfClasses), salary);
-                employees.Add(newEmployee);
+                     new SchoolSubjects(schoolSubjectId, schoolSubjectName, schoolSubjectNumberOfClasses), salary);
+                     employees.Add(newEmployee);
             }
             return employees;
         }
@@ -53,7 +52,6 @@ namespace Courses_School.Database
             string sql = "INSERT INTO employees (first_name,last_name,address,date_of_birth,phone_number,email,qualification,number_of_classes, school_subject_id,salary) VALUES " +
                     "('" + employee.First_name + "', " + employee.Last_name + ", " + employee.Address + ", " + employee.Date_of_birth + ", "
                     + employee.Phone_number + ", " + employee.Email + ", " + employee.Qualification + ", "
-                    + employee.Number_of_classes + ", "
                     + employee.SchoolSubject.Id + ")"
                     + employee.Salary + ", ";
 
