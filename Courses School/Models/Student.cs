@@ -13,9 +13,10 @@ namespace Courses_School.Models
         private string address;
         private string phone_number;
         private int membership_cost;
+        private SchoolSubjects school_subject;
 
         public Student(int id, string first_name, string last_name, string jmbg, string date_of_birth,
-          string address, string phone_number, int membership_cost)
+          string address, string phone_number, int membership_cost, SchoolSubjects school_subject)
 
         {
             this.id = id;
@@ -26,10 +27,11 @@ namespace Courses_School.Models
             Address = address;
             Phone_number = phone_number;
             Membership_cost = membership_cost;
+            SchoolSubject = school_subject;
         }
 
         public Student(string first_name, string last_name, string jmbg, string date_of_birth,
-        string address, string phone_number, string membership_cost)
+        string address, string phone_number, string membership_cost, SchoolSubjects school_subject)
 
         {
 
@@ -39,6 +41,7 @@ namespace Courses_School.Models
             Address = address;
             Date_of_birth = date_of_birth;
             Phone_number = phone_number;
+            SchoolSubject = school_subject;
 
             int membership_costInt;
             bool parseSuccessful2 = int.TryParse(membership_cost, out membership_costInt);
@@ -92,7 +95,7 @@ namespace Courses_School.Models
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                if (value.Length !=13)
                     throw new Exception("Matični broj mora da ima 13 karaktera!");
 
                 jmbg = value;
@@ -154,6 +157,17 @@ namespace Courses_School.Models
                 if (value < 0 || value == 0)
                     throw new Exception("Potrebno je unijeti mjesečnu cijenu članarine!");
                 membership_cost = value;
+            }
+        }
+        public SchoolSubjects SchoolSubject
+        {
+            get
+            {
+                return school_subject;
+            }
+            set
+            {
+                school_subject = value;
             }
         }
 

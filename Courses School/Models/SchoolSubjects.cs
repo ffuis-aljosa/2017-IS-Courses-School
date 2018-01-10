@@ -3,7 +3,7 @@
 
 namespace Courses_School.Models
 {
-    class SchoolSubjects
+    public class SchoolSubjects
     {
         private int id;
         private string school_subject;

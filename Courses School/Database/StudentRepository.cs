@@ -13,7 +13,8 @@ namespace Courses_School.Database
 
             string sql =
                 @"SELECT s.id, s.First_name, s.Last_name, s.Jmbg, s.Date_of_birth, s.Address,
-                  s.Phone_number, s.Membership_cost FROM Students AS s";
+                  s.Phone_number, s.Membership_cost, ss.school_subject, ss.number_of_classes FROM Students AS s
+                   JOIN schoolsubjects AS ss ON s.school_subject_id = ss.id";
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
             SqlCeDataReader reader = command.ExecuteReader();
@@ -29,9 +30,13 @@ namespace Courses_School.Database
                 string address = reader.GetString(5);
                 string phone_number = reader.GetString(6);
                 int membership_cost = reader.GetInt32(7);
+                int schoolSubjectId = reader.GetInt32(10);
+                string schoolSubjectName = reader.GetString(11);
+                int schoolSubjectNumberOfClasses = reader.GetInt32(12);
 
 
-                Student newStudent = new Student(id, first_name, last_name, jmbg, date_of_birth, address, phone_number, membership_cost);
+                Student newStudent = new Student(id, first_name, last_name, jmbg, date_of_birth, address, phone_number, membership_cost,
+                    new SchoolSubjects(schoolSubjectId, schoolSubjectName, schoolSubjectNumberOfClasses));
                 students.Add(newStudent);
             }
 
@@ -40,9 +45,9 @@ namespace Courses_School.Database
 
         public static void createStudent(Student student)
         {
-            string sql = "INSERT INTO Students (first_name, last_name, jmbg, date_of_birth, address, phone_number, membership_cost) VALUES" +
+            string sql = "INSERT INTO Students (first_name, last_name, jmbg, date_of_birth, address, phone_number, membership_cost, school_subject_id) VALUES" +
                 "('" + student.First_name + "','" + student.Last_name + "','" + student.Jmbg + "','" + student.Date_of_birth + " " + "00:00','"
-                + student.Address + "','" + student.Phone_number + "'," + student.Membership_cost + ")";
+                + student.Address + "','" + student.Phone_number + "'," + student.Membership_cost + "," + student.SchoolSubject.Id + ")";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
             command.ExecuteNonQuery();

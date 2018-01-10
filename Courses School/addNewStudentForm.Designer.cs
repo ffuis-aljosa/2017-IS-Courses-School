@@ -43,6 +43,7 @@
             this.addNewStudentButton = new System.Windows.Forms.Button();
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.schoolSubjectAndNumberOfClassesComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -145,7 +146,7 @@
             // 
             // addNewStudentButton
             // 
-            this.addNewStudentButton.Location = new System.Drawing.Point(173, 627);
+            this.addNewStudentButton.Location = new System.Drawing.Point(660, 631);
             this.addNewStudentButton.Name = "addNewStudentButton";
             this.addNewStudentButton.Size = new System.Drawing.Size(347, 41);
             this.addNewStudentButton.TabIndex = 16;
@@ -169,6 +170,14 @@
             this.phoneNumberTextBox.Size = new System.Drawing.Size(539, 29);
             this.phoneNumberTextBox.TabIndex = 18;
             // 
+            // schoolSubjectAndNumberOfClassesComboBox
+            // 
+            this.schoolSubjectAndNumberOfClassesComboBox.FormattingEnabled = true;
+            this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(55, 640);
+            this.schoolSubjectAndNumberOfClassesComboBox.Name = "schoolSubjectAndNumberOfClassesComboBox";
+            this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(539, 32);
+            this.schoolSubjectAndNumberOfClassesComboBox.TabIndex = 19;
+            // 
             // addNewStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -176,6 +185,7 @@
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1030, 701);
+            this.Controls.Add(this.schoolSubjectAndNumberOfClassesComboBox);
             this.Controls.Add(this.phoneNumberTextBox);
             this.Controls.Add(this.phoneNumberLabel);
             this.Controls.Add(this.addNewStudentButton);
@@ -216,5 +226,6 @@
         private System.Windows.Forms.Button addNewStudentButton;
         private System.Windows.Forms.Label phoneNumberLabel;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
+        private System.Windows.Forms.ComboBox schoolSubjectAndNumberOfClassesComboBox;
     }
 }

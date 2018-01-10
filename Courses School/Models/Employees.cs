@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Courses_School
 {
-    class Employees
+    public class Employees
     {
         private int id;
         private string first_name;
