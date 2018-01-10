@@ -14,14 +14,14 @@ namespace Courses_School
         private string last_name;
         private string address;
         private string date_of_birth;
-        private int phone_number;
+        private string phone_number;
         private string email;      
         private string qualification;
         private SchoolSubjects school_subject;
-        private int salary;
+        private string salary;
 
-        public Employees (int id,string first_name,string last_name, string address, string date_of_birth, int phone_number, string email,
-            string qualification, SchoolSubjects school_subject, int salary)
+        public Employees (int id,string first_name,string last_name, string address, string date_of_birth, string phone_number, string email,
+            string qualification, SchoolSubjects school_subject, string salary)
         {
             this.id = id;
             First_name = first_name;
@@ -41,22 +41,12 @@ namespace Courses_School
             First_name = first_name;
             Last_name = last_name;
             Address = address;
-            Date_of_birth = date_of_birth; 
+            Date_of_birth = date_of_birth;
+            Phone_number = phone_number;
             Email = email;
             Qualification = qualification;
             SchoolSubject = school_subject;
-
-            int phone_numberInt;
-            bool parseSuccessful = int.TryParse(phone_number, out phone_numberInt);
-            if (!parseSuccessful)
-                throw new Exception("Neispravan broj telefona.");
-            Phone_number = phone_numberInt;
-
-            int salaryInt;
-            bool parse_Successful = int.TryParse(salary, out salaryInt);
-            if (!parse_Successful)
-                throw new Exception("Neispavna plata.");
-            Salary = salaryInt;
+            Salary = salary;
         }
 
         public int Id
@@ -127,7 +117,7 @@ namespace Courses_School
             }
         }
 
-        public int Phone_number
+        public string Phone_number
         {
             get
             {
@@ -135,9 +125,6 @@ namespace Courses_School
             }
             set
             {
-                if (value < 0 || value  == 0)
-                    throw new Exception(" Neispravna plata !");
-
                 phone_number = value;
             }
         }
@@ -184,7 +171,7 @@ namespace Courses_School
             }
         }
 
-        public int Salary
+        public string Salary
         {
             get
             {
@@ -192,11 +179,14 @@ namespace Courses_School
             }
             set
             {
-                if (value < 0 || value == 0)
-                    throw new Exception("Neispravna plata !");
-
                 salary = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return first_name + " " + last_name + " " + address + " " + date_of_birth + " " + phone_number +  " "
+                + email + " " + qualification + " " + salary;
         }
     }
 }

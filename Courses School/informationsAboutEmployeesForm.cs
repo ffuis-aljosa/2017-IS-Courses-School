@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Courses_School.Models;
+using Courses_School.Database;
 
 namespace Courses_School
 {
@@ -18,10 +20,14 @@ namespace Courses_School
         }
 
         private void addNewEmployeeButton_Click(object sender, EventArgs e)
-        {
+        {          
             addNewEmployeeForm form = new addNewEmployeeForm();
-            form.Show();
+            DialogResult result = form.ShowDialog();
 
+            if (result == DialogResult.OK)
+            {
+                EmployeeRepository.createEmployee(form.NewEmployee);
+            }
         }
     }
 }
