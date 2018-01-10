@@ -54,6 +54,11 @@ namespace Courses_School.Models
             }
         }
 
+        internal void Add(SchoolSubjects schoolSubject)
+        {
+            throw new NotImplementedException();
+        }
+
         public int Number_of_classes
         {
             get
