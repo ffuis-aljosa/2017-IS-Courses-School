@@ -105,6 +105,7 @@
             this.Controls.Add(this.usernameTextBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "loginForm";
             this.ResumeLayout(false);
             this.PerformLayout();

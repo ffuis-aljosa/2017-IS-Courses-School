@@ -20,6 +20,7 @@ namespace Courses_School.Database
 
             while (reader.Read())
             {
+
                 int id = reader.GetInt32(0);
                 string first_name = reader.GetString(1);
                 string last_name = reader.GetString(2);
@@ -27,7 +28,7 @@ namespace Courses_School.Database
                 string date_of_birth = reader.GetString(4);
                 string address = reader.GetString(5);
                 string phone_number = reader.GetString(6);
-                string membership_cost = reader.GetString(7);
+                int membership_cost = reader.GetInt32(7);
 
 
                 Student newStudent = new Student(id, first_name, last_name, jmbg, date_of_birth, address, phone_number, membership_cost);
@@ -39,14 +40,12 @@ namespace Courses_School.Database
 
         public static void createStudent(Student student)
         {
-            string sql = "INSERT INTO Students (First_name, Last_name, Jmbg, Date_of_birth, Address, Phone_number, Membership_cost) VALUES" +
-                "('" + student.First_name + "','" + student.Last_name + "'," + student.Membership_cost + ",'" + student.Date_of_birth + "','"
-                + student.Address + "'," + student.Phone_number + "," + student.Membership_cost + ")";
+            string sql = "INSERT INTO Students (first_name, last_name, jmbg, date_of_birth, address, phone_number, membership_cost) VALUES" +
+                "('" + student.First_name + "','" + student.Last_name + "','" + student.Jmbg + "','" + student.Date_of_birth + " " + "00:00','"
+                + student.Address + "','" + student.Phone_number + "'," + student.Membership_cost + ")";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
             command.ExecuteNonQuery();
         }
     }
 }
-
-

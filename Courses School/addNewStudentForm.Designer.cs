@@ -151,6 +151,7 @@
             this.addNewStudentButton.TabIndex = 16;
             this.addNewStudentButton.Text = "Dodaj!";
             this.addNewStudentButton.UseVisualStyleBackColor = true;
+            this.addNewStudentButton.Click += new System.EventHandler(this.addNewStudentButton_Click);
             // 
             // phoneNumberLabel
             // 

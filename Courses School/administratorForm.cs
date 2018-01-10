@@ -34,10 +34,12 @@ namespace Courses_School
             form.Show();
         }
 
-        private void administratorButton_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             newUserForm form = new newUserForm();
             form.Show();
         }
+
     }
 }

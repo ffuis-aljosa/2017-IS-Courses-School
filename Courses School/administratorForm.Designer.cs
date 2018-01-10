@@ -33,7 +33,11 @@
             this.schoolSubjectbutton = new System.Windows.Forms.Button();
             this.informationsAboutStudentsButton = new System.Windows.Forms.Button();
             this.informationsAboutEmployeesButton = new System.Windows.Forms.Button();
-            this.administratorButton = new System.Windows.Forms.Button();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // schoolTimetableButton
@@ -84,16 +88,37 @@
             this.informationsAboutEmployeesButton.UseVisualStyleBackColor = true;
             this.informationsAboutEmployeesButton.Click += new System.EventHandler(this.informationsAboutEmployeesButton_Click);
             // 
-            // administratorButton
+            // menuStrip
             // 
-            this.administratorButton.AllowDrop = true;
-            this.administratorButton.Location = new System.Drawing.Point(0, 0);
-            this.administratorButton.Name = "administratorButton";
-            this.administratorButton.Size = new System.Drawing.Size(139, 37);
-            this.administratorButton.TabIndex = 4;
-            this.administratorButton.Text = "Administrator";
-            this.administratorButton.UseVisualStyleBackColor = true;
-            this.administratorButton.Click += new System.EventHandler(this.administratorButton_Click);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(747, 28);
+            this.menuStrip.TabIndex = 5;
+            // 
+            // createToolStripMenuItem
+            // 
+            this.createToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.createToolStripMenuItem.Name = "createToolStripMenuItem";
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.createToolStripMenuItem.Text = "Administrator";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(208, 26);
+            this.toolStripMenuItem1.Text = "Novi administrator";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(208, 26);
+            this.toolStripMenuItem2.Text = "Novi korisnik";
             // 
             // administratorForm
             // 
@@ -101,16 +126,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(747, 393);
-            this.Controls.Add(this.administratorButton);
             this.Controls.Add(this.informationsAboutEmployeesButton);
             this.Controls.Add(this.informationsAboutStudentsButton);
             this.Controls.Add(this.schoolSubjectbutton);
             this.Controls.Add(this.schoolTimetableButton);
+            this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "administratorForm";
-            this.Text = "administratorForm";
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,6 +148,10 @@
         private System.Windows.Forms.Button schoolSubjectbutton;
         private System.Windows.Forms.Button informationsAboutStudentsButton;
         private System.Windows.Forms.Button informationsAboutEmployeesButton;
-        private System.Windows.Forms.Button administratorButton;
+
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem createToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

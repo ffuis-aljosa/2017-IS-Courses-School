@@ -3,39 +3,42 @@
 
 namespace Courses_School.Models
 {
-    class Student
+    public class Student
     {
         private int id;
         private string first_name;
         private string last_name;
-        private int jmbg;
+        private string jmbg;
         private string date_of_birth;
         private string address;
-        private int phone_number;
+        private string phone_number;
         private int membership_cost;
 
-
         public Student(int id, string first_name, string last_name, string jmbg, string date_of_birth,
-            string address, string phone_number, string membership_cost)
+          string address, string phone_number, int membership_cost)
 
         {
             this.id = id;
             First_name = first_name;
             Last_name = last_name;
+            Jmbg = jmbg;
             Date_of_birth = date_of_birth;
             Address = address;
+            Phone_number = phone_number;
+            Membership_cost = membership_cost;
+        }
 
-            int jmbgInt;
-            bool parseSuccessful = int.TryParse(jmbg, out jmbgInt);
-            if (!parseSuccessful)
-                throw new Exception("Neispravan matični broj!");
-            Jmbg = jmbgInt;
+        public Student(string first_name, string last_name, string jmbg, string date_of_birth,
+        string address, string phone_number, string membership_cost)
 
-            int phone_numberInt;
-            bool parseSuccessful1 = int.TryParse(phone_number, out phone_numberInt);
-            if (!parseSuccessful1)
-                throw new Exception("Neispravan broj telefona!");
-            Phone_number = phone_numberInt;
+        {
+
+            First_name = first_name;
+            Last_name = last_name;
+            Jmbg = jmbg;
+            Address = address;
+            Date_of_birth = date_of_birth;
+            Phone_number = phone_number;
 
             int membership_costInt;
             bool parseSuccessful2 = int.TryParse(membership_cost, out membership_costInt);
@@ -81,7 +84,7 @@ namespace Courses_School.Models
                 last_name = value;
             }
         }
-        public int Jmbg
+        public string Jmbg
         {
             get
             {
@@ -89,8 +92,8 @@ namespace Courses_School.Models
             }
             set
             {
-                if (value != 13)
-                    throw new Exception("Neispravan matični broj!");
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Matični broj mora da ima 13 karaktera!");
 
                 jmbg = value;
             }
@@ -127,7 +130,7 @@ namespace Courses_School.Models
             }
         }
 
-        public int Phone_number
+        public string Phone_number
         {
             get
             {
@@ -135,8 +138,7 @@ namespace Courses_School.Models
             }
             set
             {
-                if (value < 0 || value == 0)
-                    throw new Exception("Neispravna broj telefona!");
+
 
                 phone_number = value;
             }
@@ -163,3 +165,4 @@ namespace Courses_School.Models
 
     }
 }
+

@@ -114,6 +114,7 @@
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.addNewUserButton);
+            this.MaximizeBox = false;
             this.Name = "newUserForm";
             this.Text = "Novi korisnik";
             this.ResumeLayout(false);
