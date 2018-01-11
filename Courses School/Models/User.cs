@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Courses_School.Models
 {
@@ -29,6 +30,7 @@ namespace Courses_School.Models
                     if (value.Length > 60)
                         throw new Exception("Korisničko ime ne može biti duže od 60 karaktera!");
                      username = value;
+
                 }
             }
 
@@ -40,7 +42,7 @@ namespace Courses_School.Models
                 }
                 set
                 {
-                    if (value.Length < 6)
+                    if (value.Length < 6 )
                         throw new Exception("Lozinka mora da ima bar 6 karaktera!");
 
                     using (SHA256 sha = new SHA256Managed())
