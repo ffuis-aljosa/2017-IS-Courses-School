@@ -61,7 +61,7 @@
             // 
             this.firstNameTextBox.Location = new System.Drawing.Point(55, 64);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(539, 29);
+            this.firstNameTextBox.Size = new System.Drawing.Size(242, 29);
             this.firstNameTextBox.TabIndex = 1;
             // 
             // lastNameLabel
@@ -77,7 +77,7 @@
             // 
             this.lastNameTextBox.Location = new System.Drawing.Point(55, 147);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(539, 29);
+            this.lastNameTextBox.Size = new System.Drawing.Size(242, 29);
             this.lastNameTextBox.TabIndex = 3;
             // 
             // addressLabel
@@ -93,7 +93,7 @@
             // 
             this.jmbgTextBox.Location = new System.Drawing.Point(55, 230);
             this.jmbgTextBox.Name = "jmbgTextBox";
-            this.jmbgTextBox.Size = new System.Drawing.Size(539, 29);
+            this.jmbgTextBox.Size = new System.Drawing.Size(242, 29);
             this.jmbgTextBox.TabIndex = 5;
             // 
             // dateOfBirthLabel
@@ -109,7 +109,7 @@
             // 
             this.dateOfBirthTextBox.Location = new System.Drawing.Point(55, 317);
             this.dateOfBirthTextBox.Name = "dateOfBirthTextBox";
-            this.dateOfBirthTextBox.Size = new System.Drawing.Size(539, 29);
+            this.dateOfBirthTextBox.Size = new System.Drawing.Size(242, 29);
             this.dateOfBirthTextBox.TabIndex = 7;
             // 
             // jmbgLabel
@@ -125,7 +125,7 @@
             // 
             this.addressTextBox.Location = new System.Drawing.Point(55, 396);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(539, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(242, 29);
             this.addressTextBox.TabIndex = 9;
             // 
             // membershipCostLabel
@@ -141,14 +141,14 @@
             // 
             this.membershipCostTextBox.Location = new System.Drawing.Point(55, 564);
             this.membershipCostTextBox.Name = "membershipCostTextBox";
-            this.membershipCostTextBox.Size = new System.Drawing.Size(539, 29);
+            this.membershipCostTextBox.Size = new System.Drawing.Size(242, 29);
             this.membershipCostTextBox.TabIndex = 11;
             // 
             // addNewStudentButton
             // 
-            this.addNewStudentButton.Location = new System.Drawing.Point(660, 631);
+            this.addNewStudentButton.Location = new System.Drawing.Point(357, 635);
             this.addNewStudentButton.Name = "addNewStudentButton";
-            this.addNewStudentButton.Size = new System.Drawing.Size(347, 41);
+            this.addNewStudentButton.Size = new System.Drawing.Size(291, 41);
             this.addNewStudentButton.TabIndex = 16;
             this.addNewStudentButton.Text = "Dodaj!";
             this.addNewStudentButton.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@
             // 
             this.phoneNumberTextBox.Location = new System.Drawing.Point(55, 481);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(539, 29);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(242, 29);
             this.phoneNumberTextBox.TabIndex = 18;
             // 
             // schoolSubjectAndNumberOfClassesComboBox
@@ -175,7 +175,7 @@
             this.schoolSubjectAndNumberOfClassesComboBox.FormattingEnabled = true;
             this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(55, 640);
             this.schoolSubjectAndNumberOfClassesComboBox.Name = "schoolSubjectAndNumberOfClassesComboBox";
-            this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(539, 32);
+            this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(242, 32);
             this.schoolSubjectAndNumberOfClassesComboBox.TabIndex = 19;
             // 
             // addNewStudentForm
@@ -184,7 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1030, 701);
+            this.ClientSize = new System.Drawing.Size(728, 701);
             this.Controls.Add(this.schoolSubjectAndNumberOfClassesComboBox);
             this.Controls.Add(this.phoneNumberTextBox);
             this.Controls.Add(this.phoneNumberLabel);

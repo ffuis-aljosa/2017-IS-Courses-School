@@ -37,14 +37,16 @@
             this.addressColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.phoneNumberColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.membershipCostcolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.school_subjectColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.numberOfClassesColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // addNewStudentButton
             // 
             this.addNewStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.addNewStudentButton.Location = new System.Drawing.Point(777, 12);
+            this.addNewStudentButton.Location = new System.Drawing.Point(873, 21);
             this.addNewStudentButton.Name = "addNewStudentButton";
-            this.addNewStudentButton.Size = new System.Drawing.Size(341, 39);
+            this.addNewStudentButton.Size = new System.Drawing.Size(484, 39);
             this.addNewStudentButton.TabIndex = 2;
             this.addNewStudentButton.Text = "Dodaj novog učenika";
             this.addNewStudentButton.UseVisualStyleBackColor = true;
@@ -59,12 +61,14 @@
             this.dateOfBirthColumnHeader,
             this.addressColumnHeader,
             this.phoneNumberColumnHeader,
-            this.membershipCostcolumnHeader});
+            this.membershipCostcolumnHeader,
+            this.school_subjectColumnHeader,
+            this.numberOfClassesColumnHeader});
             this.informationsAboutStudentsListView.GridLines = true;
-            this.informationsAboutStudentsListView.Location = new System.Drawing.Point(12, 66);
+            this.informationsAboutStudentsListView.Location = new System.Drawing.Point(26, 111);
             this.informationsAboutStudentsListView.Name = "informationsAboutStudentsListView";
-            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1066, 419);
-            this.informationsAboutStudentsListView.TabIndex = 3;
+            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1348, 482);
+            this.informationsAboutStudentsListView.TabIndex = 21;
             this.informationsAboutStudentsListView.UseCompatibleStateImageBehavior = false;
             this.informationsAboutStudentsListView.View = System.Windows.Forms.View.Details;
             // 
@@ -103,13 +107,23 @@
             this.membershipCostcolumnHeader.Text = "Mjesečna članarina";
             this.membershipCostcolumnHeader.Width = 150;
             // 
+            // school_subjectColumnHeader
+            // 
+            this.school_subjectColumnHeader.Text = "Kurs";
+            this.school_subjectColumnHeader.Width = 160;
+            // 
+            // numberOfClassesColumnHeader
+            // 
+            this.numberOfClassesColumnHeader.Text = "Broj časova";
+            this.numberOfClassesColumnHeader.Width = 150;
+            // 
             // informationsAboutStudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1130, 538);
+            this.ClientSize = new System.Drawing.Size(1485, 720);
             this.Controls.Add(this.informationsAboutStudentsListView);
             this.Controls.Add(this.addNewStudentButton);
             this.Name = "informationsAboutStudentsForm";
@@ -128,5 +142,7 @@
         private System.Windows.Forms.ColumnHeader addressColumnHeader;
         private System.Windows.Forms.ColumnHeader phoneNumberColumnHeader;
         private System.Windows.Forms.ColumnHeader membershipCostcolumnHeader;
+        private System.Windows.Forms.ColumnHeader school_subjectColumnHeader;
+        private System.Windows.Forms.ColumnHeader numberOfClassesColumnHeader;
     }
 }
