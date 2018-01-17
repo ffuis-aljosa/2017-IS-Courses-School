@@ -29,17 +29,15 @@
         private void InitializeComponent()
         {
             this.SchoolSubjectListView = new System.Windows.Forms.ListView();
-            this.SchoolSubjectButton = new System.Windows.Forms.Button();
             this.schoolSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Employee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.numberOfClasses = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SchoolSubjectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SchoolSubjectListView
             // 
             this.SchoolSubjectListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.schoolSubject,
-            this.Employee,
             this.numberOfClasses});
             this.SchoolSubjectListView.Location = new System.Drawing.Point(23, 29);
             this.SchoolSubjectListView.Name = "SchoolSubjectListView";
@@ -48,6 +46,16 @@
             this.SchoolSubjectListView.UseCompatibleStateImageBehavior = false;
             this.SchoolSubjectListView.View = System.Windows.Forms.View.Details;
             this.SchoolSubjectListView.SelectedIndexChanged += new System.EventHandler(this.SchoolSubjectListView_SelectedIndexChanged);
+            // 
+            // schoolSubject
+            // 
+            this.schoolSubject.Text = "Predmet";
+            this.schoolSubject.Width = 325;
+            // 
+            // numberOfClasses
+            // 
+            this.numberOfClasses.Text = "Broj casova";
+            this.numberOfClasses.Width = 354;
             // 
             // SchoolSubjectButton
             // 
@@ -60,21 +68,6 @@
             this.SchoolSubjectButton.Text = "Dodaj novi predmet";
             this.SchoolSubjectButton.UseVisualStyleBackColor = false;
             this.SchoolSubjectButton.Click += new System.EventHandler(this.SchoolSubjectButton_Click);
-            // 
-            // schoolSubject
-            // 
-            this.schoolSubject.Text = "Predmet";
-            this.schoolSubject.Width = 235;
-            // 
-            // Employee
-            // 
-            this.Employee.Text = "Profesor";
-            this.Employee.Width = 226;
-            // 
-            // numberOfClasses
-            // 
-            this.numberOfClasses.Text = "Broj casova";
-            this.numberOfClasses.Width = 354;
             // 
             // schoolSubjectForm
             // 
@@ -96,7 +89,6 @@
         private System.Windows.Forms.ListView SchoolSubjectListView;
         private System.Windows.Forms.Button SchoolSubjectButton;
         private System.Windows.Forms.ColumnHeader schoolSubject;
-        private System.Windows.Forms.ColumnHeader Employee;
         private System.Windows.Forms.ColumnHeader numberOfClasses;
     }
 }

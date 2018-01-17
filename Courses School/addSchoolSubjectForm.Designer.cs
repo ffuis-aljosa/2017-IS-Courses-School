@@ -30,9 +30,7 @@
         {
             this.subjectAddSchoolSubjectTextBox = new System.Windows.Forms.TextBox();
             this.subjectAddSchoolSubjectLabel = new System.Windows.Forms.Label();
-            this.employeeAddSchoolSubjectLabel = new System.Windows.Forms.Label();
             this.addSchoolSubjectButton = new System.Windows.Forms.Button();
-            this.employeeAddSchoolSubjectComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.numberOfClassesAddSchoolSubjectTextBox = new System.Windows.Forms.TextBox();
             this.numberOfCLassesAddSchoolSubject = new System.Windows.Forms.Label();
@@ -49,39 +47,21 @@
             // 
             this.subjectAddSchoolSubjectLabel.AutoSize = true;
             this.subjectAddSchoolSubjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.subjectAddSchoolSubjectLabel.Location = new System.Drawing.Point(86, 49);
+            this.subjectAddSchoolSubjectLabel.Location = new System.Drawing.Point(56, 54);
             this.subjectAddSchoolSubjectLabel.Name = "subjectAddSchoolSubjectLabel";
-            this.subjectAddSchoolSubjectLabel.Size = new System.Drawing.Size(57, 15);
+            this.subjectAddSchoolSubjectLabel.Size = new System.Drawing.Size(132, 15);
             this.subjectAddSchoolSubjectLabel.TabIndex = 2;
-            this.subjectAddSchoolSubjectLabel.Text = "Predmet:";
-            // 
-            // employeeAddSchoolSubjectLabel
-            // 
-            this.employeeAddSchoolSubjectLabel.AutoSize = true;
-            this.employeeAddSchoolSubjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.employeeAddSchoolSubjectLabel.Location = new System.Drawing.Point(87, 157);
-            this.employeeAddSchoolSubjectLabel.Name = "employeeAddSchoolSubjectLabel";
-            this.employeeAddSchoolSubjectLabel.Size = new System.Drawing.Size(56, 15);
-            this.employeeAddSchoolSubjectLabel.TabIndex = 3;
-            this.employeeAddSchoolSubjectLabel.Text = "Profesor:";
+            this.subjectAddSchoolSubjectLabel.Text = "Naziv novog predmeta:";
             // 
             // addSchoolSubjectButton
             // 
-            this.addSchoolSubjectButton.Location = new System.Drawing.Point(376, 212);
+            this.addSchoolSubjectButton.Location = new System.Drawing.Point(376, 167);
             this.addSchoolSubjectButton.Name = "addSchoolSubjectButton";
             this.addSchoolSubjectButton.Size = new System.Drawing.Size(160, 23);
             this.addSchoolSubjectButton.TabIndex = 4;
             this.addSchoolSubjectButton.Text = "Dodaj!";
             this.addSchoolSubjectButton.UseVisualStyleBackColor = true;
             this.addSchoolSubjectButton.Click += new System.EventHandler(this.addSchoolSubjectButton_Click);
-            // 
-            // employeeAddSchoolSubjectComboBox
-            // 
-            this.employeeAddSchoolSubjectComboBox.FormattingEnabled = true;
-            this.employeeAddSchoolSubjectComboBox.Location = new System.Drawing.Point(217, 151);
-            this.employeeAddSchoolSubjectComboBox.Name = "employeeAddSchoolSubjectComboBox";
-            this.employeeAddSchoolSubjectComboBox.Size = new System.Drawing.Size(319, 21);
-            this.employeeAddSchoolSubjectComboBox.TabIndex = 5;
             // 
             // label1
             // 
@@ -102,7 +82,7 @@
             // 
             this.numberOfCLassesAddSchoolSubject.AutoSize = true;
             this.numberOfCLassesAddSchoolSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.numberOfCLassesAddSchoolSubject.Location = new System.Drawing.Point(86, 105);
+            this.numberOfCLassesAddSchoolSubject.Location = new System.Drawing.Point(115, 105);
             this.numberOfCLassesAddSchoolSubject.Name = "numberOfCLassesAddSchoolSubject";
             this.numberOfCLassesAddSchoolSubject.Size = new System.Drawing.Size(73, 15);
             this.numberOfCLassesAddSchoolSubject.TabIndex = 8;
@@ -117,9 +97,7 @@
             this.Controls.Add(this.numberOfCLassesAddSchoolSubject);
             this.Controls.Add(this.numberOfClassesAddSchoolSubjectTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.employeeAddSchoolSubjectComboBox);
             this.Controls.Add(this.addSchoolSubjectButton);
-            this.Controls.Add(this.employeeAddSchoolSubjectLabel);
             this.Controls.Add(this.subjectAddSchoolSubjectLabel);
             this.Controls.Add(this.subjectAddSchoolSubjectTextBox);
             this.Name = "addSchoolSubjectForm";
@@ -133,9 +111,7 @@
 
         private System.Windows.Forms.TextBox subjectAddSchoolSubjectTextBox;
         private System.Windows.Forms.Label subjectAddSchoolSubjectLabel;
-        private System.Windows.Forms.Label employeeAddSchoolSubjectLabel;
         private System.Windows.Forms.Button addSchoolSubjectButton;
-        private System.Windows.Forms.ComboBox employeeAddSchoolSubjectComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox numberOfClassesAddSchoolSubjectTextBox;
         private System.Windows.Forms.Label numberOfCLassesAddSchoolSubject;

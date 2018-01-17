@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Courses_School.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Courses_School
 {
     public partial class addSchoolSubjectForm : Form
     {
+
+        public SchoolSubjects NewSchoolSubject { get; set; }
+
         public addSchoolSubjectForm()
         {
             InitializeComponent();
@@ -19,6 +23,19 @@ namespace Courses_School
 
         private void addSchoolSubjectButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                NewSchoolSubject = new SchoolSubjects(
+                    subjectAddSchoolSubjectTextBox.Text,
+                    numberOfClassesAddSchoolSubjectTextBox.Text);
+
+                DialogResult = DialogResult.OK;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

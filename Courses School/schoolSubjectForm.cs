@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Courses_School.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,12 @@ namespace Courses_School
         private void SchoolSubjectButton_Click(object sender, EventArgs e)
         {
             addSchoolSubjectForm form = new addSchoolSubjectForm();
-            form.Show();
+            DialogResult result = form.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                SchoolSubjectRepository.createSchoolSubject(form.NewSchoolSubject);
+            }
         }
 
         private void SchoolSubjectListView_SelectedIndexChanged(object sender, EventArgs e)

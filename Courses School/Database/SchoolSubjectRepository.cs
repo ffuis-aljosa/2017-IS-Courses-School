@@ -16,7 +16,7 @@ namespace Courses_School.Database
         {
             List<SchoolSubjects> schoolSubjects = new List<SchoolSubjects>();
 
-            string sql = "SELECT id, school_subject, number_of_classes FROM schoolSubjects";
+            string sql = "SELECT id, school_subject, number_of_classes FROM schoolsubjects";
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
             SqlCeDataReader reader = command.ExecuteReader();
@@ -31,6 +31,15 @@ namespace Courses_School.Database
                 addSchoolSubject(schoolSubjects, schoolSubject);
             }
             return schoolSubjects;
+        }
+
+        public static void createSchoolSubject(SchoolSubjects schoolsubject)
+        {
+            string sql = "INSERT INTO schoolsubjects(school_subject, number_of_classes) VALUES" +
+                "('" + schoolsubject.School_subject + "', " + schoolsubject.Number_of_classes + ")";
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+            command.ExecuteNonQuery();
         }
 
         private static void addSchoolSubject(List<SchoolSubjects> schoolSubjects, SchoolSubjects schoolSubject)
