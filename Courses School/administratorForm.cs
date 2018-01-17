@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Courses_School.Database;
 
 namespace Courses_School
 {
@@ -24,8 +25,9 @@ namespace Courses_School
 
         private void informationsAboutStudentsButton_Click(object sender, EventArgs e)
         {
-            informationsAboutStudentsForm form = new informationsAboutStudentsForm();
-            form.Show();
+            
+            addNewStudentForm addStudentForm = new addNewStudentForm();
+            addStudentForm.Show();
         }
 
         private void schoolTimetableButton_Click(object sender, EventArgs e)
