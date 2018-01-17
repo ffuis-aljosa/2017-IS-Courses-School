@@ -19,7 +19,7 @@ namespace Courses_School
 
         private void informationsAboutEmployeesButton_Click(object sender, EventArgs e)
         {
-            informationsAboutEmployeesForm form = new informationsAboutEmployeesForm();
+            addNewEmployeeForm form = new addNewEmployeeForm();
             form.Show();
         }
 
