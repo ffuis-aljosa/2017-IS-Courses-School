@@ -12,7 +12,7 @@ namespace Courses_School.Database
             List<Student> students = new List<Student>();
 
             string sql =
-                @"SELECT s.id, s.First_name, s.Last_name, s.Jmbg, s.Date_of_birth, s.Address,
+                @"SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address,
                   s.Phone_number, s.Membership_cost, ss.school_subject, ss.number_of_classes FROM Students AS s
                    JOIN schoolsubjects AS ss ON s.school_subject_id = ss.id";
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
@@ -45,7 +45,7 @@ namespace Courses_School.Database
 
         public static void createStudent(Student student)
         {
-            string sql = "INSERT INTO Students (first_name, last_name, jmbg, date_of_birth, address, phone_number, membership_cost, school_subject_id) VALUES" +
+            string sql = "INSERT INTO Students (first_name1, last_name1, jmbg, date_of_birth, address, phone_number, membership_cost, school_subject_id) VALUES" +
                 "('" + student.First_name + "','" + student.Last_name + "','" + student.Jmbg + "','" + student.Date_of_birth + " " + "00:00','"
                 + student.Address + "','" + student.Phone_number + "'," + student.Membership_cost + "," + student.SchoolSubject.Id + ")";
 

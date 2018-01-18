@@ -116,6 +116,7 @@
             this.Controls.Add(this.addNewUserButton);
             this.MaximizeBox = false;
             this.Name = "newUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novi korisnik";
             this.ResumeLayout(false);
             this.PerformLayout();

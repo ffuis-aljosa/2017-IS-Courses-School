@@ -56,10 +56,12 @@
             this.schoolSubjectColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.numberOfClassesColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.profesorColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.searchStudentButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.deleteButton = new System.Windows.Forms.Button();
             this.changeButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -162,9 +164,9 @@
             // 
             // addNewStudentButton
             // 
-            this.addNewStudentButton.Location = new System.Drawing.Point(357, 635);
+            this.addNewStudentButton.Location = new System.Drawing.Point(384, 718);
             this.addNewStudentButton.Name = "addNewStudentButton";
-            this.addNewStudentButton.Size = new System.Drawing.Size(291, 41);
+            this.addNewStudentButton.Size = new System.Drawing.Size(240, 44);
             this.addNewStudentButton.TabIndex = 16;
             this.addNewStudentButton.Text = "Dodaj!";
             this.addNewStudentButton.UseVisualStyleBackColor = true;
@@ -207,7 +209,8 @@
             this.membershipCostColumnHeader,
             this.schoolSubjectColumnHeader,
             this.numberOfClassesColumnHeader,
-            this.profesorColumnHeader});
+            this.profesorColumnHeader,
+            this.columnHeader1});
             this.informationsAboutStudentsListView.GridLines = true;
             this.informationsAboutStudentsListView.Location = new System.Drawing.Point(334, 105);
             this.informationsAboutStudentsListView.Name = "informationsAboutStudentsListView";
@@ -271,27 +274,19 @@
             this.profesorColumnHeader.Text = "Nastavnik";
             this.profesorColumnHeader.Width = 150;
             // 
-            // searchStudentButton
-            // 
-            this.searchStudentButton.Location = new System.Drawing.Point(825, 33);
-            this.searchStudentButton.Name = "searchStudentButton";
-            this.searchStudentButton.Size = new System.Drawing.Size(282, 34);
-            this.searchStudentButton.TabIndex = 23;
-            this.searchStudentButton.Text = "Traži!";
-            this.searchStudentButton.UseVisualStyleBackColor = true;
-            // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(447, 38);
+            this.searchTextBox.Location = new System.Drawing.Point(562, 31);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(263, 29);
             this.searchTextBox.TabIndex = 24;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(781, 635);
+            this.deleteButton.Location = new System.Drawing.Point(684, 718);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(268, 46);
+            this.deleteButton.Size = new System.Drawing.Size(240, 44);
             this.deleteButton.TabIndex = 25;
             this.deleteButton.Text = "Obriši!";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -299,13 +294,36 @@
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(60, 718);
+            this.changeButton.Location = new System.Drawing.Point(84, 718);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(237, 44);
+            this.changeButton.Size = new System.Drawing.Size(240, 44);
             this.changeButton.TabIndex = 26;
             this.changeButton.Text = "Izmjeni!";
             this.changeButton.UseVisualStyleBackColor = true;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(471, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 24);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Pretraga:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 601);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 24);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Kurs:";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Profesor";
+            this.columnHeader1.Width = 10;
             // 
             // addNewStudentForm
             // 
@@ -314,10 +332,11 @@
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1838, 884);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.changeButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.searchTextBox);
-            this.Controls.Add(this.searchStudentButton);
             this.Controls.Add(this.informationsAboutStudentsListView);
             this.Controls.Add(this.schoolSubjectAndNumberOfClassesComboBox);
             this.Controls.Add(this.phoneNumberTextBox);
@@ -338,6 +357,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "addNewStudentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,11 +391,13 @@
         private System.Windows.Forms.ColumnHeader phoneNumberCostcolumnHeader;
         private System.Windows.Forms.ColumnHeader membershipCostColumnHeader;
         private System.Windows.Forms.ColumnHeader schoolSubjectColumnHeader;
-        private System.Windows.Forms.Button searchStudentButton;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.ColumnHeader numberOfClassesColumnHeader;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.ColumnHeader profesorColumnHeader;
         private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
