@@ -13,7 +13,7 @@ namespace Courses_School
 
         private void schoolSubjectbutton_Click(object sender, EventArgs e)
         {
-            schoolSubjectForm form = new schoolSubjectForm();
+            addNewSchoolSubjectForm form = new addNewSchoolSubjectForm();
             form.Show();
         }
 

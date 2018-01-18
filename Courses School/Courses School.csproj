@@ -72,12 +72,6 @@
     <Compile Include="addNewStudentForm.Designer.cs">
       <DependentUpon>addNewStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="addSchoolSubjectForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="addSchoolSubjectForm.Designer.cs">
-      <DependentUpon>addSchoolSubjectForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="administratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +101,11 @@
     <Compile Include="loginForm.Designer.cs">
       <DependentUpon>loginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="schoolSubjectForm.cs">
+    <Compile Include="addNewSchoolSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="schoolSubjectForm.Designer.cs">
-      <DependentUpon>schoolSubjectForm.cs</DependentUpon>
+    <Compile Include="addNewSchoolSubjectForm.Designer.cs">
+      <DependentUpon>addNewSchoolSubjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="schoolTimetableForm.cs">
       <SubType>Form</SubType>
@@ -124,9 +118,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addNewStudentForm.resx">
       <DependentUpon>addNewStudentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="addSchoolSubjectForm.resx">
-      <DependentUpon>addSchoolSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="administratorForm.resx">
       <DependentUpon>administratorForm.cs</DependentUpon>
@@ -147,8 +138,8 @@
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="schoolSubjectForm.resx">
-      <DependentUpon>schoolSubjectForm.cs</DependentUpon>
+    <EmbeddedResource Include="addNewSchoolSubjectForm.resx">
+      <DependentUpon>addNewSchoolSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
