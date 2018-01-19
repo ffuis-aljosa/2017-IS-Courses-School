@@ -20,6 +20,7 @@ namespace Courses_School
         InitializeComponent();
         loadSchooSubject();
         loadEmployee();
+        clearTextBox();
     }
 
     private void loadSchooSubject()
@@ -62,10 +63,21 @@ namespace Courses_School
         private void loadEmployee()
         {
             employeesListView.Items.Clear();
-            SqlCeCommand command = new SqlCeCommand("SELECT e.id, e.First_name, e.Last_name, e.Address, e.Date_of_birth, " +
+            SqlCeCommand command;
+
+            if (searchTextBox.Text == "")
+
+                command = new SqlCeCommand("SELECT e.id, e.First_name, e.Last_name, e.Address, e.Date_of_birth, " +
                 "e.Phone_number, e.Email, e.Qualification, ss.school_subject, " +
                 "ss.number_of_classes, e.Salary FROM Employees AS e JOIN schoolSubjects" +
                 " AS ss ON e.schoolSubject_id = ss.id ORDER BY e.First_name", connection);
+
+            else
+
+            command = new SqlCeCommand("SELECT e.id, e.First_name, e.Last_name, e.Address, e.Date_of_birth, " +
+                           "e.Phone_number, e.Email, e.Qualification, ss.school_subject, " +
+                           "ss.number_of_classes, e.Salary FROM Employees AS e JOIN schoolSubjects" +
+                           " AS ss ON e.schoolSubject_id = ss.id WHERE e.First_name LIKE '%" + searchTextBox.Text + "%';", connection);
             try
             {
                 SqlCeDataReader reader = command.ExecuteReader();
@@ -161,6 +173,14 @@ namespace Courses_School
                 MessageBox.Show("Brisanje nije uspjelo!");
 
             }
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            employeesListView.View = View.Details;
+            employeesListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            employeesListView.Items.Clear();
+            loadEmployee();
         }
     }
 }

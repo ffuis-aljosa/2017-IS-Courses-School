@@ -48,19 +48,21 @@
             this.salaryTextBox = new System.Windows.Forms.TextBox();
             this.dateOfBirthLabel = new System.Windows.Forms.Label();
             this.employeesListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.idColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.firstNamecolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lastNamecolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.addresscolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dateOfBirthcolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.phoneNumbercolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.emailcolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.qualificationcolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.schoolSubjectcolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.numberOfClassescolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.salarycolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.deleteButton = new System.Windows.Forms.Button();
             this.changeButton = new System.Windows.Forms.Button();
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.employeesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -232,84 +234,80 @@
             // employeesListView
             // 
             this.employeesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
+            this.idColumnHeader,
+            this.firstNamecolumnHeader,
+            this.lastNamecolumnHeader,
+            this.addresscolumnHeader,
+            this.dateOfBirthcolumnHeader,
+            this.phoneNumbercolumnHeader,
+            this.emailcolumnHeader,
+            this.qualificationcolumnHeader,
+            this.schoolSubjectcolumnHeader,
+            this.numberOfClassescolumnHeader,
+            this.salarycolumnHeader});
             this.employeesListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.employeesListView.Location = new System.Drawing.Point(321, 107);
+            this.employeesListView.GridLines = true;
+            this.employeesListView.Location = new System.Drawing.Point(321, 199);
             this.employeesListView.Name = "employeesListView";
-            this.employeesListView.Size = new System.Drawing.Size(997, 342);
+            this.employeesListView.Size = new System.Drawing.Size(997, 386);
             this.employeesListView.TabIndex = 22;
             this.employeesListView.UseCompatibleStateImageBehavior = false;
             this.employeesListView.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // idColumnHeader
             // 
-            this.columnHeader1.DisplayIndex = 1;
-            this.columnHeader1.Text = "Ime:";
-            this.columnHeader1.Width = 81;
+            this.idColumnHeader.Text = "Br.";
+            this.idColumnHeader.Width = 30;
             // 
-            // columnHeader2
+            // firstNamecolumnHeader
             // 
-            this.columnHeader2.DisplayIndex = 2;
-            this.columnHeader2.Text = "Prezime:";
-            this.columnHeader2.Width = 92;
+            this.firstNamecolumnHeader.Text = "Ime:";
+            this.firstNamecolumnHeader.Width = 78;
             // 
-            // columnHeader3
+            // lastNamecolumnHeader
             // 
-            this.columnHeader3.DisplayIndex = 3;
-            this.columnHeader3.Text = "Adresa stanovanja:";
-            this.columnHeader3.Width = 143;
+            this.lastNamecolumnHeader.Text = "Prezime:";
+            this.lastNamecolumnHeader.Width = 97;
             // 
-            // columnHeader4
+            // addresscolumnHeader
             // 
-            this.columnHeader4.DisplayIndex = 4;
-            this.columnHeader4.Text = "Datum rođenja:";
-            this.columnHeader4.Width = 115;
+            this.addresscolumnHeader.Text = "Adresa stanovanja:";
+            this.addresscolumnHeader.Width = 135;
             // 
-            // columnHeader5
+            // dateOfBirthcolumnHeader
             // 
-            this.columnHeader5.DisplayIndex = 5;
-            this.columnHeader5.Text = "Broj telefona:";
-            this.columnHeader5.Width = 96;
+            this.dateOfBirthcolumnHeader.Text = "Datum rođenja:";
+            this.dateOfBirthcolumnHeader.Width = 114;
             // 
-            // columnHeader6
+            // phoneNumbercolumnHeader
             // 
-            this.columnHeader6.DisplayIndex = 6;
-            this.columnHeader6.Text = "E-mail:";
-            this.columnHeader6.Width = 81;
+            this.phoneNumbercolumnHeader.Text = "Br. telefona:";
+            this.phoneNumbercolumnHeader.Width = 90;
             // 
-            // columnHeader7
+            // emailcolumnHeader
             // 
-            this.columnHeader7.DisplayIndex = 7;
-            this.columnHeader7.Text = "Stručna sprema:";
-            this.columnHeader7.Width = 124;
+            this.emailcolumnHeader.Text = "E-mail:";
+            this.emailcolumnHeader.Width = 93;
             // 
-            // columnHeader8
+            // qualificationcolumnHeader
             // 
-            this.columnHeader8.DisplayIndex = 8;
-            this.columnHeader8.Text = "Predmet:";
-            this.columnHeader8.Width = 79;
+            this.qualificationcolumnHeader.Text = "Stručna sprema:";
+            this.qualificationcolumnHeader.Width = 122;
             // 
-            // columnHeader9
+            // schoolSubjectcolumnHeader
             // 
-            this.columnHeader9.DisplayIndex = 9;
-            this.columnHeader9.Text = "Broj časova:";
-            this.columnHeader9.Width = 96;
+            this.schoolSubjectcolumnHeader.Text = "Predmet:";
+            this.schoolSubjectcolumnHeader.Width = 98;
             // 
-            // columnHeader10
+            // numberOfClassescolumnHeader
             // 
-            this.columnHeader10.DisplayIndex = 10;
-            this.columnHeader10.Text = "Plata:";
-            this.columnHeader10.Width = 51;
+            this.numberOfClassescolumnHeader.Text = "Br. časova:";
+            this.numberOfClassescolumnHeader.Width = 83;
+            // 
+            // salarycolumnHeader
+            // 
+            this.salarycolumnHeader.Text = "Plata:";
+            this.salarycolumnHeader.Width = 78;
             // 
             // deleteButton
             // 
@@ -332,17 +330,29 @@
             this.changeButton.Text = "Izmjeni!";
             this.changeButton.UseVisualStyleBackColor = true;
             // 
-            // columnHeader11
+            // searchTextBox
             // 
-            this.columnHeader11.DisplayIndex = 0;
-            this.columnHeader11.Text = "Br.";
-            this.columnHeader11.Width = 34;
+            this.searchTextBox.Location = new System.Drawing.Point(611, 51);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(269, 20);
+            this.searchTextBox.TabIndex = 29;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label1.Location = new System.Drawing.Point(538, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Pretraga:";
             // 
             // employeesLabel
             // 
             this.employeesLabel.AutoSize = true;
             this.employeesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.employeesLabel.Location = new System.Drawing.Point(318, 86);
+            this.employeesLabel.Location = new System.Drawing.Point(318, 169);
             this.employeesLabel.Name = "employeesLabel";
             this.employeesLabel.Size = new System.Drawing.Size(80, 18);
             this.employeesLabel.TabIndex = 28;
@@ -354,10 +364,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(1330, 712);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.employeesLabel);
             this.Controls.Add(this.changeButton);
             this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.employeesListView);
             this.Controls.Add(this.dateOfBirthLabel);
             this.Controls.Add(this.salaryTextBox);
             this.Controls.Add(this.addEmployeeButton);
@@ -377,6 +388,7 @@
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.lastNameTextBox);
+            this.Controls.Add(this.employeesListView);
             this.Name = "addNewEmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addNewEmployeeForm";
@@ -407,19 +419,21 @@
         private System.Windows.Forms.TextBox salaryTextBox;
         private System.Windows.Forms.Label dateOfBirthLabel;
         private System.Windows.Forms.ListView employeesListView;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button changeButton;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader idColumnHeader;
+        private System.Windows.Forms.ColumnHeader firstNamecolumnHeader;
+        private System.Windows.Forms.ColumnHeader lastNamecolumnHeader;
+        private System.Windows.Forms.ColumnHeader addresscolumnHeader;
+        private System.Windows.Forms.ColumnHeader dateOfBirthcolumnHeader;
+        private System.Windows.Forms.ColumnHeader phoneNumbercolumnHeader;
+        private System.Windows.Forms.ColumnHeader emailcolumnHeader;
+        private System.Windows.Forms.ColumnHeader qualificationcolumnHeader;
+        private System.Windows.Forms.ColumnHeader schoolSubjectcolumnHeader;
+        private System.Windows.Forms.ColumnHeader numberOfClassescolumnHeader;
+        private System.Windows.Forms.ColumnHeader salarycolumnHeader;
+        private System.Windows.Forms.TextBox searchTextBox;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label employeesLabel;
     }
 }
