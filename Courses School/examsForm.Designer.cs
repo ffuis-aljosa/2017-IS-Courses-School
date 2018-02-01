@@ -34,16 +34,16 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.dateTextBox = new System.Windows.Forms.TextBox();
             this.gradeTextBox = new System.Windows.Forms.TextBox();
-            this.examsListView = new System.Windows.Forms.ListView();
-            this.schoolSubjectColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gradeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.nameComboBox = new System.Windows.Forms.ComboBox();
             this.schoolSubjectComboBox = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
+            this.examsListView = new System.Windows.Forms.ListView();
+            this.schoolSubjectolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gradeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // schoolSubjectLabel
@@ -100,20 +100,6 @@
             this.gradeTextBox.Size = new System.Drawing.Size(234, 20);
             this.gradeTextBox.TabIndex = 6;
             // 
-            // examsListView
-            // 
-            this.examsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.schoolSubjectColumnHeader,
-            this.nameColumnHeader,
-            this.gradeColumnHeader,
-            this.dateColumnHeader});
-            this.examsListView.GridLines = true;
-            this.examsListView.Location = new System.Drawing.Point(426, 88);
-            this.examsListView.Name = "examsListView";
-            this.examsListView.Size = new System.Drawing.Size(462, 286);
-            this.examsListView.TabIndex = 8;
-            this.examsListView.UseCompatibleStateImageBehavior = false;
-            // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
@@ -157,17 +143,53 @@
             this.addButton.Text = "Dodaj !";
             this.addButton.UseVisualStyleBackColor = true;
             // 
+            // examsListView
+            // 
+            this.examsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.schoolSubjectolumnHeader,
+            this.nameColumnHeader,
+            this.gradeColumnHeader,
+            this.dateColumnHeader});
+            this.examsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.examsListView.GridLines = true;
+            this.examsListView.Location = new System.Drawing.Point(413, 87);
+            this.examsListView.Name = "examsListView";
+            this.examsListView.Size = new System.Drawing.Size(486, 306);
+            this.examsListView.TabIndex = 23;
+            this.examsListView.UseCompatibleStateImageBehavior = false;
+            this.examsListView.View = System.Windows.Forms.View.Details;
+            // 
+            // schoolSubjectolumnHeader
+            // 
+            this.schoolSubjectolumnHeader.Text = "Predmet:";
+            this.schoolSubjectolumnHeader.Width = 131;
+            // 
+            // nameColumnHeader
+            // 
+            this.nameColumnHeader.Text = "Ime i prezime:";
+            this.nameColumnHeader.Width = 142;
+            // 
+            // gradeColumnHeader
+            // 
+            this.gradeColumnHeader.Text = "Ocjena:";
+            this.gradeColumnHeader.Width = 93;
+            // 
+            // dateColumnHeader
+            // 
+            this.dateColumnHeader.Text = "Datum:";
+            this.dateColumnHeader.Width = 116;
+            // 
             // examsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 427);
+            this.Controls.Add(this.examsListView);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.schoolSubjectComboBox);
             this.Controls.Add(this.nameComboBox);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchLabel);
-            this.Controls.Add(this.examsListView);
             this.Controls.Add(this.gradeTextBox);
             this.Controls.Add(this.dateTextBox);
             this.Controls.Add(this.dateLabel);
@@ -189,15 +211,15 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.TextBox dateTextBox;
         private System.Windows.Forms.TextBox gradeTextBox;
-        private System.Windows.Forms.ListView examsListView;
-        private System.Windows.Forms.ColumnHeader schoolSubjectColumnHeader;
-        private System.Windows.Forms.ColumnHeader nameColumnHeader;
-        private System.Windows.Forms.ColumnHeader gradeColumnHeader;
-        private System.Windows.Forms.ColumnHeader dateColumnHeader;
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.ComboBox nameComboBox;
         private System.Windows.Forms.ComboBox schoolSubjectComboBox;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.ListView examsListView;
+        private System.Windows.Forms.ColumnHeader schoolSubjectolumnHeader;
+        private System.Windows.Forms.ColumnHeader nameColumnHeader;
+        private System.Windows.Forms.ColumnHeader gradeColumnHeader;
+        private System.Windows.Forms.ColumnHeader dateColumnHeader;
     }
 }

@@ -29,6 +29,5 @@ namespace Courses_School
             foreach (SchoolSubjects schoolsubjects in schoolsubject)
                 schoolSubjectComboBox.Items.Add(schoolsubjects);
         }
-
     }
 }
