@@ -38,7 +38,6 @@ namespace Courses_School
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
             newUserForm form = new newUserForm();
             form.Show();
         }

@@ -207,7 +207,5 @@ namespace Courses_School
             informationsAboutStudentsListView.Items.Clear();
             loadStudent();
         }
-
-       
     }
 }

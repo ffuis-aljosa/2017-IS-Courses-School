@@ -83,6 +83,18 @@
     <Compile Include="Database\SchoolSubjectRepository.cs" />
     <Compile Include="Database\StudentRepository.cs" />
     <Compile Include="Database\UserRepository.cs" />
+    <Compile Include="employeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeForm.Designer.cs">
+      <DependentUpon>employeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="examsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examsForm.Designer.cs">
+      <DependentUpon>examsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\SchoolSubjects.cs" />
     <Compile Include="Models\Student.cs" />
@@ -122,6 +134,12 @@
     <EmbeddedResource Include="administratorForm.resx">
       <DependentUpon>administratorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="employeeForm.resx">
+      <DependentUpon>employeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="examsForm.resx">
+      <DependentUpon>examsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="newUserForm.resx">
       <DependentUpon>newUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addNewSchoolSubjectForm.resx">
       <DependentUpon>addNewSchoolSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="schoolTimetableForm.resx">
+      <DependentUpon>schoolTimetableForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
