@@ -96,6 +96,7 @@
       <DependentUpon>examsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Exams.cs" />
     <Compile Include="Models\SchoolSubjects.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
