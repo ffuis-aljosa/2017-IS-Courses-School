@@ -36,7 +36,7 @@
             this.gradeTextBox = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.nameComboBox = new System.Windows.Forms.ComboBox();
+            this.firstNameComboBox = new System.Windows.Forms.ComboBox();
             this.schoolSubjectComboBox = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
             this.examsListView = new System.Windows.Forms.ListView();
@@ -117,13 +117,13 @@
             this.searchTextBox.Size = new System.Drawing.Size(234, 20);
             this.searchTextBox.TabIndex = 10;
             // 
-            // nameComboBox
+            // firstNameComboBox
             // 
-            this.nameComboBox.FormattingEnabled = true;
-            this.nameComboBox.Location = new System.Drawing.Point(137, 132);
-            this.nameComboBox.Name = "nameComboBox";
-            this.nameComboBox.Size = new System.Drawing.Size(234, 21);
-            this.nameComboBox.TabIndex = 11;
+            this.firstNameComboBox.FormattingEnabled = true;
+            this.firstNameComboBox.Location = new System.Drawing.Point(137, 132);
+            this.firstNameComboBox.Name = "firstNameComboBox";
+            this.firstNameComboBox.Size = new System.Drawing.Size(234, 21);
+            this.firstNameComboBox.TabIndex = 11;
             // 
             // schoolSubjectComboBox
             // 
@@ -184,10 +184,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 427);
-            this.Controls.Add(this.examsListView);
             this.Controls.Add(this.addButton);
+            this.Controls.Add(this.examsListView);
             this.Controls.Add(this.schoolSubjectComboBox);
-            this.Controls.Add(this.nameComboBox);
+            this.Controls.Add(this.firstNameComboBox);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.gradeTextBox);
@@ -213,7 +213,7 @@
         private System.Windows.Forms.TextBox gradeTextBox;
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.TextBox searchTextBox;
-        private System.Windows.Forms.ComboBox nameComboBox;
+        private System.Windows.Forms.ComboBox firstNameComboBox;
         private System.Windows.Forms.ComboBox schoolSubjectComboBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.ListView examsListView;

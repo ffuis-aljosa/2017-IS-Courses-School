@@ -18,16 +18,49 @@ namespace Courses_School
         public examsForm()
         {
             InitializeComponent();
-            loadSchooSubject();
+            loadSchooSubjects();
+            loadStudents();
         }
 
         private static SqlCeConnection connection = DbConnection.Instance.Connection;
 
-        private void loadSchooSubject()
+        private void loadSchooSubjects()
         {
-            List<SchoolSubjects> schoolsubject = SchoolSubjectRepository.fetchAllSchoolSubjects();
-            foreach (SchoolSubjects schoolsubjects in schoolsubject)
-                schoolSubjectComboBox.Items.Add(schoolsubjects);
+            SqlCeCommand cm = new SqlCeCommand("SELECT school_subject FROM schoolSubjects ", connection);
+            try
+            {
+                SqlCeDataReader dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    schoolSubjectComboBox.Items.Add(dr["school_subject"]);
+                }
+                dr.Close();
+                dr.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void loadStudents()
+         {
+             SqlCeCommand cm = new SqlCeCommand("SELECT first_name1 FROM Students ", connection);
+             try
+             {
+                 SqlCeDataReader dr = cm.ExecuteReader();
+                 while (dr.Read())
+                 {
+                     firstNameComboBox.Items.Add(dr["first_name1"]);
+                   
+                }
+                 dr.Close();
+                 dr.Dispose();
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
+         }
     }
 }
