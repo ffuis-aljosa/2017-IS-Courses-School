@@ -42,5 +42,10 @@ namespace Courses_School
             form.Show();
         }
 
+        private void uplateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            paymentForm form = new paymentForm();
+            form.Show();
+        }
     }
 }

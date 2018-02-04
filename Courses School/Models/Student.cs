@@ -173,8 +173,7 @@ namespace Courses_School.Models
 
         public override string ToString()
         {
-            return first_name + " " + last_name + " " + jmbg + " " + date_of_birth + " " + address + " "
-                + phone_number + " " + membership_cost;
+            return first_name + " " + last_name ;
         }
 
     }

@@ -21,12 +21,15 @@ namespace Courses_School
             loadStudent();
             clearTextBox();
         }
+
         private void loadSchooSubject()
         {
             List<SchoolSubjects> schoolsubject = SchoolSubjectRepository.fetchAllSchoolSubjects();
 
             foreach (SchoolSubjects schoolsubjects in schoolsubject)
                 schoolSubjectAndNumberOfClassesComboBox.Items.Add(schoolsubjects);
+
+
         }
         private void addNewStudentButton_Click(object sender, EventArgs e)
         {
@@ -65,7 +68,7 @@ namespace Courses_School
            "s.Phone_number, s.Membership_cost, ss.school_subject, " +
           "ss.number_of_classes, e.first_name FROM Students AS s JOIN schoolsubjects" +
            " AS ss ON s.school_subject_id = ss.id JOIN Employees AS e ON e.schoolSubject_id=ss.id " +
-           "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%';", connection);
+           "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%" + searchTextBox.Text + "%';", connection);
 
 
             try

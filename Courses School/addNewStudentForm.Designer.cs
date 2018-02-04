@@ -62,6 +62,7 @@
             this.changeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -71,7 +72,7 @@
             this.firstNameLabel.Location = new System.Drawing.Point(51, 28);
             this.firstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(36, 18);
+            this.firstNameLabel.Size = new System.Drawing.Size(46, 24);
             this.firstNameLabel.TabIndex = 0;
             this.firstNameLabel.Text = "Ime:";
             // 
@@ -79,7 +80,7 @@
             // 
             this.firstNameTextBox.Location = new System.Drawing.Point(55, 64);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(242, 24);
+            this.firstNameTextBox.Size = new System.Drawing.Size(242, 29);
             this.firstNameTextBox.TabIndex = 1;
             // 
             // lastNameLabel
@@ -87,7 +88,7 @@
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Location = new System.Drawing.Point(51, 105);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(67, 18);
+            this.lastNameLabel.Size = new System.Drawing.Size(84, 24);
             this.lastNameLabel.TabIndex = 2;
             this.lastNameLabel.Text = "Prezime:";
             // 
@@ -95,7 +96,7 @@
             // 
             this.lastNameTextBox.Location = new System.Drawing.Point(55, 147);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(242, 24);
+            this.lastNameTextBox.Size = new System.Drawing.Size(242, 29);
             this.lastNameTextBox.TabIndex = 3;
             // 
             // addressLabel
@@ -103,7 +104,7 @@
             this.addressLabel.AutoSize = true;
             this.addressLabel.Location = new System.Drawing.Point(51, 358);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(133, 18);
+            this.addressLabel.Size = new System.Drawing.Size(169, 24);
             this.addressLabel.TabIndex = 4;
             this.addressLabel.Text = "Adresa stanovanja:";
             // 
@@ -111,7 +112,7 @@
             // 
             this.jmbgTextBox.Location = new System.Drawing.Point(55, 230);
             this.jmbgTextBox.Name = "jmbgTextBox";
-            this.jmbgTextBox.Size = new System.Drawing.Size(242, 24);
+            this.jmbgTextBox.Size = new System.Drawing.Size(242, 29);
             this.jmbgTextBox.TabIndex = 5;
             // 
             // dateOfBirthLabel
@@ -119,7 +120,7 @@
             this.dateOfBirthLabel.AutoSize = true;
             this.dateOfBirthLabel.Location = new System.Drawing.Point(51, 275);
             this.dateOfBirthLabel.Name = "dateOfBirthLabel";
-            this.dateOfBirthLabel.Size = new System.Drawing.Size(109, 18);
+            this.dateOfBirthLabel.Size = new System.Drawing.Size(139, 24);
             this.dateOfBirthLabel.TabIndex = 6;
             this.dateOfBirthLabel.Text = "Datum rođenja:";
             // 
@@ -127,7 +128,7 @@
             // 
             this.dateOfBirthTextBox.Location = new System.Drawing.Point(55, 317);
             this.dateOfBirthTextBox.Name = "dateOfBirthTextBox";
-            this.dateOfBirthTextBox.Size = new System.Drawing.Size(242, 24);
+            this.dateOfBirthTextBox.Size = new System.Drawing.Size(242, 29);
             this.dateOfBirthTextBox.TabIndex = 7;
             // 
             // jmbgLabel
@@ -135,7 +136,7 @@
             this.jmbgLabel.AutoSize = true;
             this.jmbgLabel.Location = new System.Drawing.Point(51, 191);
             this.jmbgLabel.Name = "jmbgLabel";
-            this.jmbgLabel.Size = new System.Drawing.Size(55, 18);
+            this.jmbgLabel.Size = new System.Drawing.Size(66, 24);
             this.jmbgLabel.TabIndex = 8;
             this.jmbgLabel.Text = "JMBG:";
             // 
@@ -143,7 +144,7 @@
             // 
             this.addressTextBox.Location = new System.Drawing.Point(55, 396);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(242, 24);
+            this.addressTextBox.Size = new System.Drawing.Size(242, 29);
             this.addressTextBox.TabIndex = 9;
             // 
             // membershipCostLabel
@@ -151,7 +152,7 @@
             this.membershipCostLabel.AutoSize = true;
             this.membershipCostLabel.Location = new System.Drawing.Point(51, 526);
             this.membershipCostLabel.Name = "membershipCostLabel";
-            this.membershipCostLabel.Size = new System.Drawing.Size(139, 18);
+            this.membershipCostLabel.Size = new System.Drawing.Size(178, 24);
             this.membershipCostLabel.TabIndex = 10;
             this.membershipCostLabel.Text = "Mjesečna članarina:";
             // 
@@ -159,7 +160,7 @@
             // 
             this.membershipCostTextBox.Location = new System.Drawing.Point(55, 564);
             this.membershipCostTextBox.Name = "membershipCostTextBox";
-            this.membershipCostTextBox.Size = new System.Drawing.Size(242, 24);
+            this.membershipCostTextBox.Size = new System.Drawing.Size(242, 29);
             this.membershipCostTextBox.TabIndex = 11;
             // 
             // addNewStudentButton
@@ -177,7 +178,7 @@
             this.phoneNumberLabel.AutoSize = true;
             this.phoneNumberLabel.Location = new System.Drawing.Point(51, 444);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(95, 18);
+            this.phoneNumberLabel.Size = new System.Drawing.Size(119, 24);
             this.phoneNumberLabel.TabIndex = 17;
             this.phoneNumberLabel.Text = "Broj telefona:";
             // 
@@ -185,7 +186,7 @@
             // 
             this.phoneNumberTextBox.Location = new System.Drawing.Point(55, 481);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(242, 24);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(242, 29);
             this.phoneNumberTextBox.TabIndex = 18;
             // 
             // schoolSubjectAndNumberOfClassesComboBox
@@ -193,7 +194,7 @@
             this.schoolSubjectAndNumberOfClassesComboBox.FormattingEnabled = true;
             this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(55, 640);
             this.schoolSubjectAndNumberOfClassesComboBox.Name = "schoolSubjectAndNumberOfClassesComboBox";
-            this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(242, 26);
+            this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(242, 32);
             this.schoolSubjectAndNumberOfClassesComboBox.TabIndex = 19;
             // 
             // informationsAboutStudentsListView
@@ -210,7 +211,8 @@
             this.schoolSubjectColumnHeader,
             this.numberOfClassesColumnHeader,
             this.profesorColumnHeader,
-            this.columnHeader1});
+            this.columnHeader1,
+            this.columnHeader2});
             this.informationsAboutStudentsListView.GridLines = true;
             this.informationsAboutStudentsListView.Location = new System.Drawing.Point(334, 105);
             this.informationsAboutStudentsListView.Name = "informationsAboutStudentsListView";
@@ -277,13 +279,12 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Profesor";
-            this.columnHeader1.Width = 10;
             // 
             // searchTextBox
             // 
             this.searchTextBox.Location = new System.Drawing.Point(562, 31);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(263, 24);
+            this.searchTextBox.Size = new System.Drawing.Size(263, 29);
             this.searchTextBox.TabIndex = 24;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
@@ -312,7 +313,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(471, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.Size = new System.Drawing.Size(85, 24);
             this.label1.TabIndex = 27;
             this.label1.Text = "Pretraga:";
             // 
@@ -321,13 +322,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(51, 601);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.Size = new System.Drawing.Size(53, 24);
             this.label2.TabIndex = 28;
             this.label2.Text = "Kurs:";
             // 
             // addNewStudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -399,5 +400,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
