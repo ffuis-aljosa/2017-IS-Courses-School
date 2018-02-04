@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Courses_School.Models
 {
-    class Exams
+    public class Exams
     {
         private int id;
         private SchoolSubjects school_subject;
@@ -83,8 +83,8 @@ namespace Courses_School.Models
             }
             set
             {
-                if (value < 0 || value == 0 || value > 5)
-                    throw new Exception("Unesite ocjenu !");
+                //if (value < 0 || value == 0 || value > 5)
+                  //  throw new Exception("Unesite ocjenu !");
                 grade = value;
             }
         }
@@ -97,8 +97,8 @@ namespace Courses_School.Models
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Datum ne može biti prazan!");
+               // if (string.IsNullOrEmpty(value))
+                 //   throw new Exception("Datum ne može biti prazan!");
 
                 date = value;
             }

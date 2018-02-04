@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="Database\DbConnection.cs" />
     <Compile Include="Database\EmployeeRepository.cs" />
+    <Compile Include="Database\ExamRepository.cs" />
     <Compile Include="Database\PaymentRepository.cs" />
     <Compile Include="Database\SchoolSubjectRepository.cs" />
     <Compile Include="Database\StudentRepository.cs" />
