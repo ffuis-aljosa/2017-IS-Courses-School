@@ -33,7 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.paymentTextBox = new System.Windows.Forms.TextBox();
             this.addPaymentButton = new System.Windows.Forms.Button();
-            this.dataTextBox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.paymentListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // StudentComboBox
@@ -81,20 +87,60 @@
             this.addPaymentButton.UseVisualStyleBackColor = true;
             this.addPaymentButton.Click += new System.EventHandler(this.addPaymentButton_Click);
             // 
-            // dataTextBox
+            // dateTimePicker
             // 
-            this.dataTextBox.Location = new System.Drawing.Point(16, 228);
-            this.dataTextBox.Name = "dataTextBox";
-            this.dataTextBox.Size = new System.Drawing.Size(199, 22);
-            this.dataTextBox.TabIndex = 6;
+            this.dateTimePicker.Location = new System.Drawing.Point(11, 235);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(184, 22);
+            this.dateTimePicker.TabIndex = 7;
+            // 
+            // paymentListView
+            // 
+            this.paymentListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.paymentListView.Location = new System.Drawing.Point(262, 44);
+            this.paymentListView.Name = "paymentListView";
+            this.paymentListView.Size = new System.Drawing.Size(389, 299);
+            this.paymentListView.TabIndex = 8;
+            this.paymentListView.UseCompatibleStateImageBehavior = false;
+            this.paymentListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Br.";
+            this.columnHeader1.Width = 30;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ime";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Prezime";
+            this.columnHeader3.Width = 100;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Iznos";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Datum";
+            this.columnHeader5.Width = 70;
             // 
             // paymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
-            this.ClientSize = new System.Drawing.Size(601, 403);
-            this.Controls.Add(this.dataTextBox);
+            this.ClientSize = new System.Drawing.Size(806, 428);
+            this.Controls.Add(this.paymentListView);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.addPaymentButton);
             this.Controls.Add(this.paymentTextBox);
             this.Controls.Add(this.label2);
@@ -113,6 +159,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox paymentTextBox;
         private System.Windows.Forms.Button addPaymentButton;
-        private System.Windows.Forms.TextBox dataTextBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.ListView paymentListView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

@@ -20,6 +20,8 @@ namespace Courses_School
             loadSchooSubject();
             loadStudent();
             clearTextBox();
+
+           
         }
 
         private void loadSchooSubject()
@@ -35,7 +37,7 @@ namespace Courses_School
         {
             try
             {
-                newStudent = new Student(firstNameTextBox.Text, lastNameTextBox.Text, jmbgTextBox.Text, dateOfBirthTextBox.Text,
+                newStudent = new Student(firstNameTextBox.Text, lastNameTextBox.Text, jmbgTextBox.Text, dateOfBirthTimePicker.Value.ToString(),
                     addressTextBox.Text, phoneNumberTextBox.Text, membershipCostTextBox.Text,
                    (SchoolSubjects)schoolSubjectAndNumberOfClassesComboBox.SelectedItem);
                 StudentRepository.createStudent(newStudent);
@@ -126,7 +128,7 @@ namespace Courses_School
             firstNameTextBox.Text = "";
             lastNameTextBox.Text = "";
             jmbgTextBox.Text = "";
-            dateOfBirthTextBox.Text = "";
+            dateOfBirthTimePicker.Value = DateTime.Now;
             addressTextBox.Text = "";
             phoneNumberTextBox.Text = "";
             membershipCostTextBox.Text = "";
@@ -140,12 +142,15 @@ namespace Courses_School
             {
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
+                comboBox1.Items.Clear();
 
                 command.CommandText = "SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
                     "s.Phone_number, s.Membership_cost, ss.school_subject, " +
                    "ss.number_of_classes FROM Students AS s JOIN schoolsubjects" +
                     " AS ss ON s.school_subject_id = ss.id WHERE s.id="
                     + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) + ";";
+               
+
                 try
                 {
                     SqlCeDataReader reader = command.ExecuteReader();
@@ -154,13 +159,18 @@ namespace Courses_School
                         firstNameTextBox.Text = reader["first_name1"].ToString();
                         lastNameTextBox.Text = reader["last_name1"].ToString();
                         jmbgTextBox.Text = reader["jmbg"].ToString();
-                        dateOfBirthTextBox.Text = reader["date_of_birth"].ToString();
+                        dateOfBirthTimePicker.Text = reader["date_of_birth"].ToString();
                         addressTextBox.Text = reader["address"].ToString();
                         phoneNumberTextBox.Text = reader["phone_number"].ToString();
                         membershipCostTextBox.Text = reader["membership_cost"].ToString();
                         schoolSubjectAndNumberOfClassesComboBox.Text = reader["school_subject"].ToString();
-
+                        command.CommandText = "SELECT ss.school_subject, e.date FROM schoolSubjects AS ss JOIN Exams AS e ON e.school_subject_id=ss.id WHERE e.student_id = " + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) /*reader["id"].ToString()*/ + ";";
+                        SqlCeDataReader dr = command.ExecuteReader();
+                        while (dr.Read())
+                            comboBox1.Items.Add(dr["school_subject"].ToString()+" " + dr["date"].ToString());
+                        
                     }
+                   
                 }
                 catch (Exception ex)
                 {
@@ -185,7 +195,7 @@ namespace Courses_School
                 command.CommandText = "UPDATE Students SET first_name1='"+firstNameTextBox.Text+"', " +
                     "last_name1='"+lastNameTextBox.Text +"'," +
                     "jmbg='" +jmbgTextBox.Text+"', " +
-                    "date_of_birth='"+dateOfBirthTextBox.Text + "', " +
+                    "date_of_birth='" + dateOfBirthTimePicker.Text + "', " +
                     "address='"+addressTextBox.Text + "'," +
                     "phone_number='"+phoneNumberTextBox.Text + "', " +
                     "membership_cost="+membershipCostTextBox.Text + " " +
@@ -210,5 +220,7 @@ namespace Courses_School
             informationsAboutStudentsListView.Items.Clear();
             loadStudent();
         }
+    
+            
     }
 }

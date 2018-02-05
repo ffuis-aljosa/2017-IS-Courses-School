@@ -83,7 +83,7 @@ namespace Courses_School.Models
         }
         public override string ToString()
         {
-            return school_subject + " " + number_of_classes;
+            return school_subject /*+ " " + number_of_classes*/;
         }
 
     }
