@@ -58,15 +58,26 @@ namespace Courses_School
             {
                 User user = new User(usernameTextBox.Text, passwordTextBox.Text);
 
-                
 
-                if (UserRepository.login(user))
+
+                if (UserRepository.login(user) != null)
                 {
-                    administratorForm form = new administratorForm();
-                    form.Show();
+                    if (user.Type == "admin")
+                    {
+                        administratorForm form = new administratorForm();
+                        form.Show();
+                        form.FormClosed += administratorForm_FormClosed;
 
-                    form.FormClosed += administratorForm_FormClosed;
-                    Hide();
+                        Hide();
+                    }
+                    else
+                    {
+                        employeeForm form = new employeeForm();
+                        form.Show();
+                        form.FormClosed += employeeForm_FormClosed;
+
+                        Hide();
+                    }
                 }
                 else
                 {
@@ -81,6 +92,10 @@ namespace Courses_School
            
         }
         private void administratorForm_FormClosed (object sender, FormClosedEventArgs e)
+        {
+            Show();
+        }
+        private void employeeForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Show();
         }

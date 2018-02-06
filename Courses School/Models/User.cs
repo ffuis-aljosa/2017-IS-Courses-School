@@ -9,8 +9,9 @@ namespace Courses_School.Models
     {
             private string username;
             private string password;
+            private string type;
 
-            public User(string username, string password)
+        public User(string username, string password)
             {
                 Username = username;
                 Password = password;
@@ -54,6 +55,18 @@ namespace Courses_School.Models
                     }
                 }
             }
+
+        public string Type
+        {
+            get
+            {
+                return type;
+            }
+            set
+            {
+                type = value;
+            }
+        }
     }
 }
 

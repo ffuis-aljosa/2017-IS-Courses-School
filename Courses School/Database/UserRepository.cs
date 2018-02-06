@@ -7,9 +7,9 @@ namespace Courses_School.Database
     {
            private static DbConnection connection = DbConnection.Instance;
 
-            public static bool login(User user)
+            public static User login(User user)
             {
-                string sql = @"SELECT * FROM Users WHERE Username = @username AND Password = @password";
+                string sql = @"SELECT * FROM Users WHERE Username = @username AND Password = @password ";
 
                 SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -19,15 +19,22 @@ namespace Courses_School.Database
                 SqlCeParameter password = new SqlCeParameter("@password", user.Password);
                 command.Parameters.Add(password);
 
-                command.Prepare();
+              //  SqlCeParameter type = new SqlCeParameter("@type", user.Type);
+               // command.Parameters.Add(type);
+
+            command.Prepare();
+           
 
                 SqlCeDataReader reader = command.ExecuteReader();
 
-                if (reader.Read())
-                    return true;
-
-                return false;
+            if (reader.Read())
+            {
+                user.Type = reader["type"].ToString();
+                return user;
             }
+
+            return null;
+        }
         public static void createUser(User user)
         {
             string sql = "INSERT INTO users(username, password) VALUES"
@@ -40,6 +47,9 @@ namespace Courses_School.Database
 
             SqlCeParameter password = new SqlCeParameter("@password", user.Password);
             command.Parameters.Add(password);
+
+            //SqlCeParameter type = new SqlCeParameter("@type", user.Type);
+            //command.Parameters.Add(type);
 
             command.Prepare();
 
