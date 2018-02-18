@@ -47,18 +47,20 @@
             // StudentComboBox
             // 
             this.StudentComboBox.FormattingEnabled = true;
-            this.StudentComboBox.Location = new System.Drawing.Point(11, 64);
+            this.StudentComboBox.Location = new System.Drawing.Point(8, 52);
+            this.StudentComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StudentComboBox.Name = "StudentComboBox";
-            this.StudentComboBox.Size = new System.Drawing.Size(184, 24);
+            this.StudentComboBox.Size = new System.Drawing.Size(139, 21);
             this.StudentComboBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(8, 22);
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ime i prezime";
             // 
@@ -66,24 +68,27 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(12, 121);
+            this.label2.Location = new System.Drawing.Point(9, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.Size = new System.Drawing.Size(118, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Iznos uplate (KM)";
             // 
             // paymentTextBox
             // 
-            this.paymentTextBox.Location = new System.Drawing.Point(11, 162);
+            this.paymentTextBox.Location = new System.Drawing.Point(8, 132);
+            this.paymentTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.paymentTextBox.Name = "paymentTextBox";
-            this.paymentTextBox.Size = new System.Drawing.Size(184, 22);
+            this.paymentTextBox.Size = new System.Drawing.Size(139, 20);
             this.paymentTextBox.TabIndex = 3;
             // 
             // addPaymentButton
             // 
-            this.addPaymentButton.Location = new System.Drawing.Point(11, 297);
+            this.addPaymentButton.Location = new System.Drawing.Point(8, 241);
+            this.addPaymentButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addPaymentButton.Name = "addPaymentButton";
-            this.addPaymentButton.Size = new System.Drawing.Size(184, 32);
+            this.addPaymentButton.Size = new System.Drawing.Size(138, 26);
             this.addPaymentButton.TabIndex = 5;
             this.addPaymentButton.Text = "Dodaj!";
             this.addPaymentButton.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(11, 235);
+            this.dateTimePicker.Location = new System.Drawing.Point(8, 191);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(184, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(139, 20);
             this.dateTimePicker.TabIndex = 7;
             // 
             // paymentListView
@@ -106,9 +112,10 @@
             this.columnHeader5});
             this.paymentListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.paymentListView.GridLines = true;
-            this.paymentListView.Location = new System.Drawing.Point(266, 76);
+            this.paymentListView.Location = new System.Drawing.Point(200, 62);
+            this.paymentListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.paymentListView.Name = "paymentListView";
-            this.paymentListView.Size = new System.Drawing.Size(389, 299);
+            this.paymentListView.Size = new System.Drawing.Size(293, 244);
             this.paymentListView.TabIndex = 8;
             this.paymentListView.UseCompatibleStateImageBehavior = false;
             this.paymentListView.View = System.Windows.Forms.View.Details;
@@ -141,28 +148,28 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(239, 20);
+            this.label3.Location = new System.Drawing.Point(179, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 29;
             this.label3.Text = "Pretraga:";
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(338, 20);
+            this.searchTextBox.Location = new System.Drawing.Point(254, 16);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(183, 22);
+            this.searchTextBox.Size = new System.Drawing.Size(138, 20);
             this.searchTextBox.TabIndex = 28;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // paymentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
-            this.ClientSize = new System.Drawing.Size(806, 428);
+            this.ClientSize = new System.Drawing.Size(604, 348);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.paymentListView);
@@ -172,6 +179,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StudentComboBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "paymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

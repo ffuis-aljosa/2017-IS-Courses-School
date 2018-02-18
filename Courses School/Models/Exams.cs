@@ -15,23 +15,23 @@ namespace Courses_School.Models
         private string date;
 
 
-        public Exams(int id, SchoolSubjects school_subject, Student student, int grade, string date)
+        public Exams(int id, Student student, SchoolSubjects school_subject, int grade, string date)
 
         {
             this.id = id;
-            SchoolSubject = school_subject;
             Student = student;
+            SchoolSubject = school_subject;
             Grade = grade;
             Date = date;
 
         }
 
-        public Exams(SchoolSubjects school_subject, Student student, string grade, string date)
+        public Exams( Student student,SchoolSubjects school_subject, string grade, string date)
 
         {
-            SchoolSubject = school_subject;
             Student = student;
-
+            SchoolSubject = school_subject;
+            
             int grade_int;
             bool parseSuccessful2 = int.TryParse(grade, out grade_int);
             if (!parseSuccessful2)

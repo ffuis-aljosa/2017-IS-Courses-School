@@ -108,7 +108,6 @@ namespace Courses_School
             loadPayment();
         }
 
-        
     }
 
 }

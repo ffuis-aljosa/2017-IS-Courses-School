@@ -39,40 +39,24 @@ namespace Courses_School
 
         }
 
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                newExam = new Exams((SchoolSubjects)schoolSubjectComboBox.SelectedItem, (Student)firstNameComboBox.SelectedItem,
-                    gradeTextBox.Text, dateTextBox.Text);
-                ExamRepository.addExam(newExam);
-                DialogResult = DialogResult.OK;
-                loadExams();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void loadExams()
         {
             examsListView.Items.Clear();
             SqlCeCommand command;
 
             if (searchTextBox.Text == "")
-
-                command = new SqlCeCommand("SELECT e.id, ss.school_subject, s.First_name1, e.Grade, e.Date " +
-                " FROM Students AS s JOIN schoolSubjects" +
-                " AS ss ON s.school_subject_id = ss.id JOIN Exams AS e ON e.school_subject_id=ss.id ORDER BY s.First_name1", connection);
-
+            {
+                command = new SqlCeCommand("SELECT s.id, s.first_name1, s.last_name1, ss.school_subject, e.grade, e.date" +
+               " FROM Students AS s JOIN schoolSubjects AS ss ON ss.id = s.school_subject_id JOIN Exams AS e ON " +
+               "e.school_subject_id = ss.id ORDER BY e.date DESC ", connection);
+            }
             else
-
-                command = new SqlCeCommand("SELECT e.id, ss.school_subject, s.First_name1, e.Grade, e.Date " +
-               " FROM Students AS s JOIN schoolSubjects" +
-               " AS ss ON s.school_subject_id = ss.id JOIN Exams AS e ON e.school_subject_id=ss.id" +
-            "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%';", connection);
+            {
+                command = new SqlCeCommand("SELECT s.id, s.first_name1, s.last_name1, ss.school_subject, e.grade, e.date" +
+              " FROM Students AS s JOIN schoolSubjects AS ss ON ss.id=s.school_subject_id JOIN Exams AS e ON e.school_subject_id = ss.id" +
+              " WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%"
+                + searchTextBox.Text + "%' ORDER BY e.date DESC ", connection);
+            }
 
 
             try
@@ -81,8 +65,9 @@ namespace Courses_School
                 while (reader.Read())
                 {
                     ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["school_subject"].ToString());
                     item.SubItems.Add(reader["first_name1"].ToString());
+                    item.SubItems.Add(reader["last_name1"].ToString());
+                    item.SubItems.Add(reader["school_subject"].ToString());
                     item.SubItems.Add(reader["grade"].ToString());
                     item.SubItems.Add(reader["date"].ToString());
 
@@ -96,8 +81,29 @@ namespace Courses_School
                 MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
         }
 
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                newExam = new Exams((Student)firstNameComboBox.SelectedItem, (SchoolSubjects)schoolSubjectComboBox.SelectedItem, 
+                    gradeTextBox.Text, dateTimePicker.Value.ToString());
+
+                ExamRepository.addExam(newExam);
+                DialogResult = DialogResult.OK;
+                loadExams();
+                clearTextBox();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+   
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
             examsListView.View = View.Details;
@@ -106,37 +112,33 @@ namespace Courses_School
             loadExams();
         }
 
-        private void examsListView_SelectedIndexChanged(object sender, EventArgs e)
+        private void clearTextBox()
         {
-            try
-            {
-                SqlCeCommand command = connection.CreateCommand();
-                command.CommandType = CommandType.Text;
+            firstNameComboBox.Text = "";
+            schoolSubjectComboBox.Text = "";
+            dateTimePicker.Value = DateTime.Now;
+            gradeTextBox.Text = "";
+        }
 
-                command.CommandText = "SELECT e.id, ss.school_subject, s.First_name1, e.Grade, e.Date " +
-                   " FROM Students AS s JOIN schoolsubjects" +
-                    " AS ss ON s.school_subject_id = ss.id JOIN Exams AS e ON e.school_subject_id=ss.id WHERE e.id="
-                    + int.Parse(examsListView.SelectedItems[0].Text) + ";";
-                try
-                {
-                    SqlCeDataReader reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        schoolSubjectComboBox.Text = reader["school_subject"].ToString();
-                        firstNameComboBox.Text = reader["first_name1"].ToString();
-                        gradeTextBox.Text = reader["grade"].ToString();
-                        dateTextBox.Text = reader["date"].ToString();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
-            catch (Exception ex)
+        private void firstNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCeCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            string full = firstNameComboBox.SelectedItem.ToString();
+            cmd.CommandText = "select * from Students where first_name1='" + full.Substring(0, full.IndexOf(' ')) + "' ;";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlCeDataAdapter da = new SqlCeDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
             {
-                MessageBox.Show(ex.Message);
+
+                cmd.CommandText = "SELECT School_subject FROM schoolSubjects WHERE Id = " + dr["school_subject_id"] + ";";
+
+                SqlCeDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                    schoolSubjectComboBox.Text = reader.GetString(0);
+
             }
         }
     }
