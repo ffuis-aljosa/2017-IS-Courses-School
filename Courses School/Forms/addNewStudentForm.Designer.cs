@@ -56,14 +56,13 @@
             this.numberOfClassesColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.profesorColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.deleteButton = new System.Windows.Forms.Button();
             this.changeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateOfBirthTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateOfBirthTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -80,7 +79,7 @@
             // firstNameTextBox
             // 
             this.firstNameTextBox.Location = new System.Drawing.Point(60, 67);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(264, 30);
             this.firstNameTextBox.TabIndex = 1;
@@ -98,7 +97,7 @@
             // lastNameTextBox
             // 
             this.lastNameTextBox.Location = new System.Drawing.Point(60, 152);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(264, 30);
             this.lastNameTextBox.TabIndex = 3;
@@ -116,7 +115,7 @@
             // jmbgTextBox
             // 
             this.jmbgTextBox.Location = new System.Drawing.Point(60, 239);
-            this.jmbgTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.jmbgTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.jmbgTextBox.Name = "jmbgTextBox";
             this.jmbgTextBox.Size = new System.Drawing.Size(264, 30);
             this.jmbgTextBox.TabIndex = 5;
@@ -144,7 +143,7 @@
             // addressTextBox
             // 
             this.addressTextBox.Location = new System.Drawing.Point(60, 412);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(264, 30);
             this.addressTextBox.TabIndex = 9;
@@ -162,7 +161,7 @@
             // membershipCostTextBox
             // 
             this.membershipCostTextBox.Location = new System.Drawing.Point(60, 587);
-            this.membershipCostTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.membershipCostTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.membershipCostTextBox.Name = "membershipCostTextBox";
             this.membershipCostTextBox.Size = new System.Drawing.Size(264, 30);
             this.membershipCostTextBox.TabIndex = 11;
@@ -170,7 +169,7 @@
             // addNewStudentButton
             // 
             this.addNewStudentButton.Location = new System.Drawing.Point(419, 748);
-            this.addNewStudentButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addNewStudentButton.Margin = new System.Windows.Forms.Padding(2);
             this.addNewStudentButton.Name = "addNewStudentButton";
             this.addNewStudentButton.Size = new System.Drawing.Size(262, 45);
             this.addNewStudentButton.TabIndex = 16;
@@ -191,7 +190,7 @@
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.Location = new System.Drawing.Point(60, 501);
-            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(264, 30);
             this.phoneNumberTextBox.TabIndex = 18;
@@ -200,7 +199,7 @@
             // 
             this.schoolSubjectAndNumberOfClassesComboBox.FormattingEnabled = true;
             this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(60, 669);
-            this.schoolSubjectAndNumberOfClassesComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.schoolSubjectAndNumberOfClassesComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.schoolSubjectAndNumberOfClassesComboBox.Name = "schoolSubjectAndNumberOfClassesComboBox";
             this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(264, 33);
             this.schoolSubjectAndNumberOfClassesComboBox.TabIndex = 19;
@@ -219,11 +218,10 @@
             this.schoolSubjectColumnHeader,
             this.numberOfClassesColumnHeader,
             this.profesorColumnHeader,
-            this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader1});
             this.informationsAboutStudentsListView.GridLines = true;
             this.informationsAboutStudentsListView.Location = new System.Drawing.Point(364, 110);
-            this.informationsAboutStudentsListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.informationsAboutStudentsListView.Margin = new System.Windows.Forms.Padding(2);
             this.informationsAboutStudentsListView.Name = "informationsAboutStudentsListView";
             this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1601, 518);
             this.informationsAboutStudentsListView.TabIndex = 22;
@@ -287,12 +285,13 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Profesor";
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 150;
             // 
             // searchTextBox
             // 
             this.searchTextBox.Location = new System.Drawing.Point(613, 32);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(287, 30);
             this.searchTextBox.TabIndex = 24;
@@ -301,7 +300,7 @@
             // deleteButton
             // 
             this.deleteButton.Location = new System.Drawing.Point(746, 748);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(262, 45);
             this.deleteButton.TabIndex = 25;
@@ -312,7 +311,7 @@
             // changeButton
             // 
             this.changeButton.Location = new System.Drawing.Point(92, 748);
-            this.changeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.changeButton.Margin = new System.Windows.Forms.Padding(2);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(262, 45);
             this.changeButton.TabIndex = 26;
@@ -344,21 +343,18 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(466, 669);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(290, 33);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.Text = "Položeni predmeti";
             // 
-            // dateOfBirthTimePicker
+            // dateOfBirthTextBox
             // 
-            this.dateOfBirthTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateOfBirthTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateOfBirthTimePicker.Location = new System.Drawing.Point(1, 326);
-            this.dateOfBirthTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateOfBirthTimePicker.Name = "dateOfBirthTimePicker";
-            this.dateOfBirthTimePicker.Size = new System.Drawing.Size(323, 24);
-            this.dateOfBirthTimePicker.TabIndex = 31;
+            this.dateOfBirthTextBox.Location = new System.Drawing.Point(60, 330);
+            this.dateOfBirthTextBox.Name = "dateOfBirthTextBox";
+            this.dateOfBirthTextBox.Size = new System.Drawing.Size(264, 30);
+            this.dateOfBirthTextBox.TabIndex = 30;
             // 
             // addNewStudentForm
             // 
@@ -367,7 +363,7 @@
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1495, 781);
-            this.Controls.Add(this.dateOfBirthTimePicker);
+            this.Controls.Add(this.dateOfBirthTextBox);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -434,8 +430,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateOfBirthTimePicker;
+        private System.Windows.Forms.TextBox dateOfBirthTextBox;
     }
 }

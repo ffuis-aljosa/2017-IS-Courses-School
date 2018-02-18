@@ -52,7 +52,7 @@ namespace Courses_School
             }
         }
 
-        private void loginFormButton_Click(object sender, EventArgs e)
+        private void loginFormButton_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -83,13 +83,12 @@ namespace Courses_School
                 {
                     throw new Exception("Korisničko ime i/ili lozinka su pogrešni");
                 }
-                
+
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message);
             }
-           
         }
         private void administratorForm_FormClosed (object sender, FormClosedEventArgs e)
         {
@@ -98,6 +97,11 @@ namespace Courses_School
         private void employeeForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }  
 }

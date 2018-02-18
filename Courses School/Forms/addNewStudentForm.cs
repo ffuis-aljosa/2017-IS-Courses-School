@@ -37,7 +37,7 @@ namespace Courses_School
         {
             try
             {
-                newStudent = new Student(firstNameTextBox.Text, lastNameTextBox.Text, jmbgTextBox.Text, dateOfBirthTimePicker.Value.ToString(),
+                newStudent = new Student(firstNameTextBox.Text, lastNameTextBox.Text, jmbgTextBox.Text,dateOfBirthTextBox.Text,
                     addressTextBox.Text, phoneNumberTextBox.Text, membershipCostTextBox.Text,
                    (SchoolSubjects)schoolSubjectAndNumberOfClassesComboBox.SelectedItem);
                 StudentRepository.createStudent(newStudent);
@@ -61,16 +61,17 @@ namespace Courses_School
 
                 command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
                 "s.Phone_number, s.Membership_cost, ss.school_subject, " +
-                "ss.number_of_classes, e.first_name FROM Students AS s JOIN schoolsubjects" +
+                "ss.number_of_classes, e.first_name, e.last_name FROM Students AS s JOIN schoolsubjects" +
                 " AS ss ON s.school_subject_id = ss.id JOIN Employees AS e ON e.schoolSubject_id=ss.id ORDER BY s.First_name1", connection);
 
             else
 
                command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
            "s.Phone_number, s.Membership_cost, ss.school_subject, " +
-          "ss.number_of_classes, e.first_name FROM Students AS s JOIN schoolsubjects" +
+          "ss.number_of_classes, e.first_name, e.last_name FROM Students AS s JOIN schoolsubjects" +
            " AS ss ON s.school_subject_id = ss.id JOIN Employees AS e ON e.schoolSubject_id=ss.id " +
-           "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%" + searchTextBox.Text + "%';", connection);
+           "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%" + searchTextBox.Text + "%'" +
+           "OR ss.school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
 
 
             try
@@ -89,7 +90,7 @@ namespace Courses_School
                     item.SubItems.Add(reader["school_subject"].ToString());
                     item.SubItems.Add(reader["number_of_classes"].ToString());
                     item.SubItems.Add(reader["first_name"].ToString());
-                    //item.SubItems.Add(reader["last_name"].ToString());
+                    item.SubItems.Add(reader["last_name"].ToString());
 
                     informationsAboutStudentsListView.Items.Add(item);
 
@@ -128,7 +129,7 @@ namespace Courses_School
             firstNameTextBox.Text = "";
             lastNameTextBox.Text = "";
             jmbgTextBox.Text = "";
-            dateOfBirthTimePicker.Value = DateTime.Now;
+            dateOfBirthTextBox.Text = "";
             addressTextBox.Text = "";
             phoneNumberTextBox.Text = "";
             membershipCostTextBox.Text = "";
@@ -159,7 +160,7 @@ namespace Courses_School
                         firstNameTextBox.Text = reader["first_name1"].ToString();
                         lastNameTextBox.Text = reader["last_name1"].ToString();
                         jmbgTextBox.Text = reader["jmbg"].ToString();
-                        dateOfBirthTimePicker.Text = reader["date_of_birth"].ToString();
+                        dateOfBirthTextBox.Text = reader["date_of_birth"].ToString();
                         addressTextBox.Text = reader["address"].ToString();
                         phoneNumberTextBox.Text = reader["phone_number"].ToString();
                         membershipCostTextBox.Text = reader["membership_cost"].ToString();
@@ -192,14 +193,19 @@ namespace Courses_School
             {
                 SqlCeCommand command= connection.CreateCommand();
                 command.CommandType = CommandType.Text;
+                command.CommandText = "select Id from schoolSubjects where school_subject ='" + schoolSubjectAndNumberOfClassesComboBox.SelectedItem.ToString() + "';";
+                SqlCeDataReader reader = command.ExecuteReader();
+                reader.Read();
                 command.CommandText = "UPDATE Students SET first_name1='"+firstNameTextBox.Text+"', " +
                     "last_name1='"+lastNameTextBox.Text +"'," +
                     "jmbg='" +jmbgTextBox.Text+"', " +
-                    "date_of_birth='" + dateOfBirthTimePicker.Text + "', " +
+                    "date_of_birth='" + dateOfBirthTextBox.Text + "', " +
                     "address='"+addressTextBox.Text + "'," +
                     "phone_number='"+phoneNumberTextBox.Text + "', " +
-                    "membership_cost="+membershipCostTextBox.Text + " " +
-                
+                    "membership_cost="+membershipCostTextBox.Text + ", " +
+                    "school_subject_id=" + reader.GetInt32(0) + " " +
+
+
                     "WHERE id=" + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) + ";";
 
                 command.ExecuteNonQuery();

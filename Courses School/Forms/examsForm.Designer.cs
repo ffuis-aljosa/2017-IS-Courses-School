@@ -93,7 +93,7 @@
             // dateTextBox
             // 
             this.dateTextBox.Location = new System.Drawing.Point(183, 265);
-            this.dateTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateTextBox.Name = "dateTextBox";
             this.dateTextBox.Size = new System.Drawing.Size(311, 22);
             this.dateTextBox.TabIndex = 5;
@@ -101,7 +101,7 @@
             // gradeTextBox
             // 
             this.gradeTextBox.Location = new System.Drawing.Point(183, 213);
-            this.gradeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gradeTextBox.Name = "gradeTextBox";
             this.gradeTextBox.Size = new System.Drawing.Size(311, 22);
             this.gradeTextBox.TabIndex = 6;
@@ -120,7 +120,7 @@
             // searchTextBox
             // 
             this.searchTextBox.Location = new System.Drawing.Point(771, 71);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(311, 22);
             this.searchTextBox.TabIndex = 10;
@@ -130,7 +130,7 @@
             // 
             this.firstNameComboBox.FormattingEnabled = true;
             this.firstNameComboBox.Location = new System.Drawing.Point(183, 162);
-            this.firstNameComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.firstNameComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.firstNameComboBox.Name = "firstNameComboBox";
             this.firstNameComboBox.Size = new System.Drawing.Size(311, 24);
             this.firstNameComboBox.TabIndex = 11;
@@ -139,7 +139,7 @@
             // 
             this.schoolSubjectComboBox.FormattingEnabled = true;
             this.schoolSubjectComboBox.Location = new System.Drawing.Point(183, 107);
-            this.schoolSubjectComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.schoolSubjectComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.schoolSubjectComboBox.Name = "schoolSubjectComboBox";
             this.schoolSubjectComboBox.Size = new System.Drawing.Size(311, 24);
             this.schoolSubjectComboBox.TabIndex = 12;
@@ -148,7 +148,7 @@
             // 
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.addButton.Location = new System.Drawing.Point(331, 337);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(164, 62);
             this.addButton.TabIndex = 13;
@@ -166,7 +166,7 @@
             this.examsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.examsListView.GridLines = true;
             this.examsListView.Location = new System.Drawing.Point(551, 107);
-            this.examsListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.examsListView.Margin = new System.Windows.Forms.Padding(4);
             this.examsListView.Name = "examsListView";
             this.examsListView.Size = new System.Drawing.Size(647, 376);
             this.examsListView.TabIndex = 23;
@@ -198,6 +198,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 526);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.examsListView);
@@ -211,7 +214,7 @@
             this.Controls.Add(this.gradeLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.schoolSubjectLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "examsForm";
             this.Text = "examsForm";
             this.ResumeLayout(false);

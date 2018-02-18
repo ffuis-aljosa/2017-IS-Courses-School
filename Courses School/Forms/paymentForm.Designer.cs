@@ -40,6 +40,8 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label3 = new System.Windows.Forms.Label();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // StudentComboBox
@@ -102,7 +104,9 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.paymentListView.Location = new System.Drawing.Point(262, 44);
+            this.paymentListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.paymentListView.GridLines = true;
+            this.paymentListView.Location = new System.Drawing.Point(266, 76);
             this.paymentListView.Name = "paymentListView";
             this.paymentListView.Size = new System.Drawing.Size(389, 299);
             this.paymentListView.TabIndex = 8;
@@ -112,7 +116,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Br.";
-            this.columnHeader1.Width = 30;
+            this.columnHeader1.Width = 31;
             // 
             // columnHeader2
             // 
@@ -133,12 +137,34 @@
             this.columnHeader5.Text = "Datum";
             this.columnHeader5.Width = 70;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(239, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Pretraga:";
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(338, 20);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(183, 22);
+            this.searchTextBox.TabIndex = 28;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            // 
             // paymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(806, 428);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.paymentListView);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.addPaymentButton);
@@ -146,7 +172,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StudentComboBox);
+            this.MaximizeBox = false;
             this.Name = "paymentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +194,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox searchTextBox;
     }
 }

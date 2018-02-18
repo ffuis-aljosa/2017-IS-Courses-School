@@ -44,7 +44,7 @@
             // schoolTimetableButton
             // 
             this.schoolTimetableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.schoolTimetableButton.Location = new System.Drawing.Point(407, 180);
+            this.schoolTimetableButton.Location = new System.Drawing.Point(391, 195);
             this.schoolTimetableButton.Margin = new System.Windows.Forms.Padding(4);
             this.schoolTimetableButton.Name = "schoolTimetableButton";
             this.schoolTimetableButton.Size = new System.Drawing.Size(211, 81);
@@ -56,7 +56,7 @@
             // schoolSubjectbutton
             // 
             this.schoolSubjectbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.schoolSubjectbutton.Location = new System.Drawing.Point(131, 76);
+            this.schoolSubjectbutton.Location = new System.Drawing.Point(115, 91);
             this.schoolSubjectbutton.Margin = new System.Windows.Forms.Padding(4);
             this.schoolSubjectbutton.Name = "schoolSubjectbutton";
             this.schoolSubjectbutton.Size = new System.Drawing.Size(211, 81);
@@ -68,7 +68,7 @@
             // informationsAboutStudentsButton
             // 
             this.informationsAboutStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.informationsAboutStudentsButton.Location = new System.Drawing.Point(131, 180);
+            this.informationsAboutStudentsButton.Location = new System.Drawing.Point(115, 195);
             this.informationsAboutStudentsButton.Margin = new System.Windows.Forms.Padding(4);
             this.informationsAboutStudentsButton.Name = "informationsAboutStudentsButton";
             this.informationsAboutStudentsButton.Size = new System.Drawing.Size(211, 81);
@@ -80,7 +80,7 @@
             // informationsAboutEmployeesButton
             // 
             this.informationsAboutEmployeesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.informationsAboutEmployeesButton.Location = new System.Drawing.Point(407, 76);
+            this.informationsAboutEmployeesButton.Location = new System.Drawing.Point(391, 91);
             this.informationsAboutEmployeesButton.Margin = new System.Windows.Forms.Padding(4);
             this.informationsAboutEmployeesButton.Name = "informationsAboutEmployeesButton";
             this.informationsAboutEmployeesButton.Size = new System.Drawing.Size(211, 81);
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(747, 393);
             this.Controls.Add(this.informationsAboutEmployeesButton);
             this.Controls.Add(this.informationsAboutStudentsButton);
@@ -142,7 +142,7 @@
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "administratorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.menuStrip.ResumeLayout(false);

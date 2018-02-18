@@ -60,40 +60,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addNewEmloyeeForm.cs">
+    <Compile Include="Forms\addNewEmloyeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addNewEmloyeeForm.Designer.cs">
+    <Compile Include="Forms\addNewEmloyeeForm.Designer.cs">
       <DependentUpon>addNewEmloyeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="addNewStudentForm.cs">
+    <Compile Include="Forms\addNewStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addNewStudentForm.Designer.cs">
+    <Compile Include="Forms\addNewStudentForm.Designer.cs">
       <DependentUpon>addNewStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="administratorForm.cs">
+    <Compile Include="Forms\administratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="administratorForm.Designer.cs">
+    <Compile Include="Forms\administratorForm.Designer.cs">
       <DependentUpon>administratorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="classroom1Form.cs">
+    <Compile Include="Forms\classroom1Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="classroom1Form.Designer.cs">
+    <Compile Include="Forms\classroom1Form.Designer.cs">
       <DependentUpon>classroom1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="classroom2Form.cs">
+    <Compile Include="Forms\classroom2Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="classroom2Form.Designer.cs">
+    <Compile Include="Forms\classroom2Form.Designer.cs">
       <DependentUpon>classroom2Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="classroom3Form.cs">
+    <Compile Include="Forms\classroom3Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="classroom3Form.Designer.cs">
+    <Compile Include="Forms\classroom3Form.Designer.cs">
       <DependentUpon>classroom3Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DbConnection.cs" />
@@ -103,16 +103,16 @@
     <Compile Include="Database\SchoolSubjectRepository.cs" />
     <Compile Include="Database\StudentRepository.cs" />
     <Compile Include="Database\UserRepository.cs" />
-    <Compile Include="employeeForm.cs">
+    <Compile Include="Forms\employeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="employeeForm.Designer.cs">
+    <Compile Include="Forms\employeeForm.Designer.cs">
       <DependentUpon>employeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="examsForm.cs">
+    <Compile Include="Forms\examsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="examsForm.Designer.cs">
+    <Compile Include="Forms\examsForm.Designer.cs">
       <DependentUpon>examsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Employees.cs" />
@@ -121,66 +121,66 @@
     <Compile Include="Models\SchoolSubjects.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="newUserForm.cs">
+    <Compile Include="Forms\newUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newUserForm.Designer.cs">
+    <Compile Include="Forms\newUserForm.Designer.cs">
       <DependentUpon>newUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="paymentForm.cs">
+    <Compile Include="Forms\paymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="paymentForm.Designer.cs">
+    <Compile Include="Forms\paymentForm.Designer.cs">
       <DependentUpon>paymentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="loginForm.cs">
+    <Compile Include="Forms\loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginForm.Designer.cs">
+    <Compile Include="Forms\loginForm.Designer.cs">
       <DependentUpon>loginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="addNewSchoolSubjectForm.cs">
+    <Compile Include="Forms\addNewSchoolSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addNewSchoolSubjectForm.Designer.cs">
+    <Compile Include="Forms\addNewSchoolSubjectForm.Designer.cs">
       <DependentUpon>addNewSchoolSubjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="schoolTimetableForm.cs">
+    <Compile Include="Forms\schoolTimetableForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="schoolTimetableForm.Designer.cs">
+    <Compile Include="Forms\schoolTimetableForm.Designer.cs">
       <DependentUpon>schoolTimetableForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="addNewEmloyeeForm.resx">
+    <EmbeddedResource Include="Forms\addNewEmloyeeForm.resx">
       <DependentUpon>addNewEmloyeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addNewStudentForm.resx">
+    <EmbeddedResource Include="Forms\addNewStudentForm.resx">
       <DependentUpon>addNewStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="administratorForm.resx">
+    <EmbeddedResource Include="Forms\administratorForm.resx">
       <DependentUpon>administratorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="classroom1Form.resx">
+    <EmbeddedResource Include="Forms\classroom1Form.resx">
       <DependentUpon>classroom1Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="classroom2Form.resx">
+    <EmbeddedResource Include="Forms\classroom2Form.resx">
       <DependentUpon>classroom2Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="classroom3Form.resx">
+    <EmbeddedResource Include="Forms\classroom3Form.resx">
       <DependentUpon>classroom3Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employeeForm.resx">
+    <EmbeddedResource Include="Forms\employeeForm.resx">
       <DependentUpon>employeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="examsForm.resx">
+    <EmbeddedResource Include="Forms\examsForm.resx">
       <DependentUpon>examsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newUserForm.resx">
+    <EmbeddedResource Include="Forms\newUserForm.resx">
       <DependentUpon>newUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="paymentForm.resx">
+    <EmbeddedResource Include="Forms\paymentForm.resx">
       <DependentUpon>paymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -193,13 +193,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="loginForm.resx">
+    <EmbeddedResource Include="Forms\loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addNewSchoolSubjectForm.resx">
+    <EmbeddedResource Include="Forms\addNewSchoolSubjectForm.resx">
       <DependentUpon>addNewSchoolSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="schoolTimetableForm.resx">
+    <EmbeddedResource Include="Forms\schoolTimetableForm.resx">
       <DependentUpon>schoolTimetableForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
