@@ -60,10 +60,10 @@
             this.numberOfClassescolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.salarycolumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.deleteButton = new System.Windows.Forms.Button();
-            this.changeButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.employeesLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lastNameTextBox
@@ -82,9 +82,9 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(32, 366);
+            this.emailTextBox.Location = new System.Drawing.Point(31, 366);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(268, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(269, 20);
             this.emailTextBox.TabIndex = 2;
             // 
             // firstNameTextBox
@@ -98,12 +98,12 @@
             // 
             this.phoneNumberTextBox.Location = new System.Drawing.Point(31, 306);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(269, 20);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(272, 20);
             this.phoneNumberTextBox.TabIndex = 4;
             // 
             // dateOfBirthTextBox
             // 
-            this.dateOfBirthTextBox.Location = new System.Drawing.Point(34, 232);
+            this.dateOfBirthTextBox.Location = new System.Drawing.Point(31, 232);
             this.dateOfBirthTextBox.Name = "dateOfBirthTextBox";
             this.dateOfBirthTextBox.Size = new System.Drawing.Size(266, 20);
             this.dateOfBirthTextBox.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lastNameLabel.Location = new System.Drawing.Point(29, 86);
+            this.lastNameLabel.Location = new System.Drawing.Point(31, 86);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(67, 18);
             this.lastNameLabel.TabIndex = 6;
@@ -132,7 +132,7 @@
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.addressLabel.Location = new System.Drawing.Point(28, 146);
+            this.addressLabel.Location = new System.Drawing.Point(31, 146);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(133, 18);
             this.addressLabel.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             this.phoneNumberLabel.AutoSize = true;
             this.phoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.phoneNumberLabel.Location = new System.Drawing.Point(30, 285);
+            this.phoneNumberLabel.Location = new System.Drawing.Point(31, 285);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
             this.phoneNumberLabel.Size = new System.Drawing.Size(95, 18);
             this.phoneNumberLabel.TabIndex = 10;
@@ -152,7 +152,7 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.emailLabel.Location = new System.Drawing.Point(29, 345);
+            this.emailLabel.Location = new System.Drawing.Point(31, 345);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(54, 18);
             this.emailLabel.TabIndex = 11;
@@ -198,7 +198,7 @@
             // schoolSubjectAndNumberOfClassesComboBox
             // 
             this.schoolSubjectAndNumberOfClassesComboBox.FormattingEnabled = true;
-            this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(33, 502);
+            this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(31, 502);
             this.schoolSubjectAndNumberOfClassesComboBox.Name = "schoolSubjectAndNumberOfClassesComboBox";
             this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(266, 21);
             this.schoolSubjectAndNumberOfClassesComboBox.TabIndex = 18;
@@ -206,7 +206,7 @@
             // addEmployeeButton
             // 
             this.addEmployeeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.addEmployeeButton.Location = new System.Drawing.Point(34, 618);
+            this.addEmployeeButton.Location = new System.Drawing.Point(524, 618);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(268, 46);
             this.addEmployeeButton.TabIndex = 19;
@@ -312,7 +312,7 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.deleteButton.Location = new System.Drawing.Point(450, 618);
+            this.deleteButton.Location = new System.Drawing.Point(816, 618);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(268, 46);
             this.deleteButton.TabIndex = 19;
@@ -320,19 +320,9 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // changeButton
-            // 
-            this.changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.changeButton.Location = new System.Drawing.Point(862, 618);
-            this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(237, 44);
-            this.changeButton.TabIndex = 27;
-            this.changeButton.Text = "Izmjeni!";
-            this.changeButton.UseVisualStyleBackColor = true;
-            // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(611, 51);
+            this.searchTextBox.Location = new System.Drawing.Point(701, 146);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(269, 20);
             this.searchTextBox.TabIndex = 29;
@@ -342,7 +332,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.Location = new System.Drawing.Point(538, 54);
+            this.label1.Location = new System.Drawing.Point(627, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 30;
@@ -358,16 +348,26 @@
             this.employeesLabel.TabIndex = 28;
             this.employeesLabel.Text = "Zaposleni :";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.label2.Location = new System.Drawing.Point(30, 255);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "YYYY-MM-DD";
+            // 
             // addNewEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
-            this.ClientSize = new System.Drawing.Size(1330, 712);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.employeesLabel);
-            this.Controls.Add(this.changeButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dateOfBirthLabel);
             this.Controls.Add(this.salaryTextBox);
@@ -392,7 +392,6 @@
             this.Name = "addNewEmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addNewEmployeeForm";
-            this.Load += new System.EventHandler(this.addNewEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,7 +420,6 @@
         private System.Windows.Forms.Label dateOfBirthLabel;
         private System.Windows.Forms.ListView employeesListView;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.ColumnHeader idColumnHeader;
         private System.Windows.Forms.ColumnHeader firstNamecolumnHeader;
         private System.Windows.Forms.ColumnHeader lastNamecolumnHeader;
@@ -436,5 +434,6 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label employeesLabel;
+        private System.Windows.Forms.Label label2;
     }
 }

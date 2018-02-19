@@ -74,10 +74,12 @@ namespace Courses_School
 
             else
 
-            command = new SqlCeCommand("SELECT e.id, e.First_name, e.Last_name, e.Address, e.Date_of_birth, " +
-                           "e.Phone_number, e.Email, e.Qualification, ss.school_subject, " +
-                           "ss.number_of_classes, e.Salary FROM Employees AS e JOIN schoolSubjects" +
-                           " AS ss ON e.schoolSubject_id = ss.id WHERE e.First_name LIKE '%" + searchTextBox.Text + "%';", connection);
+                command = new SqlCeCommand("SELECT e.id, e.First_name, e.Last_name, e.Address, e.Date_of_birth, " +
+                "e.Phone_number, e.Email, e.Qualification, ss.school_subject, " +
+                "ss.number_of_classes, e.Salary FROM Employees AS e JOIN schoolSubjects" +
+                " AS ss ON e.schoolSubject_id = ss.id " +
+               "WHERE e.First_name LIKE '%" + searchTextBox.Text + "%' OR e.Last_name LIKE '%" + searchTextBox.Text + "%'" +
+               "OR ss.school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
             try
             {
                 SqlCeDataReader reader = command.ExecuteReader();
@@ -181,11 +183,6 @@ namespace Courses_School
             employeesListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             employeesListView.Items.Clear();
             loadEmployee();
-        }
-
-        private void addNewEmployeeForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
