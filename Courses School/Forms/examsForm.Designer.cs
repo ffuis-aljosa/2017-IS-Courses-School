@@ -46,6 +46,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // schoolSubjectLabel
@@ -196,6 +197,17 @@
             this.dateTimePicker.Size = new System.Drawing.Size(235, 20);
             this.dateTimePicker.TabIndex = 25;
             // 
+            // deleteButton
+            // 
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.deleteButton.Location = new System.Drawing.Point(248, 343);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(123, 50);
+            this.deleteButton.TabIndex = 26;
+            this.deleteButton.Text = "Obriši !";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
             // examsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +216,7 @@
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(927, 427);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.examsListView);
@@ -244,5 +257,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.Button deleteButton;
     }
 }

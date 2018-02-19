@@ -46,16 +46,16 @@ namespace Courses_School
 
             if (searchTextBox.Text == "")
             {
-                command = new SqlCeCommand("SELECT s.id, s.first_name1, s.last_name1, ss.school_subject, e.grade, e.date" +
+                command = new SqlCeCommand("SELECT e.id, s.first_name1, s.last_name1, ss.school_subject, e.grade, e.date" +
                " FROM Students AS s JOIN schoolSubjects AS ss ON ss.id = s.school_subject_id JOIN Exams AS e ON " +
-               "e.school_subject_id = ss.id ORDER BY e.date DESC ", connection);
+               "e.school_subject_id = ss.id ORDER BY e.date ", connection);
             }
             else
             {
-                command = new SqlCeCommand("SELECT s.id, s.first_name1, s.last_name1, ss.school_subject, e.grade, e.date" +
+                command = new SqlCeCommand("SELECT e.id, s.first_name1, s.last_name1, ss.school_subject, e.grade, e.date" +
               " FROM Students AS s JOIN schoolSubjects AS ss ON ss.id=s.school_subject_id JOIN Exams AS e ON e.school_subject_id = ss.id" +
               " WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%"
-                + searchTextBox.Text + "%' ORDER BY e.date DESC ", connection);
+                + searchTextBox.Text + "%' ORDER BY e.date ", connection);
             }
 
 
@@ -145,6 +145,28 @@ namespace Courses_School
         private void examsForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da obrišete?", "", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                SqlCeCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "DELETE FROM Exams WHERE id = "
+                    + int.Parse(examsListView.SelectedItems[0].Text) + ";";
+
+                command.ExecuteNonQuery();
+                loadExams();
+                clearTextBox();
+            }
+            else
+            {
+                MessageBox.Show("Brisanje nije uspjelo!");
+
+            }
         }
     }
 }
