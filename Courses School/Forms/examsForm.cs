@@ -141,5 +141,10 @@ namespace Courses_School
 
             }
         }
+
+        private void examsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

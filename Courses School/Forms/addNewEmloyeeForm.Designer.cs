@@ -392,6 +392,7 @@
             this.Name = "addNewEmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addNewEmployeeForm";
+            this.Load += new System.EventHandler(this.addNewEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

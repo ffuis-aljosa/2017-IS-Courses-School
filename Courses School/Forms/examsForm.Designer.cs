@@ -218,6 +218,7 @@
             this.Controls.Add(this.schoolSubjectLabel);
             this.Name = "examsForm";
             this.Text = "examsForm";
+            this.Load += new System.EventHandler(this.examsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

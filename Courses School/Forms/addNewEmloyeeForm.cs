@@ -183,6 +183,9 @@ namespace Courses_School
             loadEmployee();
         }
 
-        
+        private void addNewEmployeeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
