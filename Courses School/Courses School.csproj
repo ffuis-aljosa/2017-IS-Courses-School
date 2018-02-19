@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\SchoolTimetableRepository.cs" />
+    <Compile Include="Database\SchoolTimetableRepository2.cs" />
     <Compile Include="Forms\addNewEmloyeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +120,7 @@
     <Compile Include="Models\Exams.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\SchoolSubjects.cs" />
-    <Compile Include="Models\SchoolTimetable.cs" />
+    <Compile Include="Models\SchoolTimetable2.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Forms\newUserForm.cs">

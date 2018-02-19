@@ -28,40 +28,33 @@ namespace Courses_School
         private void schoolSubjectForm_Load(object sender, EventArgs e)
         {
 
-        }
-   
-        /*
-        private void SchoolSubjectButton_Click(object sender, EventArgs e)
-        {
-            addNewSchoolSubjectForm form = new addNewSchoolSubjectForm();
-            DialogResult result = form.ShowDialog();
-
-            if (result == DialogResult.OK)
-            {
-                SchoolSubjectRepository.createSchoolSubject(form.NewSchoolSubject);
-            }
-        */
-
-        private void SchoolSubjectListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
-       private void SchoolSubjectListView_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void loadSchoolSubject()
         {
-            SqlCeCommand command = connection.CreateCommand();
-            command.CommandType = CommandType.Text;
+            schoolSubjectListView.Items.Clear();
+            SqlCeCommand command;
 
-            command.CommandText = "SELECT id, school_subject, number_of_classes FROM schoolsubjects" +
-                int.Parse(SchoolSubjectListView.SelectedItems[0].Text) + ";";
+            if (searchTextBox.Text == "")
+
+                command = new SqlCeCommand("SELECT id, school_subject, number_of_classes FROM schoolSubjects ORDER BY id", connection);
+
+            else
+
+                command = new SqlCeCommand("SELECT id, school_subject, number_of_classes FROM schoolSubjects" +
+                          "WHERE school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
+
             try
             {
                 SqlCeDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    subjectAddSchoolSubjectTextBox.Text = reader["school_subject"].ToString();
-                    numberOfClassesAddSchoolSubjectTextBox.Text = reader["number_of_classes"].ToString();
+                    ListViewItem item = new ListViewItem(reader["id"].ToString());
+                    item.SubItems.Add(reader["school_subject"].ToString());
+                    item.SubItems.Add(reader["number_of_classes"].ToString());
 
+                    schoolSubjectListView.Items.Add(item);
                 }
             }
             catch (Exception ex)
@@ -71,13 +64,19 @@ namespace Courses_School
 
 
         }
-        
-        private void addSchoolSubjectButton_Click(object sender, EventArgs e)
+
+        private void clearTextBox()
+        {
+            schoolSubjectTextBox.Text = " ";
+            numberOfClassesTextBox.Text = " ";
+
+        }  
+
+        private void addSchoolSubjectButton_Click_1(object sender, EventArgs e)
         {
             try
             {
-
-                newSchoolSubject = new SchoolSubjects(subjectAddSchoolSubjectTextBox.Text, numberOfClassesAddSchoolSubjectTextBox.Text);
+                newSchoolSubject = new SchoolSubjects(schoolSubjectTextBox.Text, numberOfClassesTextBox.Text);
 
                 SchoolSubjectRepository.createSchoolSubject(newSchoolSubject);
 
@@ -85,44 +84,107 @@ namespace Courses_School
                 loadSchoolSubject();
                 clearTextBox();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-       
-        private void loadSchoolSubject()
+        private void deleteSchoolSubjectButton_Click(object sender, EventArgs e)
         {
-            SchoolSubjectListView.Items.Clear();
-            SqlCeCommand command = new SqlCeCommand("SELECT id, school_subject, number_of_classes FROM schoolsubjects", connection);
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da obrišete?", "", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                SqlCeCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "DELETE FROM schoolSubjects WHERE id = "
+                    + int.Parse(schoolSubjectListView.SelectedItems[0].Text) + ";";
+
+                command.ExecuteNonQuery();
+                loadSchoolSubject();
+                clearTextBox();
+            }
+            else
+            {
+                MessageBox.Show("Brisanje nije uspjelo!");
+
+            }
+        }
+
+        private void changeSchoolSubjectButton_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da izmjenite podatke?", "", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    SqlCeCommand command = connection.CreateCommand();
+                    command.CommandType = CommandType.Text;
+                    command.CommandText = "select Id from schoolSubjects where id =" + int.Parse(schoolSubjectListView.SelectedItems[0].Text) + ";";
+                    SqlCeDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    command.CommandText = "UPDATE schoolSubjects SET school_subject'" + schoolSubjectTextBox.Text + "', " +
+                        "number_of_classes = " + numberOfClassesTextBox.Text + "," +
+                        "WHERE id=" + int.Parse(schoolSubjectListView.SelectedItems[0].Text) + ";";
+
+                    command.ExecuteNonQuery();
+                    loadSchoolSubject();
+                    clearTextBox();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Izmjena nije uspjela!");
+
+            }
+        }
+
+        private void schoolSubjectListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
             try
             {
-                SqlCeDataReader reader = command.ExecuteReader();
-                while(reader.Read())
-                {
-                    ListViewItem item = new ListViewItem(reader["id"].ToString());
-                    item.SubItems.Add(reader["school_subject"].ToString());
-                    item.SubItems.Add(reader["number_of_classes"].ToString());
+                SqlCeCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
 
-                    SchoolSubjectListView.Items.Add(item);
+                command.CommandText = "SELECT id, school_subject, number_of_classes FROM schoolSubjects";
+
+                try
+                {
+
+                    SqlCeDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        schoolSubjectTextBox.Text = reader["school_subject"].ToString();
+                        numberOfClassesTextBox.Text = reader["number_of_classes"].ToString();
+
+                    }
+                    clearTextBox();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show(ex.Message);
             }
-        }
-        private void clearTextBox()
-        {
-            subjectAddSchoolSubjectTextBox.Text = " ";
-            numberOfClassesAddSchoolSubjectTextBox.Text = " ";
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            schoolSubjectListView.View = View.Details;
+            schoolSubjectListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            schoolSubjectListView.Items.Clear();
+            loadSchoolSubject();
         }
     }
 }

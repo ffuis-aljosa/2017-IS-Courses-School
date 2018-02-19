@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Courses_School.Models
 {
-    public class SchoolTimetable
+    public class SchoolTimetable2
     {
         private int id;
         private string time;
@@ -17,7 +17,7 @@ namespace Courses_School.Models
         private string friday;
 
 
-        public SchoolTimetable(int id, string time, string monday, string tuesday, string wednesday, string thursday, string friday)
+        public SchoolTimetable2(int id, string time, string monday, string tuesday, string wednesday, string thursday, string friday)
         {
             this.id = id;
             Time = time;
@@ -29,7 +29,7 @@ namespace Courses_School.Models
 
         }
 
-        public SchoolTimetable(string time, string monday, string tuesday, string wednesday, string thursday, string friday)
+        public SchoolTimetable2(string time, string monday, string tuesday, string wednesday, string thursday, string friday)
         {
 
             Time = time;

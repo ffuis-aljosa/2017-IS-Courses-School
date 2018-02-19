@@ -17,7 +17,7 @@ namespace Courses_School
     {
         private static SqlCeConnection connection = DbConnection.Instance.Connection;
 
-        public SchoolTimetable newSchoolTimetable { get; set; }
+        public SchoolTimetable2 newSchoolTimetable { get; set; }
 
         public classroom2Form()
         {
@@ -65,9 +65,9 @@ namespace Courses_School
             try
             {
 
-                newSchoolTimetable = new SchoolTimetable(timeTextBox.Text, mondayTextBox.Text, tuesdayTextBox.Text, wednesdayTextBox.Text, thursdayTextBox.Text, fridayTextBox.Text);
+                newSchoolTimetable = new SchoolTimetable2(timeTextBox.Text, mondayTextBox.Text, tuesdayTextBox.Text, wednesdayTextBox.Text, thursdayTextBox.Text, fridayTextBox.Text);
 
-                SchoolTimetableRepository.addInSchoolTimetable(newSchoolTimetable);
+                SchoolTimetableRepository2.addInSchoolTimetable(newSchoolTimetable);
 
                 DialogResult = DialogResult.OK;
                 loadSchoolTimetable();

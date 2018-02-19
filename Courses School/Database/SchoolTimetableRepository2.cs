@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Courses_School.Database
 {
-    class SchoolTimetableRepository
+    class SchoolTimetableRepository2
     {
         private static DbConnection connection = DbConnection.Instance;
 
 
-        public static List<SchoolTimetable> fetchAllSchoolTimetable()
+        public static List<SchoolTimetable2> fetchAllSchoolTimetable()
         {
-            List<SchoolTimetable> schoolTimetables = new List<SchoolTimetable>();
+            List<SchoolTimetable2> schoolTimetables = new List<SchoolTimetable2>();
 
             string sql = "SELECT id, time, monday, tuesday, wednesday thursday, friday FROM SchoolTimetable";
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
@@ -32,7 +32,7 @@ namespace Courses_School.Database
                 string thursday = (string)reader["thursday"];
                 string friday = (string)reader["friday"];
 
-                SchoolTimetable newSchoolTimetable = new SchoolTimetable(id, time, monday, tuesday, wednesday, thursday, friday);
+                SchoolTimetable2 newSchoolTimetable = new SchoolTimetable2(id, time, monday, tuesday, wednesday, thursday, friday);
                 schoolTimetables.Add(newSchoolTimetable);
             }
             return schoolTimetables;
@@ -40,7 +40,7 @@ namespace Courses_School.Database
 
 
 
-        public static void addInSchoolTimetable(SchoolTimetable schoolTimetable)
+        public static void addInSchoolTimetable(SchoolTimetable2 schoolTimetable)
         {
             string sql = "INSERT INTO SchoolTimetable(time, monday, tuesday, wednesday, thursday,friday) VALUES" +
             "('" + schoolTimetable.Time + "','" + schoolTimetable.Monday + "','" + schoolTimetable.Tuesday + "','" + schoolTimetable.Wednesday + "','"
