@@ -72,7 +72,7 @@ namespace Courses_School.Models
             set
             {
                 if (value < 1)
-                    throw new Exception("Broj časova mora biti veći od 1.");
+                    throw new Exception("Broj časova mora biti veći od 0.");
 
                 if (value > 100)
                     throw new Exception("Broj časova mora biti manji od 100.");
