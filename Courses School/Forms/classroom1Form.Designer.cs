@@ -107,6 +107,7 @@
             this.deleteButton1.TabIndex = 29;
             this.deleteButton1.Text = "Obriši";
             this.deleteButton1.UseVisualStyleBackColor = true;
+            this.deleteButton1.Click += new System.EventHandler(this.deleteButton1_Click);
             // 
             // addButton1
             // 
@@ -116,6 +117,7 @@
             this.addButton1.TabIndex = 28;
             this.addButton1.Text = "Dodaj";
             this.addButton1.UseVisualStyleBackColor = true;
+            this.addButton1.Click += new System.EventHandler(this.addButton1_Click);
             // 
             // fridayLabel1
             // 
@@ -183,6 +185,7 @@
             this.schoolTimetableListView1.TabIndex = 21;
             this.schoolTimetableListView1.UseCompatibleStateImageBehavior = false;
             this.schoolTimetableListView1.View = System.Windows.Forms.View.Details;
+            this.schoolTimetableListView1.SelectedIndexChanged += new System.EventHandler(this.schoolTimetableListView1_SelectedIndexChanged);
             // 
             // TimeDay
             // 
@@ -237,6 +240,7 @@
             this.Controls.Add(this.schoolTimetableListView1);
             this.Name = "classroom1Form";
             this.Text = "Učionica br. 1";
+            this.Load += new System.EventHandler(this.classroom1Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

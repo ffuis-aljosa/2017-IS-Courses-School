@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace Courses_School.Database
 {
-    class SchoolTimetableRepository2
+    class SchoolTimetable2Repository
     {
         private static DbConnection connection = DbConnection.Instance;
 
 
-        public static List<SchoolTimetable2> fetchAllSchoolTimetable()
+        public static List<SchoolTimetable2> fetchAllSchoolTimetable2()
         {
             List<SchoolTimetable2> schoolTimetables = new List<SchoolTimetable2>();
 
-            string sql = "SELECT id, time, monday, tuesday, wednesday thursday, friday FROM SchoolTimetable2";
+            string sql = "SELECT id, time, monday, tuesday, wednesday, thursday, friday FROM SchoolTimetable2";
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
             SqlCeDataReader reader = command.ExecuteReader();

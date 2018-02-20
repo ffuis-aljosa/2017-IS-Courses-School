@@ -37,7 +37,6 @@ namespace Courses_School
                 while (reader.Read())
                 {
                     ListViewItem item = new ListViewItem(reader["time"].ToString());
-                  //  item.SubItems.Add(reader["time"].ToString());
                     item.SubItems.Add(reader["monday"].ToString());
                     item.SubItems.Add(reader["tuesday"].ToString());
                     item.SubItems.Add(reader["wednesday"].ToString());
@@ -67,7 +66,7 @@ namespace Courses_School
 
                 newSchoolTimetable = new SchoolTimetable2(timeTextBox.Text, mondayTextBox.Text, tuesdayTextBox.Text, wednesdayTextBox.Text, thursdayTextBox.Text, fridayTextBox.Text);
 
-                SchoolTimetableRepository2.addInSchoolTimetable(newSchoolTimetable);
+                SchoolTimetable2Repository.addInSchoolTimetable(newSchoolTimetable);
 
                 DialogResult = DialogResult.OK;
                 loadSchoolTimetable();

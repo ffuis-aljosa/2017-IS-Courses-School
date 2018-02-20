@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.searchSchoolSubjectLabel = new System.Windows.Forms.Label();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.changeSchoolSubjectButton = new System.Windows.Forms.Button();
             this.deleteSchoolSubjectButton = new System.Windows.Forms.Button();
             this.schoolSubjectListView = new System.Windows.Forms.ListView();
@@ -42,6 +41,7 @@
             this.addSchoolSubjectButton = new System.Windows.Forms.Button();
             this.subjectAddSchoolSubjectLabel = new System.Windows.Forms.Label();
             this.schoolSubjectTextBox = new System.Windows.Forms.TextBox();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // searchSchoolSubjectLabel
@@ -52,14 +52,6 @@
             this.searchSchoolSubjectLabel.Size = new System.Drawing.Size(33, 13);
             this.searchSchoolSubjectLabel.TabIndex = 31;
             this.searchSchoolSubjectLabel.Text = "Traži:";
-            // 
-            // searchTextBox
-            // 
-            this.searchTextBox.Location = new System.Drawing.Point(278, 319);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(391, 20);
-            this.searchTextBox.TabIndex = 30;
-            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // changeSchoolSubjectButton
             // 
@@ -166,6 +158,14 @@
             this.schoolSubjectTextBox.Size = new System.Drawing.Size(212, 20);
             this.schoolSubjectTextBox.TabIndex = 21;
             // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(278, 319);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(391, 20);
+            this.searchTextBox.TabIndex = 32;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged_1);
+            // 
             // addNewSchoolSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,8 +173,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(707, 360);
-            this.Controls.Add(this.searchSchoolSubjectLabel);
             this.Controls.Add(this.searchTextBox);
+            this.Controls.Add(this.searchSchoolSubjectLabel);
             this.Controls.Add(this.changeSchoolSubjectButton);
             this.Controls.Add(this.deleteSchoolSubjectButton);
             this.Controls.Add(this.schoolSubjectListView);
@@ -195,7 +195,6 @@
         #endregion
 
         private System.Windows.Forms.Label searchSchoolSubjectLabel;
-        private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button changeSchoolSubjectButton;
         private System.Windows.Forms.Button deleteSchoolSubjectButton;
         private System.Windows.Forms.ListView schoolSubjectListView;
@@ -208,5 +207,6 @@
         private System.Windows.Forms.Button addSchoolSubjectButton;
         private System.Windows.Forms.Label subjectAddSchoolSubjectLabel;
         private System.Windows.Forms.TextBox schoolSubjectTextBox;
+        private System.Windows.Forms.TextBox searchTextBox;
     }
 }

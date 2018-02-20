@@ -72,6 +72,7 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(268, 20);
             this.lastNameTextBox.TabIndex = 0;
+          
             // 
             // addressTextBox
             // 
@@ -86,6 +87,7 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(269, 20);
             this.emailTextBox.TabIndex = 2;
+           
             // 
             // firstNameTextBox
             // 
@@ -93,7 +95,7 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(269, 20);
             this.firstNameTextBox.TabIndex = 3;
-            // 
+              // 
             // phoneNumberTextBox
             // 
             this.phoneNumberTextBox.Location = new System.Drawing.Point(31, 306);
@@ -220,7 +222,7 @@
             this.salaryTextBox.Name = "salaryTextBox";
             this.salaryTextBox.Size = new System.Drawing.Size(269, 20);
             this.salaryTextBox.TabIndex = 20;
-            // 
+           // 
             // dateOfBirthLabel
             // 
             this.dateOfBirthLabel.AutoSize = true;
@@ -363,7 +365,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
-            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchTextBox);
@@ -392,6 +394,7 @@
             this.Name = "addNewEmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addNewEmployeeForm";
+            this.Load += new System.EventHandler(this.addNewEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

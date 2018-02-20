@@ -226,7 +226,10 @@ namespace Courses_School
             informationsAboutStudentsListView.Items.Clear();
             loadStudent();
         }
-    
-            
+
+        private void addNewStudentForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

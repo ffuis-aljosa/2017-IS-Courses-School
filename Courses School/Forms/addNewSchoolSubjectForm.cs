@@ -178,9 +178,9 @@ namespace Courses_School
             }
 
         }
-
-        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        private void searchTextBox_TextChanged_1(object sender, EventArgs e)
         {
+
             schoolSubjectListView.View = View.Details;
             schoolSubjectListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             schoolSubjectListView.Items.Clear();

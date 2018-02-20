@@ -362,7 +362,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.dateOfBirthTextBox);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -390,6 +390,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "addNewStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.addNewStudentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

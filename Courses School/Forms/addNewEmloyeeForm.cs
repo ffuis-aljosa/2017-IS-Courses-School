@@ -184,5 +184,12 @@ namespace Courses_School
             employeesListView.Items.Clear();
             loadEmployee();
         }
+
+        private void addNewEmployeeForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
