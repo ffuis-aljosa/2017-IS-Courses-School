@@ -68,6 +68,8 @@ namespace Courses_School.Models
             }
             set
             {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Unesite vrijeme održavanja časa");
                 time = value;
             }
         }

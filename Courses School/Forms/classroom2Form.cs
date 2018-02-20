@@ -29,7 +29,7 @@ namespace Courses_School
         private void loadSchoolTimetable()
         {
             schoolTimetableListView.Items.Clear();
-            SqlCeCommand command = new SqlCeCommand("SELECT  time, monday, tuesday,  wednesday, thursday, friday FROM SchoolTimetable", connection);
+            SqlCeCommand command = new SqlCeCommand("SELECT  time, monday, tuesday,  wednesday, thursday, friday FROM SchoolTimetable2", connection);
 
             try
             {
@@ -87,8 +87,8 @@ namespace Courses_School
             SqlCeCommand command = connection.CreateCommand();
             command.CommandType = CommandType.Text;
 
-            command.CommandText = "SELECT time, monday, tuesday,  wednesday, thursday, friday FROM SchoolTimetable" +
-                int.Parse(schoolTimetableListView.SelectedItems[0].Text) + ";";
+            command.CommandText = "SELECT time, monday, tuesday,  wednesday, thursday, friday FROM SchoolTimetable2";
+              
             try
             {
                 SqlCeDataReader reader = command.ExecuteReader();
@@ -119,6 +119,28 @@ namespace Courses_School
             wednesdayTextBox.Text = "";
             thursdayTextBox.Text = "";
             fridayTextBox.Text = "";
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da obrišete?", "", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                SqlCeCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "DELETE FROM SchoolTimetable2 WHERE time = "
+                     +"'" +schoolTimetableListView.SelectedItems[0].Text + "'";
+
+                command.ExecuteNonQuery();
+                loadSchoolTimetable();
+                clearTextBox();
+            }
+            else
+            {
+                MessageBox.Show("Brisanje nije uspjelo!");
+
+            }
         }
     }
 }

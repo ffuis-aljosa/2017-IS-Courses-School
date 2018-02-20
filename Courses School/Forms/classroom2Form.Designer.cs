@@ -42,7 +42,7 @@
             this.thursdayLabel = new System.Windows.Forms.Label();
             this.fridayLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
-            this.changeButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeTextBox = new System.Windows.Forms.TextBox();
             this.mondayLabel = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.Wednesday,
             this.Thursday,
             this.Friday});
+            this.schoolTimetableListView.FullRowSelect = true;
             this.schoolTimetableListView.GridLines = true;
             this.schoolTimetableListView.Location = new System.Drawing.Point(97, 33);
             this.schoolTimetableListView.Name = "schoolTimetableListView";
@@ -158,14 +159,15 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // changeButton
+            // deleteButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(783, 248);
-            this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(100, 23);
-            this.changeButton.TabIndex = 14;
-            this.changeButton.Text = "Izmijeni";
-            this.changeButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Location = new System.Drawing.Point(783, 248);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(100, 23);
+            this.deleteButton.TabIndex = 14;
+            this.deleteButton.Text = "Obriši";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // timeLabel
             // 
@@ -227,7 +229,7 @@
             this.Controls.Add(this.mondayTextBox);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.timeTextBox);
-            this.Controls.Add(this.changeButton);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.fridayLabel);
             this.Controls.Add(this.thursdayLabel);
@@ -260,7 +262,7 @@
         private System.Windows.Forms.Label thursdayLabel;
         private System.Windows.Forms.Label fridayLabel;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.TextBox timeTextBox;
         private System.Windows.Forms.Label mondayLabel;

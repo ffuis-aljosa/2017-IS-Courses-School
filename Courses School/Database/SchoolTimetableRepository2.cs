@@ -17,7 +17,7 @@ namespace Courses_School.Database
         {
             List<SchoolTimetable2> schoolTimetables = new List<SchoolTimetable2>();
 
-            string sql = "SELECT id, time, monday, tuesday, wednesday thursday, friday FROM SchoolTimetable";
+            string sql = "SELECT id, time, monday, tuesday, wednesday thursday, friday FROM SchoolTimetable2";
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
             SqlCeDataReader reader = command.ExecuteReader();
@@ -42,7 +42,7 @@ namespace Courses_School.Database
 
         public static void addInSchoolTimetable(SchoolTimetable2 schoolTimetable)
         {
-            string sql = "INSERT INTO SchoolTimetable(time, monday, tuesday, wednesday, thursday,friday) VALUES" +
+            string sql = "INSERT INTO SchoolTimetable2(time, monday, tuesday, wednesday, thursday,friday) VALUES" +
             "('" + schoolTimetable.Time + "','" + schoolTimetable.Monday + "','" + schoolTimetable.Tuesday + "','" + schoolTimetable.Wednesday + "','"
              + schoolTimetable.Thursday + "','" + schoolTimetable.Friday + "')";
 
