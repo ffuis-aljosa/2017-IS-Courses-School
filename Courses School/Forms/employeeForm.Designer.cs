@@ -36,7 +36,7 @@
             // 
             this.examsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.examsButton.Location = new System.Drawing.Point(263, 224);
-            this.examsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.examsButton.Margin = new System.Windows.Forms.Padding(4);
             this.examsButton.Name = "examsButton";
             this.examsButton.Size = new System.Drawing.Size(247, 96);
             this.examsButton.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.timeTableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.timeTableButton.Location = new System.Drawing.Point(263, 71);
-            this.timeTableButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.timeTableButton.Margin = new System.Windows.Forms.Padding(4);
             this.timeTableButton.Name = "timeTableButton";
             this.timeTableButton.Size = new System.Drawing.Size(247, 96);
             this.timeTableButton.TabIndex = 1;
@@ -65,9 +65,9 @@
             this.ClientSize = new System.Drawing.Size(747, 393);
             this.Controls.Add(this.timeTableButton);
             this.Controls.Add(this.examsButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "employeeForm";
-            this.Text = "employeeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }

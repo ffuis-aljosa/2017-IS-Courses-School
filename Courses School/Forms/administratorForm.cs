@@ -47,5 +47,11 @@ namespace Courses_School
             paymentForm form = new paymentForm();
             form.Show();
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            newAdministratorForm form = new newAdministratorForm();
+            form.Show();
+        }
     }
 }

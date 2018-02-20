@@ -19,8 +19,7 @@ namespace Courses_School.Database
                 SqlCeParameter password = new SqlCeParameter("@password", user.Password);
                 command.Parameters.Add(password);
 
-              //  SqlCeParameter type = new SqlCeParameter("@type", user.Type);
-               // command.Parameters.Add(type);
+          
 
             command.Prepare();
            
@@ -35,10 +34,10 @@ namespace Courses_School.Database
 
             return null;
         }
-        public static void createUser(User user)
+        public static void createAdministrator(User user)
         {
-            string sql = "INSERT INTO users(username, password) VALUES"
-                + "(@username, @password)";
+            string sql = "INSERT INTO users(username, password,type) VALUES"
+                + "(@username, @password,'admin')";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
 
@@ -48,8 +47,25 @@ namespace Courses_School.Database
             SqlCeParameter password = new SqlCeParameter("@password", user.Password);
             command.Parameters.Add(password);
 
-            //SqlCeParameter type = new SqlCeParameter("@type", user.Type);
-            //command.Parameters.Add(type);
+
+            command.Prepare();
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void createUser(User user)
+        {
+            string sql = "INSERT INTO users(username, password,type) VALUES"
+                + "(@username, @password,'client')";
+
+            SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
+
+            SqlCeParameter username = new SqlCeParameter("@username", user.Username);
+            command.Parameters.Add(username);
+
+            SqlCeParameter password = new SqlCeParameter("@password", user.Password);
+            command.Parameters.Add(password);
+
 
             command.Prepare();
 
