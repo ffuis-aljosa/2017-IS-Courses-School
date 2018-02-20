@@ -198,5 +198,48 @@ namespace Courses_School
                 MessageBox.Show("Nema izmjene.");
             }
         }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da izmjenite podatke?", "", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    SqlCeCommand command = connection.CreateCommand();
+                    command.CommandType = CommandType.Text;
+
+                    command.CommandText = "select Id from schoolSubjects where school_subject ='" + schoolSubjectAndNumberOfClassesComboBox.SelectedItem.ToString() + "';";
+                    SqlCeDataReader reader = command.ExecuteReader();
+                    reader.Read();
+
+                    command.CommandText = "UPDATE Employees SET " +
+                    "first_name='" + firstNameTextBox.Text + "', " +
+                    "last_name='" + lastNameTextBox.Text + "'," +
+                    "address='" + addressTextBox.Text + "'," +
+                    "date_of_birth='" + dateOfBirthTextBox.Text + "', " +
+                    "qualification='" + qualificationTextBox.Text + "'," +
+                    "schoolSubject_id=" + reader.GetInt32(0) + ", " +
+                    "salary='" + salaryTextBox.Text + "', " +
+                    "phone_number='" + phoneNumberTextBox.Text + "', " +
+                    "email='" + emailTextBox.Text + "' " +
+
+                   "WHERE id=" + int.Parse(employeesListView.SelectedItems[0].Text) + ";";
+                    command.ExecuteNonQuery();
+                    loadEmployee();
+                    clearTextBox();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Izmjena nije uspjela!");
+
+            }
+        }
     }
 }
