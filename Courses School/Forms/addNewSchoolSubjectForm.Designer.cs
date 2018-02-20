@@ -47,17 +47,19 @@
             // searchSchoolSubjectLabel
             // 
             this.searchSchoolSubjectLabel.AutoSize = true;
-            this.searchSchoolSubjectLabel.Location = new System.Drawing.Point(275, 303);
+            this.searchSchoolSubjectLabel.Location = new System.Drawing.Point(367, 373);
+            this.searchSchoolSubjectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchSchoolSubjectLabel.Name = "searchSchoolSubjectLabel";
-            this.searchSchoolSubjectLabel.Size = new System.Drawing.Size(33, 13);
+            this.searchSchoolSubjectLabel.Size = new System.Drawing.Size(44, 17);
             this.searchSchoolSubjectLabel.TabIndex = 31;
             this.searchSchoolSubjectLabel.Text = "Traži:";
             // 
             // changeSchoolSubjectButton
             // 
-            this.changeSchoolSubjectButton.Location = new System.Drawing.Point(29, 256);
+            this.changeSchoolSubjectButton.Location = new System.Drawing.Point(39, 315);
+            this.changeSchoolSubjectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.changeSchoolSubjectButton.Name = "changeSchoolSubjectButton";
-            this.changeSchoolSubjectButton.Size = new System.Drawing.Size(209, 23);
+            this.changeSchoolSubjectButton.Size = new System.Drawing.Size(279, 28);
             this.changeSchoolSubjectButton.TabIndex = 29;
             this.changeSchoolSubjectButton.Text = "Izmijeni";
             this.changeSchoolSubjectButton.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@
             // 
             // deleteSchoolSubjectButton
             // 
-            this.deleteSchoolSubjectButton.Location = new System.Drawing.Point(29, 209);
+            this.deleteSchoolSubjectButton.Location = new System.Drawing.Point(39, 257);
+            this.deleteSchoolSubjectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteSchoolSubjectButton.Name = "deleteSchoolSubjectButton";
-            this.deleteSchoolSubjectButton.Size = new System.Drawing.Size(209, 23);
+            this.deleteSchoolSubjectButton.Size = new System.Drawing.Size(279, 28);
             this.deleteSchoolSubjectButton.TabIndex = 28;
             this.deleteSchoolSubjectButton.Text = "Obriši";
             this.deleteSchoolSubjectButton.UseVisualStyleBackColor = true;
@@ -84,9 +87,10 @@
             this.schoolSubjectListView.FullRowSelect = true;
             this.schoolSubjectListView.GridLines = true;
             this.schoolSubjectListView.HoverSelection = true;
-            this.schoolSubjectListView.Location = new System.Drawing.Point(278, 27);
+            this.schoolSubjectListView.Location = new System.Drawing.Point(371, 33);
+            this.schoolSubjectListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.schoolSubjectListView.Name = "schoolSubjectListView";
-            this.schoolSubjectListView.Size = new System.Drawing.Size(391, 252);
+            this.schoolSubjectListView.Size = new System.Drawing.Size(520, 309);
             this.schoolSubjectListView.TabIndex = 27;
             this.schoolSubjectListView.UseCompatibleStateImageBehavior = false;
             this.schoolSubjectListView.View = System.Windows.Forms.View.Details;
@@ -110,32 +114,36 @@
             // 
             this.numberOfCLassesAddSchoolSubject.AutoSize = true;
             this.numberOfCLassesAddSchoolSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.numberOfCLassesAddSchoolSubject.Location = new System.Drawing.Point(29, 95);
+            this.numberOfCLassesAddSchoolSubject.Location = new System.Drawing.Point(39, 117);
+            this.numberOfCLassesAddSchoolSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.numberOfCLassesAddSchoolSubject.Name = "numberOfCLassesAddSchoolSubject";
-            this.numberOfCLassesAddSchoolSubject.Size = new System.Drawing.Size(73, 15);
+            this.numberOfCLassesAddSchoolSubject.Size = new System.Drawing.Size(91, 18);
             this.numberOfCLassesAddSchoolSubject.TabIndex = 26;
             this.numberOfCLassesAddSchoolSubject.Text = "Broj casova:";
             // 
             // numberOfClassesTextBox
             // 
-            this.numberOfClassesTextBox.Location = new System.Drawing.Point(29, 113);
+            this.numberOfClassesTextBox.Location = new System.Drawing.Point(39, 139);
+            this.numberOfClassesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numberOfClassesTextBox.Name = "numberOfClassesTextBox";
-            this.numberOfClassesTextBox.Size = new System.Drawing.Size(212, 20);
+            this.numberOfClassesTextBox.Size = new System.Drawing.Size(281, 22);
             this.numberOfClassesTextBox.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 134);
+            this.label1.Location = new System.Drawing.Point(147, 165);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 24;
             // 
             // addSchoolSubjectButton
             // 
-            this.addSchoolSubjectButton.Location = new System.Drawing.Point(29, 161);
+            this.addSchoolSubjectButton.Location = new System.Drawing.Point(39, 198);
+            this.addSchoolSubjectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addSchoolSubjectButton.Name = "addSchoolSubjectButton";
-            this.addSchoolSubjectButton.Size = new System.Drawing.Size(209, 23);
+            this.addSchoolSubjectButton.Size = new System.Drawing.Size(279, 28);
             this.addSchoolSubjectButton.TabIndex = 23;
             this.addSchoolSubjectButton.Text = "Dodaj";
             this.addSchoolSubjectButton.UseVisualStyleBackColor = true;
@@ -145,34 +153,36 @@
             // 
             this.subjectAddSchoolSubjectLabel.AutoSize = true;
             this.subjectAddSchoolSubjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.subjectAddSchoolSubjectLabel.Location = new System.Drawing.Point(29, 38);
+            this.subjectAddSchoolSubjectLabel.Location = new System.Drawing.Point(39, 47);
+            this.subjectAddSchoolSubjectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subjectAddSchoolSubjectLabel.Name = "subjectAddSchoolSubjectLabel";
-            this.subjectAddSchoolSubjectLabel.Size = new System.Drawing.Size(132, 15);
+            this.subjectAddSchoolSubjectLabel.Size = new System.Drawing.Size(160, 18);
             this.subjectAddSchoolSubjectLabel.TabIndex = 22;
             this.subjectAddSchoolSubjectLabel.Text = "Naziv novog predmeta:";
             // 
             // schoolSubjectTextBox
             // 
-            this.schoolSubjectTextBox.Location = new System.Drawing.Point(29, 56);
+            this.schoolSubjectTextBox.Location = new System.Drawing.Point(39, 69);
+            this.schoolSubjectTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.schoolSubjectTextBox.Name = "schoolSubjectTextBox";
-            this.schoolSubjectTextBox.Size = new System.Drawing.Size(212, 20);
+            this.schoolSubjectTextBox.Size = new System.Drawing.Size(281, 22);
             this.schoolSubjectTextBox.TabIndex = 21;
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(278, 319);
+            this.searchTextBox.Location = new System.Drawing.Point(371, 393);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(391, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(397, 22);
             this.searchTextBox.TabIndex = 32;
-            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged_1);
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // addNewSchoolSubjectForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
-            this.ClientSize = new System.Drawing.Size(707, 360);
+            this.ClientSize = new System.Drawing.Size(943, 443);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchSchoolSubjectLabel);
             this.Controls.Add(this.changeSchoolSubjectButton);
@@ -184,9 +194,9 @@
             this.Controls.Add(this.addSchoolSubjectButton);
             this.Controls.Add(this.subjectAddSchoolSubjectLabel);
             this.Controls.Add(this.schoolSubjectTextBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "addNewSchoolSubjectForm";
             this.Text = "Predmeti";
-            this.Load += new System.EventHandler(this.schoolSubjectForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

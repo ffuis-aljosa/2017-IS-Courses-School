@@ -1,15 +1,10 @@
-﻿using Courses_School.Database;
-using Courses_School.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlServerCe;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using Courses_School.Models;
+using Courses_School.Database;
+using System.Collections.Generic;
+using System.Data.SqlServerCe;
+using System.Data;
 
 namespace Courses_School
 {
@@ -23,14 +18,10 @@ namespace Courses_School
         {
             InitializeComponent();
             loadSchoolSubject();
+            clearTextBox();
         }
 
-        private void schoolSubjectForm_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
+       
         private void loadSchoolSubject()
         {
             schoolSubjectListView.Items.Clear();
@@ -122,11 +113,9 @@ namespace Courses_School
                 {
                     SqlCeCommand command = connection.CreateCommand();
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "select Id from schoolSubjects where id =" + int.Parse(schoolSubjectListView.SelectedItems[0].Text) + ";";
-                    SqlCeDataReader reader = command.ExecuteReader();
-                    reader.Read();
-                    command.CommandText = "UPDATE schoolSubjects SET school_subject'" + schoolSubjectTextBox.Text + "', " +
-                        "number_of_classes = " + numberOfClassesTextBox.Text + "," +
+                   
+                    command.CommandText = "UPDATE schoolSubjects SET school_subject='" + schoolSubjectTextBox.Text + "', " +
+                        "number_of_classes = " + numberOfClassesTextBox.Text + " " +
                         "WHERE id=" + int.Parse(schoolSubjectListView.SelectedItems[0].Text) + ";";
 
                     command.ExecuteNonQuery();
@@ -153,7 +142,8 @@ namespace Courses_School
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
 
-                command.CommandText = "SELECT id, school_subject, number_of_classes FROM schoolSubjects";
+                command.CommandText = "SELECT id, school_subject, number_of_classes FROM schoolSubjects WHERE id="
+                    + int.Parse(schoolSubjectListView.SelectedItems[0].Text) + ";";
 
                 try
                 {
@@ -165,7 +155,7 @@ namespace Courses_School
                         numberOfClassesTextBox.Text = reader["number_of_classes"].ToString();
 
                     }
-                    clearTextBox();
+                    
                 }
                 catch (Exception ex)
                 {
@@ -178,9 +168,10 @@ namespace Courses_School
             }
 
         }
-        private void searchTextBox_TextChanged_1(object sender, EventArgs e)
-        {
+        
 
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
             schoolSubjectListView.View = View.Details;
             schoolSubjectListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             schoolSubjectListView.Items.Clear();

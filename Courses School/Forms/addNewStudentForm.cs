@@ -21,7 +21,7 @@ namespace Courses_School
             loadStudent();
             clearTextBox();
 
-           
+
         }
 
         private void loadSchooSubject()
@@ -37,7 +37,7 @@ namespace Courses_School
         {
             try
             {
-                newStudent = new Student(firstNameTextBox.Text, lastNameTextBox.Text, jmbgTextBox.Text,dateOfBirthTextBox.Text,
+                newStudent = new Student(firstNameTextBox.Text, lastNameTextBox.Text, jmbgTextBox.Text, dateOfBirthTextBox.Text,
                     addressTextBox.Text, phoneNumberTextBox.Text, membershipCostTextBox.Text,
                    (SchoolSubjects)schoolSubjectAndNumberOfClassesComboBox.SelectedItem);
                 StudentRepository.createStudent(newStudent);
@@ -66,12 +66,12 @@ namespace Courses_School
 
             else
 
-               command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
-           "s.Phone_number, s.Membership_cost, ss.school_subject, " +
-          "ss.number_of_classes, e.first_name, e.last_name FROM Students AS s JOIN schoolsubjects" +
-           " AS ss ON s.school_subject_id = ss.id JOIN Employees AS e ON e.schoolSubject_id=ss.id " +
-           "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%" + searchTextBox.Text + "%'" +
-           "OR ss.school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
+                command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
+            "s.Phone_number, s.Membership_cost, ss.school_subject, " +
+           "ss.number_of_classes, e.first_name, e.last_name FROM Students AS s JOIN schoolsubjects" +
+            " AS ss ON s.school_subject_id = ss.id JOIN Employees AS e ON e.schoolSubject_id=ss.id " +
+            "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%" + searchTextBox.Text + "%'" +
+            "OR ss.school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
 
 
             try
@@ -105,13 +105,13 @@ namespace Courses_School
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da obrišete?","", MessageBoxButtons.OKCancel);
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da obrišete?", "", MessageBoxButtons.OKCancel);
 
             if (result == DialogResult.OK)
             {
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = "DELETE FROM Students WHERE id = " 
+                command.CommandText = "DELETE FROM Students WHERE id = "
                     + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) + ";";
 
                 command.ExecuteNonQuery();
@@ -136,73 +136,26 @@ namespace Courses_School
             schoolSubjectAndNumberOfClassesComboBox.Text = "";
 
         }
-
-        private void informationsAboutStudentsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                SqlCeCommand command = connection.CreateCommand();
-                command.CommandType = CommandType.Text;
-                comboBox1.Items.Clear();
-
-                command.CommandText = "SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
-                    "s.Phone_number, s.Membership_cost, ss.school_subject, " +
-                   "ss.number_of_classes FROM Students AS s JOIN schoolsubjects" +
-                    " AS ss ON s.school_subject_id = ss.id WHERE s.id="
-                    + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) + ";";
-               
-
-                try
-                {
-                    SqlCeDataReader reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        firstNameTextBox.Text = reader["first_name1"].ToString();
-                        lastNameTextBox.Text = reader["last_name1"].ToString();
-                        jmbgTextBox.Text = reader["jmbg"].ToString();
-                        dateOfBirthTextBox.Text = reader["date_of_birth"].ToString();
-                        addressTextBox.Text = reader["address"].ToString();
-                        phoneNumberTextBox.Text = reader["phone_number"].ToString();
-                        membershipCostTextBox.Text = reader["membership_cost"].ToString();
-                        schoolSubjectAndNumberOfClassesComboBox.Text = reader["school_subject"].ToString();
-                        command.CommandText = "SELECT ss.school_subject, e.date FROM schoolSubjects AS ss JOIN Exams AS e ON e.school_subject_id=ss.id WHERE e.student_id = " + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) /*reader["id"].ToString()*/ + ";";
-                        SqlCeDataReader dr = command.ExecuteReader();
-                        while (dr.Read())
-                            comboBox1.Items.Add(dr["school_subject"].ToString()+" " + dr["date"].ToString());
-                        
-                    }
-                   
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
+       
+        
         private void changeButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Jeste li sigurni da želite da izmjenite podatke?", "", MessageBoxButtons.OKCancel);
 
             if (result == DialogResult.OK)
             {
-                SqlCeCommand command= connection.CreateCommand();
+                SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
                 command.CommandText = "select Id from schoolSubjects where school_subject ='" + schoolSubjectAndNumberOfClassesComboBox.SelectedItem.ToString() + "';";
                 SqlCeDataReader reader = command.ExecuteReader();
                 reader.Read();
-                command.CommandText = "UPDATE Students SET first_name1='"+firstNameTextBox.Text+"', " +
-                    "last_name1='"+lastNameTextBox.Text +"'," +
-                    "jmbg='" +jmbgTextBox.Text+"', " +
+                command.CommandText = "UPDATE Students SET first_name1='" + firstNameTextBox.Text + "', " +
+                    "last_name1='" + lastNameTextBox.Text + "'," +
+                    "jmbg='" + jmbgTextBox.Text + "', " +
                     "date_of_birth='" + dateOfBirthTextBox.Text + "', " +
-                    "address='"+addressTextBox.Text + "'," +
-                    "phone_number='"+phoneNumberTextBox.Text + "', " +
-                    "membership_cost="+membershipCostTextBox.Text + ", " +
+                    "address='" + addressTextBox.Text + "'," +
+                    "phone_number='" + phoneNumberTextBox.Text + "', " +
+                    "membership_cost=" + membershipCostTextBox.Text + ", " +
                     "school_subject_id=" + reader.GetInt32(0) + " " +
 
 
@@ -229,7 +182,57 @@ namespace Courses_School
 
         private void addNewStudentForm_Load(object sender, EventArgs e)
         {
+            informationsAboutStudentsListView.View = View.Details;
+            informationsAboutStudentsListView.FullRowSelect = true;
+        }
 
+
+        private void informationsAboutStudentsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlCeCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                comboBox1.Items.Clear();
+
+                command.CommandText = "SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
+                    "s.Phone_number, s.Membership_cost, ss.school_subject, " +
+                   "ss.number_of_classes FROM Students AS s JOIN schoolsubjects" +
+                    " AS ss ON s.school_subject_id = ss.id WHERE s.id="
+                    + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) + ";";
+
+
+                try
+                {
+                    SqlCeDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        firstNameTextBox.Text = reader["first_name1"].ToString();
+                        lastNameTextBox.Text = reader["last_name1"].ToString();
+                        jmbgTextBox.Text = reader["jmbg"].ToString();
+                        dateOfBirthTextBox.Text = reader["date_of_birth"].ToString();
+                        addressTextBox.Text = reader["address"].ToString();
+                        phoneNumberTextBox.Text = reader["phone_number"].ToString();
+                        membershipCostTextBox.Text = reader["membership_cost"].ToString();
+                        schoolSubjectAndNumberOfClassesComboBox.Text = reader["school_subject"].ToString();
+                        command.CommandText = "SELECT ss.school_subject, e.date FROM schoolSubjects AS ss JOIN Exams AS e ON e.school_subject_id=ss.id WHERE e.student_id = " + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) /*reader["id"].ToString()*/ + ";";
+                        SqlCeDataReader dr = command.ExecuteReader();
+                        while (dr.Read())
+                            comboBox1.Items.Add(dr["school_subject"].ToString() + " " + dr["date"].ToString());
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("Nema izmjene.");
+            }
         }
     }
 }

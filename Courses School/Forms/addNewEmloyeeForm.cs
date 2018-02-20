@@ -121,39 +121,6 @@ namespace Courses_School
             salaryTextBox.Text = " ";
         }
 
-        private void employeesListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SqlCeCommand command = connection.CreateCommand();
-            command.CommandType = CommandType.Text;
-
-            command.CommandText = "SELECT e.id, e.First_name, e.Last_name, e.Address, e.Date_of_birth, e.email," +
-                "e.Phone_number, e.Qualification,e.salary ss.school_subject, " +
-               "ss.number_of_classes FROM Employees AS e JOIN schoolSubjects" +
-                " AS ss ON e.schoolSubject_id = ss.id WHERE s.id="
-                + int.Parse(employeesListView.SelectedItems[0].Text) + ";";
-            try
-            {
-                SqlCeDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    firstNameTextBox.Text = reader["first_name"].ToString();
-                    lastNameTextBox.Text = reader["last_name"].ToString();
-                    addressTextBox.Text = reader["address"].ToString();
-                    dateOfBirthTextBox.Text = reader["date_of_birth"].ToString();
-                    phoneNumberTextBox.Text = reader["phone_number"].ToString();
-                    emailTextBox.Text = reader["email"].ToString();
-                    qualificationTextBox.Text = reader["qualification"].ToString();
-                    salaryTextBox.Text = reader["salary"].ToString();
-                    schoolSubjectAndNumberOfClassesComboBox.Text = reader["school_subject"].ToString();
-                    
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
@@ -187,9 +154,49 @@ namespace Courses_School
 
         private void addNewEmployeeForm_Load(object sender, EventArgs e)
         {
-
+            employeesListView.View = View.Details;
+            employeesListView.FullRowSelect = true;
         }
 
-       
+        private void employeesListView_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlCeCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+
+                command.CommandText = "SELECT e.id, e.First_name, e.Last_name, e.Address, e.Date_of_birth, e.email," +
+                    "e.Phone_number, e.Qualification,e.salary, ss.school_subject, " +
+                   "ss.number_of_classes FROM Employees AS e JOIN schoolSubjects" +
+                    " AS ss ON e.schoolSubject_id = ss.id WHERE e.id="
+                    + int.Parse(employeesListView.SelectedItems[0].Text) + ";";
+                try
+                {
+                    SqlCeDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        firstNameTextBox.Text = reader["First_name"].ToString();
+                        lastNameTextBox.Text = reader["Last_name"].ToString();
+                        addressTextBox.Text = reader["address"].ToString();
+                        dateOfBirthTextBox.Text = reader["Date_of_birth"].ToString();
+                        emailTextBox.Text = reader["Email"].ToString();
+                        phoneNumberTextBox.Text = reader["Phone_number"].ToString();
+                        qualificationTextBox.Text = reader["Qualification"].ToString();
+                        salaryTextBox.Text = reader["Salary"].ToString();
+                        schoolSubjectAndNumberOfClassesComboBox.Text = reader["school_subject"].ToString();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("Nema izmjene.");
+            }
+        }
     }
 }

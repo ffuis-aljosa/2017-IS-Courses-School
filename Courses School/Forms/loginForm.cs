@@ -103,5 +103,10 @@ namespace Courses_School
         {
             Close();
         }
+
+        private void loginForm_MouseEnter(object sender, EventArgs e)
+        {
+           
+        }
     }  
 }

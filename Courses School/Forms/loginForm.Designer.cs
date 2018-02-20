@@ -127,6 +127,7 @@
             this.Name = "loginForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MouseEnter += new System.EventHandler(this.loginForm_MouseEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
