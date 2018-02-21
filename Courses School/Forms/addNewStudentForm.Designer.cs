@@ -169,7 +169,7 @@
             // 
             // addNewStudentButton
             // 
-            this.addNewStudentButton.Location = new System.Drawing.Point(797, 660);
+            this.addNewStudentButton.Location = new System.Drawing.Point(386, 635);
             this.addNewStudentButton.Margin = new System.Windows.Forms.Padding(2);
             this.addNewStudentButton.Name = "addNewStudentButton";
             this.addNewStudentButton.Size = new System.Drawing.Size(262, 45);
@@ -199,7 +199,7 @@
             // schoolSubjectAndNumberOfClassesComboBox
             // 
             this.schoolSubjectAndNumberOfClassesComboBox.FormattingEnabled = true;
-            this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(60, 669);
+            this.schoolSubjectAndNumberOfClassesComboBox.Location = new System.Drawing.Point(59, 652);
             this.schoolSubjectAndNumberOfClassesComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.schoolSubjectAndNumberOfClassesComboBox.Name = "schoolSubjectAndNumberOfClassesComboBox";
             this.schoolSubjectAndNumberOfClassesComboBox.Size = new System.Drawing.Size(264, 28);
@@ -221,10 +221,10 @@
             this.profesorColumnHeader,
             this.columnHeader1});
             this.informationsAboutStudentsListView.GridLines = true;
-            this.informationsAboutStudentsListView.Location = new System.Drawing.Point(364, 110);
+            this.informationsAboutStudentsListView.Location = new System.Drawing.Point(371, 96);
             this.informationsAboutStudentsListView.Margin = new System.Windows.Forms.Padding(2);
             this.informationsAboutStudentsListView.Name = "informationsAboutStudentsListView";
-            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(1601, 518);
+            this.informationsAboutStudentsListView.Size = new System.Drawing.Size(966, 487);
             this.informationsAboutStudentsListView.TabIndex = 22;
             this.informationsAboutStudentsListView.UseCompatibleStateImageBehavior = false;
             this.informationsAboutStudentsListView.View = System.Windows.Forms.View.Details;
@@ -238,22 +238,22 @@
             // firstNameColumnHeader
             // 
             this.firstNameColumnHeader.Text = "Ime";
-            this.firstNameColumnHeader.Width = 150;
+            this.firstNameColumnHeader.Width = 111;
             // 
             // lastNameColumnHeader
             // 
             this.lastNameColumnHeader.Text = "Prezime";
-            this.lastNameColumnHeader.Width = 150;
+            this.lastNameColumnHeader.Width = 86;
             // 
             // jmbgColumnHeader
             // 
             this.jmbgColumnHeader.Text = "JMBG";
-            this.jmbgColumnHeader.Width = 150;
+            this.jmbgColumnHeader.Width = 65;
             // 
             // dateOfBirthColumnteHeader
             // 
             this.dateOfBirthColumnteHeader.Text = "Datum rođenja";
-            this.dateOfBirthColumnteHeader.Width = 150;
+            this.dateOfBirthColumnteHeader.Width = 90;
             // 
             // addressNumberColumnHeader
             // 
@@ -263,17 +263,16 @@
             // phoneNumberCostcolumnHeader
             // 
             this.phoneNumberCostcolumnHeader.Text = "Broj telefona";
-            this.phoneNumberCostcolumnHeader.Width = 150;
+            this.phoneNumberCostcolumnHeader.Width = 95;
             // 
             // membershipCostColumnHeader
             // 
             this.membershipCostColumnHeader.Text = "Mjesečna članarina";
-            this.membershipCostColumnHeader.Width = 150;
+            this.membershipCostColumnHeader.Width = 71;
             // 
             // schoolSubjectColumnHeader
             // 
             this.schoolSubjectColumnHeader.Text = "Kurs";
-            this.schoolSubjectColumnHeader.Width = 170;
             // 
             // numberOfClassesColumnHeader
             // 
@@ -300,7 +299,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(1107, 660);
+            this.deleteButton.Location = new System.Drawing.Point(1034, 635);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(262, 45);
@@ -311,7 +310,7 @@
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(62, 747);
+            this.changeButton.Location = new System.Drawing.Point(714, 635);
             this.changeButton.Margin = new System.Windows.Forms.Padding(2);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(262, 45);
@@ -343,10 +342,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(466, 669);
+            this.comboBox1.Location = new System.Drawing.Point(386, 587);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(290, 28);
+            this.comboBox1.Size = new System.Drawing.Size(262, 28);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.Text = "Položeni predmeti";
             // 
@@ -363,7 +362,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.dateOfBirthTextBox);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);

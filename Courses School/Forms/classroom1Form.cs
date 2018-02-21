@@ -57,8 +57,8 @@ namespace Courses_School
         {
             try
             {
-               // if (schoolTimetableListView1.SelectedItems.Count == 0)
-                //    return;
+                if (schoolTimetableListView1.SelectedItems.Count == 0)
+                    return;
 
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;

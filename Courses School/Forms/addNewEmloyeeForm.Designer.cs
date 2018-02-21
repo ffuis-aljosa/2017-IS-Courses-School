@@ -64,7 +64,6 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.employeesLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.changeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -166,9 +165,9 @@
             this.schoolSubjectAndNumberOfClassesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.schoolSubjectAndNumberOfClassesLabel.Location = new System.Drawing.Point(29, 531);
             this.schoolSubjectAndNumberOfClassesLabel.Name = "schoolSubjectAndNumberOfClassesLabel";
-            this.schoolSubjectAndNumberOfClassesLabel.Size = new System.Drawing.Size(156, 18);
+            this.schoolSubjectAndNumberOfClassesLabel.Size = new System.Drawing.Size(68, 18);
             this.schoolSubjectAndNumberOfClassesLabel.TabIndex = 12;
-            this.schoolSubjectAndNumberOfClassesLabel.Text = "Predmet i broj časova:";
+            this.schoolSubjectAndNumberOfClassesLabel.Text = "Predmet:";
             // 
             // salaryLabel
             // 
@@ -280,7 +279,7 @@
             // dateOfBirthcolumnHeader
             // 
             this.dateOfBirthcolumnHeader.Text = "Datum rođenja:";
-            this.dateOfBirthcolumnHeader.Width = 114;
+            this.dateOfBirthcolumnHeader.Width = 113;
             // 
             // phoneNumbercolumnHeader
             // 
@@ -290,7 +289,7 @@
             // emailcolumnHeader
             // 
             this.emailcolumnHeader.Text = "E-mail:";
-            this.emailcolumnHeader.Width = 93;
+            this.emailcolumnHeader.Width = 85;
             // 
             // qualificationcolumnHeader
             // 
@@ -351,16 +350,6 @@
             this.employeesLabel.TabIndex = 28;
             this.employeesLabel.Text = "Zaposleni :";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label2.Location = new System.Drawing.Point(29, 305);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "YYYY-MM-DD";
-            // 
             // changeButton
             // 
             this.changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
@@ -380,7 +369,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.changeButton);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.employeesLabel);
@@ -452,7 +440,6 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label employeesLabel;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button changeButton;
     }
 }

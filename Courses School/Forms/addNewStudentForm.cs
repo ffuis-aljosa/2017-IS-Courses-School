@@ -37,9 +37,17 @@ namespace Courses_School
         {
             try
             {
-                newStudent = new Student(firstNameTextBox.Text, lastNameTextBox.Text, jmbgTextBox.Text, dateOfBirthTextBox.Text,
-                    addressTextBox.Text, phoneNumberTextBox.Text, membershipCostTextBox.Text,
-                   (SchoolSubjects)schoolSubjectAndNumberOfClassesComboBox.SelectedItem);
+
+                newStudent = new Student(
+                    firstNameTextBox.Text,
+                    lastNameTextBox.Text,
+                    jmbgTextBox.Text,
+                    dateOfBirthTextBox.Text,
+                    addressTextBox.Text,
+                    phoneNumberTextBox.Text,
+                    membershipCostTextBox.Text,
+                    (SchoolSubjects)schoolSubjectAndNumberOfClassesComboBox.SelectedItem
+                    );
                 StudentRepository.createStudent(newStudent);
 
                 DialogResult = DialogResult.OK;
@@ -59,21 +67,19 @@ namespace Courses_School
 
             if (searchTextBox.Text == "")
 
-                command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
-                "s.Phone_number, s.Membership_cost, ss.school_subject, " +
-                "ss.number_of_classes, e.first_name, e.last_name FROM Students AS s JOIN schoolsubjects" +
-                " AS ss ON s.school_subject_id = ss.id JOIN Employees AS e ON e.schoolSubject_id=ss.id ORDER BY s.First_name1", connection);
+                command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, " +
+                "s.Address, s.Phone_number, s.Membership_cost, ss.school_subject, " +
+                "ss.number_of_classes, e.First_name, e.Last_name FROM Employees AS e JOIN schoolSubjects" +
+                " AS ss ON e.schoolSubject_id = ss.id  JOIN Students AS s ON s.school_subject_id=ss.id ORDER BY s.First_name1", connection);
 
             else
 
-                command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
-            "s.Phone_number, s.Membership_cost, ss.school_subject, " +
-           "ss.number_of_classes, e.first_name, e.last_name FROM Students AS s JOIN schoolsubjects" +
-            " AS ss ON s.school_subject_id = ss.id JOIN Employees AS e ON e.schoolSubject_id=ss.id " +
-            "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%" + searchTextBox.Text + "%'" +
-            "OR ss.school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
-
-
+                command = new SqlCeCommand("SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, " +
+               "s.Address, s.Phone_number, s.Membership_cost, ss.school_subject, " +
+               "ss.number_of_classes, e.First_name, e.Last_name FROM Employees AS e JOIN schoolSubjects" +
+               " AS ss ON e.schoolSubject_id = ss.id  JOIN Students AS s ON s.school_subject_id=ss.id" +
+               "WHERE s.First_name1 LIKE '%" + searchTextBox.Text + "%' OR s.Last_name1 LIKE '%" + searchTextBox.Text + "%'" +
+               "OR ss.school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
             try
             {
                 SqlCeDataReader reader = command.ExecuteReader();
@@ -92,6 +98,7 @@ namespace Courses_School
                     item.SubItems.Add(reader["first_name"].ToString());
                     item.SubItems.Add(reader["last_name"].ToString());
 
+
                     informationsAboutStudentsListView.Items.Add(item);
 
                 }
@@ -99,8 +106,7 @@ namespace Courses_School
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            }            
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -203,7 +209,7 @@ namespace Courses_School
 
                 command.CommandText = "SELECT s.id, s.First_name1, s.Last_name1, s.Jmbg, s.Date_of_birth, s.Address," +
                     "s.Phone_number, s.Membership_cost, ss.school_subject, " +
-                   "ss.number_of_classes FROM Students AS s JOIN schoolsubjects" +
+                   "ss.number_of_classes  FROM Students AS s JOIN schoolsubjects" +
                     " AS ss ON s.school_subject_id = ss.id WHERE s.id="
                     + int.Parse(informationsAboutStudentsListView.SelectedItems[0].Text) + ";";
 

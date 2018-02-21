@@ -153,6 +153,7 @@
             this.columnHeader5,
             this.columnHeader6});
             this.examsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.examsListView.FullRowSelect = true;
             this.examsListView.GridLines = true;
             this.examsListView.Location = new System.Drawing.Point(413, 87);
             this.examsListView.Name = "examsListView";

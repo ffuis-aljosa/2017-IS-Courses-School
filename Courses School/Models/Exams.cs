@@ -35,7 +35,7 @@ namespace Courses_School.Models
             int grade_int;
             bool parseSuccessful2 = int.TryParse(grade, out grade_int);
             if (!parseSuccessful2)
-                throw new Exception("Neispravna cijena mjesečne članarine!");
+                throw new Exception("Unesite ocjenu !");
             Grade = grade_int;
 
             Date = date;
@@ -83,8 +83,11 @@ namespace Courses_School.Models
             }
             set
             {
-                //if (value < 0 || value == 0 || value > 5)
-                  //  throw new Exception("Unesite ocjenu !");
+               // if (value == 0 )
+                 //   throw new Exception("Unesite ocjenu !");
+                 if ( value < 0 || value > 5)
+                    throw new Exception(" Pogrešan unos ocjene !");
+
                 grade = value;
             }
         }
