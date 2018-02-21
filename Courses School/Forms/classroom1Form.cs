@@ -55,31 +55,42 @@ namespace Courses_School
 
         private void schoolTimetableListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCeCommand command = connection.CreateCommand();
-            command.CommandType = CommandType.Text;
-
-            command.CommandText = "SELECT time1, monday1, tuesday1, wednesday1, thursday1, friday1 FROM SchoolTimetable1";
-
             try
             {
-                SqlCeDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    timeTextBox1.Text = reader["time1"].ToString();
-                    mondayTextBox1.Text = reader["monday1"].ToString();
-                    tuesdayTextBox1.Text = reader["tuesday1"].ToString();
-                    wednesdayTextBox1.Text = reader["wednesday1"].ToString();
-                    thursdayTextBox1.Text = reader["thursday1"].ToString();
-                    fridayTextBox1.Text = reader["friday1"].ToString();
+                if (schoolTimetableListView1.SelectedItems.Count == 0)
+                    return;
 
+                SqlCeCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+
+                command.CommandText = "SELECT time1, monday1, tuesday1, wednesday1, thursday1, friday1 FROM SchoolTimetable1 WHERE time1 ='" +
+                    schoolTimetableListView1.SelectedItems[0].Text + "';";
+
+
+                try
+                {
+                    SqlCeDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        timeTextBox1.Text = reader["time1"].ToString();
+                        mondayTextBox1.Text = reader["monday1"].ToString();
+                        tuesdayTextBox1.Text = reader["tuesday1"].ToString();
+                        wednesdayTextBox1.Text = reader["wednesday1"].ToString();
+                        thursdayTextBox1.Text = reader["thursday1"].ToString();
+                        fridayTextBox1.Text = reader["friday1"].ToString();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
-
-            clearTextBox();
+            
         }
 
         private void addButton1_Click(object sender, EventArgs e)
@@ -137,6 +148,44 @@ namespace Courses_School
         private void classroom1Form_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void changeButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da izmjenite podatke?", "", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    if (schoolTimetableListView1.SelectedItems.Count == 0)
+                        return;
+
+                    SqlCeCommand command = connection.CreateCommand();
+                    command.CommandType = CommandType.Text;
+
+                    command.CommandText = "UPDATE SchoolTimetable1 SET time1='" + timeTextBox1.Text + "', " +
+                        "monday1 = '" + mondayTextBox1.Text + "', " +
+                        "tuesday1 = '" + tuesdayTextBox1.Text + "', " +
+                        "wednesday1 = '" + wednesdayTextBox1.Text + "', " +
+                        "thursday1 = '" + thursdayTextBox1.Text + "', " + 
+                        "friday1 = '" + fridayTextBox1.Text + "' " +
+                        "WHERE time1 = '" + schoolTimetableListView1.SelectedItems[0].Text + "';";
+
+                    command.ExecuteNonQuery();
+                    loadSchoolTimetable1();
+                    clearTextBox();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Izmjena nije uspjela!");
+
+            }
         }
     }
 }

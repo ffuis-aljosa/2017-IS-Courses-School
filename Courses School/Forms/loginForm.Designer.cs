@@ -41,7 +41,7 @@
             // loginFormButton
             // 
             this.loginFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.loginFormButton.Location = new System.Drawing.Point(337, 178);
+            this.loginFormButton.Location = new System.Drawing.Point(355, 178);
             this.loginFormButton.Name = "loginFormButton";
             this.loginFormButton.Size = new System.Drawing.Size(127, 33);
             this.loginFormButton.TabIndex = 11;
@@ -53,9 +53,9 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.passwordLabel.Location = new System.Drawing.Point(146, 129);
+            this.passwordLabel.Location = new System.Drawing.Point(114, 132);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(58, 25);
+            this.passwordLabel.Size = new System.Drawing.Size(46, 20);
             this.passwordLabel.TabIndex = 10;
             this.passwordLabel.Text = "Šifra:";
             // 
@@ -63,9 +63,9 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.usernameLabel.Location = new System.Drawing.Point(59, 90);
+            this.usernameLabel.Location = new System.Drawing.Point(46, 88);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(145, 25);
+            this.usernameLabel.Size = new System.Drawing.Size(114, 20);
             this.usernameLabel.TabIndex = 9;
             this.usernameLabel.Text = "Korisničko ime:";
             // 
@@ -74,28 +74,28 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(142, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 8;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(227, 132);
+            this.passwordTextBox.Location = new System.Drawing.Point(185, 132);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(237, 23);
+            this.passwordTextBox.Size = new System.Drawing.Size(297, 20);
             this.passwordTextBox.TabIndex = 7;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(227, 90);
+            this.usernameTextBox.Location = new System.Drawing.Point(185, 90);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(237, 23);
+            this.usernameTextBox.Size = new System.Drawing.Size(297, 20);
             this.usernameTextBox.TabIndex = 6;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(87, 178);
+            this.button1.Location = new System.Drawing.Point(185, 178);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 33);
             this.button1.TabIndex = 12;
@@ -105,7 +105,7 @@
             // 
             // loginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;

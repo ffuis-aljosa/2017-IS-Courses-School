@@ -54,10 +54,14 @@ namespace Courses_School
 
         private void schoolTimetableListView3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (schoolTimetableListView3.SelectedItems.Count == 0)
+                return;
+
             SqlCeCommand command = connection.CreateCommand();
             command.CommandType = CommandType.Text;
 
-            command.CommandText = "SELECT time3, monday3, tuesday3, wednesday3, thursday3, friday3 FROM SchoolTimetable3";
+            command.CommandText = "SELECT time3, monday3, tuesday3, wednesday3, thursday3, friday3 FROM SchoolTimetable3 WHERE time3 ='" +
+                    schoolTimetableListView3.SelectedItems[0].Text + "';";
 
             try
             {
@@ -77,8 +81,6 @@ namespace Courses_School
             {
                 MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            clearTextBox3();
 
         }
 
@@ -138,5 +140,44 @@ namespace Courses_School
 
             }
         }
+
+        private void changeButton3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Jeste li sigurni da želite da izmjenite podatke?", "", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    if (schoolTimetableListView3.SelectedItems.Count == 0)
+                        return;
+
+                    SqlCeCommand command = connection.CreateCommand();
+                    command.CommandType = CommandType.Text;
+
+                    command.CommandText = "UPDATE SchoolTimetable3 SET time3='" + timeTextBox3.Text + "', " +
+                        "monday3 = '" + mondayTextBox3.Text + "', " +
+                        "tuesday3 = '" + tuesdayTextBox3.Text + "', " +
+                        "wednesday3 = '" + wednesdayTextBox3.Text + "', " +
+                        "thursday3 = '" + thursdayTextBox3.Text + "', " +
+                        "friday3 = '" + fridayTextBox3.Text + "' " +
+                        "WHERE time3 = '" + schoolTimetableListView3.SelectedItems[0].Text + "';";
+
+                    command.ExecuteNonQuery();
+                    loadSchoolTimetable3();
+                    clearTextBox3();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Izmjena nije uspjela!");
+
+            }
+        }
+    
     }
 }

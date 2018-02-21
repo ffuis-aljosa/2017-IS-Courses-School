@@ -162,6 +162,7 @@ namespace Courses_School
         {
             try
             {
+
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
 
@@ -207,6 +208,8 @@ namespace Courses_School
             {
                 try
                 {
+                   
+
                     SqlCeCommand command = connection.CreateCommand();
                     command.CommandType = CommandType.Text;
 

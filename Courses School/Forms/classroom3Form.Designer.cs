@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(classroom3Form));
             this.tuesdayLabel3 = new System.Windows.Forms.Label();
             this.tuesdayTextBox3 = new System.Windows.Forms.TextBox();
             this.mondayLabel3 = new System.Windows.Forms.Label();
@@ -49,12 +50,13 @@
             this.Wednesday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Thursday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Friday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.changeButton3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tuesdayLabel3
             // 
             this.tuesdayLabel3.AutoSize = true;
-            this.tuesdayLabel3.Location = new System.Drawing.Point(262, 194);
+            this.tuesdayLabel3.Location = new System.Drawing.Point(263, 220);
             this.tuesdayLabel3.Name = "tuesdayLabel3";
             this.tuesdayLabel3.Size = new System.Drawing.Size(27, 13);
             this.tuesdayLabel3.TabIndex = 35;
@@ -62,7 +64,7 @@
             // 
             // tuesdayTextBox3
             // 
-            this.tuesdayTextBox3.Location = new System.Drawing.Point(265, 210);
+            this.tuesdayTextBox3.Location = new System.Drawing.Point(266, 236);
             this.tuesdayTextBox3.Name = "tuesdayTextBox3";
             this.tuesdayTextBox3.Size = new System.Drawing.Size(100, 20);
             this.tuesdayTextBox3.TabIndex = 34;
@@ -70,7 +72,7 @@
             // mondayLabel3
             // 
             this.mondayLabel3.AutoSize = true;
-            this.mondayLabel3.Location = new System.Drawing.Point(137, 194);
+            this.mondayLabel3.Location = new System.Drawing.Point(138, 220);
             this.mondayLabel3.Name = "mondayLabel3";
             this.mondayLabel3.Size = new System.Drawing.Size(29, 13);
             this.mondayLabel3.TabIndex = 33;
@@ -78,7 +80,7 @@
             // 
             // mondayTextBox3
             // 
-            this.mondayTextBox3.Location = new System.Drawing.Point(140, 210);
+            this.mondayTextBox3.Location = new System.Drawing.Point(141, 236);
             this.mondayTextBox3.Name = "mondayTextBox3";
             this.mondayTextBox3.Size = new System.Drawing.Size(100, 20);
             this.mondayTextBox3.TabIndex = 32;
@@ -86,7 +88,7 @@
             // timeLabel3
             // 
             this.timeLabel3.AutoSize = true;
-            this.timeLabel3.Location = new System.Drawing.Point(17, 194);
+            this.timeLabel3.Location = new System.Drawing.Point(18, 220);
             this.timeLabel3.Name = "timeLabel3";
             this.timeLabel3.Size = new System.Drawing.Size(44, 13);
             this.timeLabel3.TabIndex = 31;
@@ -94,14 +96,14 @@
             // 
             // timeTextBox3
             // 
-            this.timeTextBox3.Location = new System.Drawing.Point(20, 210);
+            this.timeTextBox3.Location = new System.Drawing.Point(21, 236);
             this.timeTextBox3.Name = "timeTextBox3";
             this.timeTextBox3.Size = new System.Drawing.Size(100, 20);
             this.timeTextBox3.TabIndex = 30;
             // 
             // deleteButton3
             // 
-            this.deleteButton3.Location = new System.Drawing.Point(772, 248);
+            this.deleteButton3.Location = new System.Drawing.Point(773, 274);
             this.deleteButton3.Name = "deleteButton3";
             this.deleteButton3.Size = new System.Drawing.Size(100, 23);
             this.deleteButton3.TabIndex = 29;
@@ -111,7 +113,7 @@
             // 
             // addButton3
             // 
-            this.addButton3.Location = new System.Drawing.Point(772, 207);
+            this.addButton3.Location = new System.Drawing.Point(773, 233);
             this.addButton3.Name = "addButton3";
             this.addButton3.Size = new System.Drawing.Size(100, 23);
             this.addButton3.TabIndex = 28;
@@ -122,7 +124,7 @@
             // fridayLabel3
             // 
             this.fridayLabel3.AutoSize = true;
-            this.fridayLabel3.Location = new System.Drawing.Point(646, 194);
+            this.fridayLabel3.Location = new System.Drawing.Point(647, 220);
             this.fridayLabel3.Name = "fridayLabel3";
             this.fridayLabel3.Size = new System.Drawing.Size(26, 13);
             this.fridayLabel3.TabIndex = 27;
@@ -131,7 +133,7 @@
             // thursdayLabel3
             // 
             this.thursdayLabel3.AutoSize = true;
-            this.thursdayLabel3.Location = new System.Drawing.Point(520, 194);
+            this.thursdayLabel3.Location = new System.Drawing.Point(521, 220);
             this.thursdayLabel3.Name = "thursdayLabel3";
             this.thursdayLabel3.Size = new System.Drawing.Size(26, 13);
             this.thursdayLabel3.TabIndex = 26;
@@ -140,7 +142,7 @@
             // wednesdayLabel3
             // 
             this.wednesdayLabel3.AutoSize = true;
-            this.wednesdayLabel3.Location = new System.Drawing.Point(391, 194);
+            this.wednesdayLabel3.Location = new System.Drawing.Point(392, 220);
             this.wednesdayLabel3.Name = "wednesdayLabel3";
             this.wednesdayLabel3.Size = new System.Drawing.Size(22, 13);
             this.wednesdayLabel3.TabIndex = 25;
@@ -148,21 +150,21 @@
             // 
             // thursdayTextBox3
             // 
-            this.thursdayTextBox3.Location = new System.Drawing.Point(523, 210);
+            this.thursdayTextBox3.Location = new System.Drawing.Point(524, 236);
             this.thursdayTextBox3.Name = "thursdayTextBox3";
             this.thursdayTextBox3.Size = new System.Drawing.Size(100, 20);
             this.thursdayTextBox3.TabIndex = 24;
             // 
             // fridayTextBox3
             // 
-            this.fridayTextBox3.Location = new System.Drawing.Point(649, 210);
+            this.fridayTextBox3.Location = new System.Drawing.Point(650, 236);
             this.fridayTextBox3.Name = "fridayTextBox3";
             this.fridayTextBox3.Size = new System.Drawing.Size(100, 20);
             this.fridayTextBox3.TabIndex = 23;
             // 
             // wednesdayTextBox3
             // 
-            this.wednesdayTextBox3.Location = new System.Drawing.Point(394, 210);
+            this.wednesdayTextBox3.Location = new System.Drawing.Point(395, 236);
             this.wednesdayTextBox3.Name = "wednesdayTextBox3";
             this.wednesdayTextBox3.Size = new System.Drawing.Size(100, 20);
             this.wednesdayTextBox3.TabIndex = 22;
@@ -217,12 +219,23 @@
             this.Friday.Text = "Petak";
             this.Friday.Width = 108;
             // 
+            // changeButton3
+            // 
+            this.changeButton3.Location = new System.Drawing.Point(773, 194);
+            this.changeButton3.Name = "changeButton3";
+            this.changeButton3.Size = new System.Drawing.Size(100, 23);
+            this.changeButton3.TabIndex = 36;
+            this.changeButton3.Text = "Izmijeni";
+            this.changeButton3.UseVisualStyleBackColor = true;
+            this.changeButton3.Click += new System.EventHandler(this.changeButton3_Click);
+            // 
             // classroom3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(888, 305);
+            this.Controls.Add(this.changeButton3);
             this.Controls.Add(this.tuesdayLabel3);
             this.Controls.Add(this.tuesdayTextBox3);
             this.Controls.Add(this.mondayLabel3);
@@ -238,6 +251,7 @@
             this.Controls.Add(this.fridayTextBox3);
             this.Controls.Add(this.wednesdayTextBox3);
             this.Controls.Add(this.schoolTimetableListView3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "classroom3Form";
             this.Text = "Učionica br. 3";
             this.Load += new System.EventHandler(this.classroom3Form_Load);
@@ -269,5 +283,6 @@
         private System.Windows.Forms.ColumnHeader Wednesday;
         private System.Windows.Forms.ColumnHeader Thursday;
         private System.Windows.Forms.ColumnHeader Friday;
+        private System.Windows.Forms.Button changeButton3;
     }
 }

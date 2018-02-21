@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(schoolTimetableForm));
             this.classroom1Button = new System.Windows.Forms.Button();
             this.classroom2Botton = new System.Windows.Forms.Button();
             this.classroom3Button = new System.Windows.Forms.Button();
@@ -74,6 +75,7 @@
             this.Controls.Add(this.classroom3Button);
             this.Controls.Add(this.classroom2Botton);
             this.Controls.Add(this.classroom1Button);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "schoolTimetableForm";
             this.Text = "Raspored ";
             this.ResumeLayout(false);

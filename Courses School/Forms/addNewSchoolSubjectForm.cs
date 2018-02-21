@@ -111,6 +111,9 @@ namespace Courses_School
             {
                 try
                 {
+                    if (schoolSubjectListView.SelectedItems.Count == 0)
+                        return;
+
                     SqlCeCommand command = connection.CreateCommand();
                     command.CommandType = CommandType.Text;
                    
@@ -139,6 +142,9 @@ namespace Courses_School
 
             try
             {
+                if (schoolSubjectListView.SelectedItems.Count == 0)
+                    return;
+
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
 
@@ -176,6 +182,11 @@ namespace Courses_School
             schoolSubjectListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             schoolSubjectListView.Items.Clear();
             loadSchoolSubject();
+        }
+
+        private void addNewSchoolSubjectForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

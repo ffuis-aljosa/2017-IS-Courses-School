@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paymentForm));
             this.StudentComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@
             // 
             this.StudentComboBox.FormattingEnabled = true;
             this.StudentComboBox.Location = new System.Drawing.Point(8, 52);
-            this.StudentComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.StudentComboBox.Name = "StudentComboBox";
             this.StudentComboBox.Size = new System.Drawing.Size(139, 21);
             this.StudentComboBox.TabIndex = 0;
@@ -78,7 +79,7 @@
             // paymentTextBox
             // 
             this.paymentTextBox.Location = new System.Drawing.Point(8, 132);
-            this.paymentTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paymentTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.paymentTextBox.Name = "paymentTextBox";
             this.paymentTextBox.Size = new System.Drawing.Size(139, 20);
             this.paymentTextBox.TabIndex = 3;
@@ -86,7 +87,7 @@
             // addPaymentButton
             // 
             this.addPaymentButton.Location = new System.Drawing.Point(8, 241);
-            this.addPaymentButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addPaymentButton.Margin = new System.Windows.Forms.Padding(2);
             this.addPaymentButton.Name = "addPaymentButton";
             this.addPaymentButton.Size = new System.Drawing.Size(138, 26);
             this.addPaymentButton.TabIndex = 5;
@@ -97,7 +98,7 @@
             // dateTimePicker
             // 
             this.dateTimePicker.Location = new System.Drawing.Point(8, 191);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(139, 20);
             this.dateTimePicker.TabIndex = 7;
@@ -113,7 +114,7 @@
             this.paymentListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.paymentListView.GridLines = true;
             this.paymentListView.Location = new System.Drawing.Point(200, 62);
-            this.paymentListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paymentListView.Margin = new System.Windows.Forms.Padding(2);
             this.paymentListView.Name = "paymentListView";
             this.paymentListView.Size = new System.Drawing.Size(293, 244);
             this.paymentListView.TabIndex = 8;
@@ -179,7 +180,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StudentComboBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "paymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
