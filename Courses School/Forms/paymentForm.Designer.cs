@@ -185,6 +185,7 @@
             this.MaximizeBox = false;
             this.Name = "paymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Uplate";
             this.ResumeLayout(false);
             this.PerformLayout();
 

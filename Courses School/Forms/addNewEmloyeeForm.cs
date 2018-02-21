@@ -162,6 +162,8 @@ namespace Courses_School
         {
             try
             {
+                if (employeesListView.SelectedItems.Count == 0)
+                    return;
 
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
@@ -208,7 +210,8 @@ namespace Courses_School
             {
                 try
                 {
-                   
+                    if (employeesListView.SelectedItems.Count == 0)
+                        return;
 
                     SqlCeCommand command = connection.CreateCommand();
                     command.CommandType = CommandType.Text;

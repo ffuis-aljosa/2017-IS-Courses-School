@@ -144,6 +144,9 @@ namespace Courses_School
 
             if (result == DialogResult.OK)
             {
+                if (informationsAboutStudentsListView.SelectedItems.Count == 0)
+                    return;
+
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
                 command.CommandText = "select Id from schoolSubjects where school_subject ='" + schoolSubjectAndNumberOfClassesComboBox.SelectedItem.ToString() + "';";
@@ -191,6 +194,9 @@ namespace Courses_School
         {
             try
             {
+                if (informationsAboutStudentsListView.SelectedItems.Count == 0)
+                    return;
+
                 SqlCeCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
                 comboBox1.Items.Clear();

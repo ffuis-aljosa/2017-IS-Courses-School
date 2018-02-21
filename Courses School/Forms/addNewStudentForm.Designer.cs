@@ -392,6 +392,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "addNewStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Studenti";
             this.Load += new System.EventHandler(this.addNewStudentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

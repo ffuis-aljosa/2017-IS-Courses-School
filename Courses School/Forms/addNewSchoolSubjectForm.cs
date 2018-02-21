@@ -29,12 +29,14 @@ namespace Courses_School
 
             if (searchTextBox.Text == "")
 
-                command = new SqlCeCommand("SELECT id, school_subject, number_of_classes FROM schoolSubjects ORDER BY id", connection);
+                command = new SqlCeCommand("SELECT id, school_subject, number_of_classes " +
+                " FROM schoolSubjects " +
+                " ORDER BY id", connection);
 
             else
-
-                command = new SqlCeCommand("SELECT id, school_subject, number_of_classes FROM schoolSubjects" +
-                          "WHERE school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
+                command = new SqlCeCommand("SELECT id, school_subject, number_of_classes " +
+                " FROM schoolSubjects " +
+               "WHERE school_subject LIKE '%" + searchTextBox.Text + "%'", connection);
 
             try
             {

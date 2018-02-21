@@ -164,7 +164,7 @@
             this.searchTextBox.Location = new System.Drawing.Point(278, 319);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(299, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(391, 20);
             this.searchTextBox.TabIndex = 32;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 

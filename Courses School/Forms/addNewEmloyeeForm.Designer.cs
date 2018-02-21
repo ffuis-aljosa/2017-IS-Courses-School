@@ -408,7 +408,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addNewEmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "addNewEmployeeForm";
+            this.Text = "Zaposleni";
             this.Load += new System.EventHandler(this.addNewEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
