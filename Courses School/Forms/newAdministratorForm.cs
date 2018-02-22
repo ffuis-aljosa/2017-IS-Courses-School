@@ -29,9 +29,9 @@ namespace Courses_School
 
                 MessageBox.Show("Korisnik uspješno kreiran");
             }
-            catch (Exception error)
+            catch 
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Korisničko ime već postoji.");
             }
         }
     }
