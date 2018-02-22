@@ -21,7 +21,7 @@ namespace Courses_School
             loadStudents();
             loadExams();
         }
-      
+
         private void loadSchooSubjects()
         {
             List<SchoolSubjects> schoolSubject = SchoolSubjectRepository.fetchAllSchoolSubjects();
@@ -31,7 +31,7 @@ namespace Courses_School
         }
 
         private void loadStudents()
-         {
+        {
             List<Student> student = StudentRepository.fetchAllStudents();
 
             foreach (Student students in student)
@@ -140,6 +140,8 @@ namespace Courses_School
                     schoolSubjectComboBox.Text = reader.GetString(0);
 
             }
+
+
         }
 
         private void examsForm_Load(object sender, EventArgs e)

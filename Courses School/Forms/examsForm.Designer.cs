@@ -54,9 +54,10 @@
             // 
             this.schoolSubjectLabel.AutoSize = true;
             this.schoolSubjectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.schoolSubjectLabel.Location = new System.Drawing.Point(54, 133);
+            this.schoolSubjectLabel.Location = new System.Drawing.Point(72, 164);
+            this.schoolSubjectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.schoolSubjectLabel.Name = "schoolSubjectLabel";
-            this.schoolSubjectLabel.Size = new System.Drawing.Size(77, 20);
+            this.schoolSubjectLabel.Size = new System.Drawing.Size(98, 25);
             this.schoolSubjectLabel.TabIndex = 0;
             this.schoolSubjectLabel.Text = "Predmet:";
             // 
@@ -64,9 +65,10 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.nameLabel.Location = new System.Drawing.Point(12, 87);
+            this.nameLabel.Location = new System.Drawing.Point(16, 107);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(115, 20);
+            this.nameLabel.Size = new System.Drawing.Size(145, 25);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Ime i prezime:";
             // 
@@ -74,9 +76,10 @@
             // 
             this.gradeLabel.AutoSize = true;
             this.gradeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.gradeLabel.Location = new System.Drawing.Point(64, 173);
+            this.gradeLabel.Location = new System.Drawing.Point(85, 213);
+            this.gradeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gradeLabel.Name = "gradeLabel";
-            this.gradeLabel.Size = new System.Drawing.Size(67, 20);
+            this.gradeLabel.Size = new System.Drawing.Size(86, 25);
             this.gradeLabel.TabIndex = 2;
             this.gradeLabel.Text = "Ocjena:";
             // 
@@ -84,60 +87,67 @@
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.dateLabel.Location = new System.Drawing.Point(67, 215);
+            this.dateLabel.Location = new System.Drawing.Point(89, 265);
+            this.dateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(64, 20);
+            this.dateLabel.Size = new System.Drawing.Size(80, 25);
             this.dateLabel.TabIndex = 3;
             this.dateLabel.Text = "Datum:";
             // 
             // gradeTextBox
             // 
-            this.gradeTextBox.Location = new System.Drawing.Point(137, 173);
+            this.gradeTextBox.Location = new System.Drawing.Point(183, 213);
+            this.gradeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gradeTextBox.Name = "gradeTextBox";
-            this.gradeTextBox.Size = new System.Drawing.Size(234, 20);
+            this.gradeTextBox.Size = new System.Drawing.Size(311, 22);
             this.gradeTextBox.TabIndex = 6;
             // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.searchLabel.Location = new System.Drawing.Point(494, 56);
+            this.searchLabel.Location = new System.Drawing.Point(659, 69);
+            this.searchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(78, 20);
+            this.searchLabel.Size = new System.Drawing.Size(100, 25);
             this.searchLabel.TabIndex = 9;
             this.searchLabel.Text = "Pretraga:";
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(578, 58);
+            this.searchTextBox.Location = new System.Drawing.Point(771, 71);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(234, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(311, 22);
             this.searchTextBox.TabIndex = 10;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // firstNameComboBox
             // 
             this.firstNameComboBox.FormattingEnabled = true;
-            this.firstNameComboBox.Location = new System.Drawing.Point(137, 89);
+            this.firstNameComboBox.Location = new System.Drawing.Point(183, 110);
+            this.firstNameComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.firstNameComboBox.Name = "firstNameComboBox";
-            this.firstNameComboBox.Size = new System.Drawing.Size(234, 21);
+            this.firstNameComboBox.Size = new System.Drawing.Size(311, 24);
             this.firstNameComboBox.TabIndex = 11;
             this.firstNameComboBox.SelectedIndexChanged += new System.EventHandler(this.firstNameComboBox_SelectedIndexChanged);
             // 
             // schoolSubjectComboBox
             // 
             this.schoolSubjectComboBox.FormattingEnabled = true;
-            this.schoolSubjectComboBox.Location = new System.Drawing.Point(137, 135);
+            this.schoolSubjectComboBox.Location = new System.Drawing.Point(183, 166);
+            this.schoolSubjectComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.schoolSubjectComboBox.Name = "schoolSubjectComboBox";
-            this.schoolSubjectComboBox.Size = new System.Drawing.Size(234, 21);
+            this.schoolSubjectComboBox.Size = new System.Drawing.Size(311, 24);
             this.schoolSubjectComboBox.TabIndex = 12;
             // 
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.addButton.Location = new System.Drawing.Point(248, 274);
+            this.addButton.Location = new System.Drawing.Point(331, 337);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(123, 50);
+            this.addButton.Size = new System.Drawing.Size(164, 62);
             this.addButton.TabIndex = 13;
             this.addButton.Text = "Dodaj !";
             this.addButton.UseVisualStyleBackColor = true;
@@ -155,9 +165,10 @@
             this.examsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.examsListView.FullRowSelect = true;
             this.examsListView.GridLines = true;
-            this.examsListView.Location = new System.Drawing.Point(413, 87);
+            this.examsListView.Location = new System.Drawing.Point(551, 107);
+            this.examsListView.Margin = new System.Windows.Forms.Padding(4);
             this.examsListView.Name = "examsListView";
-            this.examsListView.Size = new System.Drawing.Size(486, 306);
+            this.examsListView.Size = new System.Drawing.Size(586, 376);
             this.examsListView.TabIndex = 23;
             this.examsListView.UseCompatibleStateImageBehavior = false;
             this.examsListView.View = System.Windows.Forms.View.Details;
@@ -165,7 +176,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Br";
-            this.columnHeader1.Width = 32;
+            this.columnHeader1.Width = 40;
             // 
             // columnHeader2
             // 
@@ -175,36 +186,38 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Prezime";
-            this.columnHeader3.Width = 95;
+            this.columnHeader3.Width = 80;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Predmet";
-            this.columnHeader4.Width = 127;
+            this.columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Ocjena";
+            this.columnHeader5.Width = 100;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Datum";
-            this.columnHeader6.Width = 84;
+            this.columnHeader6.Width = 120;
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(136, 215);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker.Location = new System.Drawing.Point(181, 265);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(235, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(312, 22);
             this.dateTimePicker.TabIndex = 25;
             // 
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.deleteButton.Location = new System.Drawing.Point(248, 343);
+            this.deleteButton.Location = new System.Drawing.Point(331, 422);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(123, 50);
+            this.deleteButton.Size = new System.Drawing.Size(164, 62);
             this.deleteButton.TabIndex = 26;
             this.deleteButton.Text = "Obriši !";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -212,12 +225,12 @@
             // 
             // examsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = global::Courses_School.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(927, 427);
+            this.ClientSize = new System.Drawing.Size(1236, 526);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.addButton);
@@ -232,6 +245,7 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.schoolSubjectLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "examsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ispiti";

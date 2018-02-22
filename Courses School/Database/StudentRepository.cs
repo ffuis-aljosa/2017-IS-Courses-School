@@ -46,7 +46,7 @@ namespace Courses_School.Database
         public static void createStudent(Student student)
         {
             string sql = "INSERT INTO Students (first_name1, last_name1, jmbg, date_of_birth, address, phone_number, membership_cost, school_subject_id) VALUES" +
-                "('" + student.First_name + "','" + student.Last_name + "','" + student.Jmbg + "','" + student.Date_of_birth + " " + "00:00','"
+                "('" + student.First_name + "','" + student.Last_name + "','" + student.Jmbg + "','" + student.Date_of_birth + " " + "','"
                 + student.Address + "','" + student.Phone_number + "'," + student.Membership_cost + "," + student.SchoolSubject.Id + ")";
 
             SqlCeCommand command = new SqlCeCommand(sql, connection.Connection);
