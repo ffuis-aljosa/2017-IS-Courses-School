@@ -54,9 +54,9 @@ namespace Courses_School
             clearTextBox();
  
         }
-        catch (Exception ex)
+        catch 
         {
-            MessageBox.Show(ex.Message);
+            MessageBox.Show("Unesite sve podatke o zaposlenom");
         }
     }
 

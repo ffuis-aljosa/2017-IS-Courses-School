@@ -10,19 +10,19 @@ namespace Courses_School
         public loginForm()
         {
             InitializeComponent();
-            usernameTextBox.MouseHover += new EventHandler(usernameTextBox_MouseHover);
-            usernameTextBox.MouseLeave += new EventHandler(usernameTextBox_MouseLeave);
+            usernameTextBox.MouseHover += new EventHandler(usernameTextBox_MouseHover_1);
+            usernameTextBox.MouseLeave += new EventHandler(usernameTextBox_MouseLeave_1);
 
-            passwordTextBox.MouseHover += new EventHandler(passwordTextBox_MouseHover);
-            passwordTextBox.MouseLeave += new EventHandler(passwordTextBox_MouseLeave);
+            passwordTextBox.MouseHover += new EventHandler(passwordTextBox_MouseHover_1);
+            passwordTextBox.MouseLeave += new EventHandler(passwordTextBox_MouseLeave_1);
         }
 
         ToolTip toolTip1 = new ToolTip();
-        void usernameTextBox_MouseLeave(object sender, EventArgs e)
+        private void usernameTextBox_MouseLeave_1(object sender, EventArgs e)
         {
             toolTip1.Hide(usernameTextBox);
         }
-        void usernameTextBox_MouseHover(object sender, EventArgs e)
+        private void usernameTextBox_MouseHover_1(object sender, EventArgs e)
         {
             if (Control.IsKeyLocked(Keys.CapsLock))
             {
@@ -35,11 +35,11 @@ namespace Courses_School
             }
         }
 
-        void passwordTextBox_MouseLeave(object sender, EventArgs e)
+        private void passwordTextBox_MouseLeave_1(object sender, EventArgs e)
         {
             toolTip1.Hide(passwordTextBox);
-        } 
-        void passwordTextBox_MouseHover(object sender, EventArgs e)
+        }
+        private void passwordTextBox_MouseHover_1(object sender, EventArgs e)
         {
             if (Control.IsKeyLocked(Keys.CapsLock))
             {
@@ -114,9 +114,6 @@ namespace Courses_School
             Close();
         }
 
-        private void loginForm_MouseEnter(object sender, EventArgs e)
-        {
-           
-        }
+      
     }  
 }

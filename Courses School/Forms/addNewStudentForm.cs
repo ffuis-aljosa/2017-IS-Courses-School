@@ -55,9 +55,10 @@ namespace Courses_School
                 clearTextBox();
 
             }
-            catch 
+            catch (Exception ex)
             {
-                MessageBox.Show("Postojeći JMBG.");
+                MessageBox.Show(ex.Message);
+
             }
         }
         private void loadStudent()

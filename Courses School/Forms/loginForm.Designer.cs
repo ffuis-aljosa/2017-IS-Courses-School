@@ -84,6 +84,8 @@
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(297, 23);
             this.passwordTextBox.TabIndex = 7;
+            this.passwordTextBox.MouseLeave += new System.EventHandler(this.passwordTextBox_MouseLeave_1);
+            this.passwordTextBox.MouseHover += new System.EventHandler(this.passwordTextBox_MouseHover_1);
             // 
             // usernameTextBox
             // 
@@ -91,6 +93,8 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(297, 23);
             this.usernameTextBox.TabIndex = 6;
+            this.usernameTextBox.MouseLeave += new System.EventHandler(this.usernameTextBox_MouseLeave_1);
+            this.usernameTextBox.MouseHover += new System.EventHandler(this.usernameTextBox_MouseHover_1);
             // 
             // button1
             // 
@@ -127,7 +131,6 @@
             this.Name = "loginForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.MouseEnter += new System.EventHandler(this.loginForm_MouseEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
