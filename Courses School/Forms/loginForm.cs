@@ -69,6 +69,7 @@ namespace Courses_School
                         form.FormClosed += administratorForm_FormClosed;
 
                         Hide();
+                        clearTextBox();
                     }
                     else
                     {
@@ -77,6 +78,7 @@ namespace Courses_School
                         form.FormClosed += employeeForm_FormClosed;
 
                         Hide();
+                        clearTextBox();
                     }
                 }
                 else
@@ -90,6 +92,14 @@ namespace Courses_School
                 MessageBox.Show(error.Message);
             }
         }
+
+        private void clearTextBox()
+        {
+            usernameTextBox.Text = "";
+            passwordTextBox.Text = "";
+
+        }
+
         private void administratorForm_FormClosed (object sender, FormClosedEventArgs e)
         {
             Show();

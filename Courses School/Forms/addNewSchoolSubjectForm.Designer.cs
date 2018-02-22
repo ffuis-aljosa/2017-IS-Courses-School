@@ -96,16 +96,17 @@
             // id
             // 
             this.id.Text = "Br.";
+            this.id.Width = 0;
             // 
             // schoolSubject
             // 
             this.schoolSubject.Text = "Predmet";
-            this.schoolSubject.Width = 194;
+            this.schoolSubject.Width = 220;
             // 
             // numberOfClasses
             // 
             this.numberOfClasses.Text = "Broj časova";
-            this.numberOfClasses.Width = 242;
+            this.numberOfClasses.Width = 167;
             // 
             // numberOfCLassesAddSchoolSubject
             // 

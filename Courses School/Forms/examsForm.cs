@@ -122,25 +122,35 @@ namespace Courses_School
 
         private void firstNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCeCommand cmd = connection.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            string full = firstNameComboBox.SelectedItem.ToString();
-            cmd.CommandText = "select * from Students where first_name1='" + full.Substring(0, full.IndexOf(' ')) + "' ;";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlCeDataAdapter da = new SqlCeDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            try
             {
+                SqlCeCommand cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                string full = firstNameComboBox.SelectedItem.ToString();
+                cmd.CommandText = "select * from Students " +
+                    "where first_name1='" + full.Substring(0, full.IndexOf(' ')) + "' " +
+                    "AND last_name1='" + full.Substring(full.IndexOf(' ') + 1) + "' ;";
 
-                cmd.CommandText = "SELECT School_subject FROM schoolSubjects WHERE Id = " + dr["school_subject_id"] + ";";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlCeDataAdapter da = new SqlCeDataAdapter(cmd);
+                da.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
 
-                SqlCeDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                    schoolSubjectComboBox.Text = reader.GetString(0);
+                    cmd.CommandText = "SELECT School_subject FROM schoolSubjects WHERE Id = " + dr["school_subject_id"] + ";";
 
+                    SqlCeDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                        schoolSubjectComboBox.Text = reader.GetString(0);
+
+                }
             }
 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 

@@ -259,7 +259,7 @@
             // idColumnHeader
             // 
             this.idColumnHeader.Text = "Br.";
-            this.idColumnHeader.Width = 29;
+            this.idColumnHeader.Width = 0;
             // 
             // firstNamecolumnHeader
             // 
@@ -289,7 +289,7 @@
             // emailcolumnHeader
             // 
             this.emailcolumnHeader.Text = "E-mail:";
-            this.emailcolumnHeader.Width = 85;
+            this.emailcolumnHeader.Width = 99;
             // 
             // qualificationcolumnHeader
             // 

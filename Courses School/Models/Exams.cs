@@ -83,9 +83,7 @@ namespace Courses_School.Models
             }
             set
             {
-               // if (value == 0 )
-                 //   throw new Exception("Unesite ocjenu !");
-                 if ( value < 0 || value > 5)
+                 if (value == 0 || value < 0 || value > 5)
                     throw new Exception(" Pogrešan unos ocjene !");
 
                 grade = value;
