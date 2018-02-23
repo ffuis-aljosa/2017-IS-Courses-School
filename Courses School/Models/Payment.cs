@@ -32,12 +32,7 @@ namespace Courses_School.Models
                 throw new Exception("Greška!");
             Price = price_int;
           
-            //DateTime date_int;
-            //bool parseSuccessful1 = DateTime.TryParse(payment, out date_int);
-            //if (!parseSuccessful)
-            //    throw new Exception("Greška!");
-
-
+        
         }
 
 

@@ -154,11 +154,7 @@ namespace Courses_School
 
         }
 
-        private void examsForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void deleteButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Jeste li sigurni da želite da obrišete?", "", MessageBoxButtons.OKCancel);

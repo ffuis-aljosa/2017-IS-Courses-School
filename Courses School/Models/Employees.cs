@@ -1,11 +1,8 @@
-﻿using Courses_School.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
-namespace Courses_School
+
+
+namespace Courses_School.Models
 {
     public class Employees
     {

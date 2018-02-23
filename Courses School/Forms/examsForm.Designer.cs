@@ -236,7 +236,7 @@
             this.Name = "examsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ispiti";
-            this.Load += new System.EventHandler(this.examsForm_Load);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

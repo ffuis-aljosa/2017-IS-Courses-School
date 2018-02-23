@@ -44,7 +44,7 @@
             // schoolTimetableButton
             // 
             this.schoolTimetableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.schoolTimetableButton.Location = new System.Drawing.Point(391, 195);
+            this.schoolTimetableButton.Location = new System.Drawing.Point(373, 91);
             this.schoolTimetableButton.Margin = new System.Windows.Forms.Padding(4);
             this.schoolTimetableButton.Name = "schoolTimetableButton";
             this.schoolTimetableButton.Size = new System.Drawing.Size(211, 81);
@@ -80,7 +80,7 @@
             // informationsAboutEmployeesButton
             // 
             this.informationsAboutEmployeesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.informationsAboutEmployeesButton.Location = new System.Drawing.Point(391, 91);
+            this.informationsAboutEmployeesButton.Location = new System.Drawing.Point(373, 195);
             this.informationsAboutEmployeesButton.Margin = new System.Windows.Forms.Padding(4);
             this.informationsAboutEmployeesButton.Name = "informationsAboutEmployeesButton";
             this.informationsAboutEmployeesButton.Size = new System.Drawing.Size(211, 81);

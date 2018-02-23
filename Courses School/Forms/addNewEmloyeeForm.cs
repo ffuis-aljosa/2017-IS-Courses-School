@@ -13,7 +13,7 @@ namespace Courses_School
     {
         private static SqlCeConnection connection = DbConnection.Instance.Connection;
 
-        public Employees NewEmployee { get; private set; }
+        public Employees NewEmployee { get;  set; }
 
         public addNewEmployeeForm()
     {
@@ -54,11 +54,11 @@ namespace Courses_School
             clearTextBox();
  
         }
-        catch 
-        {
-            MessageBox.Show("Unesite sve podatke o zaposlenom");
+            catch 
+            {
+                MessageBox.Show("Unesite sve podatke o zaposlenom!");
+            }
         }
-    }
 
         private void loadEmployee()
         {
